@@ -154,10 +154,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>Something <em>delicious</em> is cooking.</h1>
     <p>RecipeHQ is almost ready. Be the first to know when we launch — enter your email and we'll notify you.</p>
 
-    <form class="notify-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'color:#2DD4BF;font-size:16px;font-weight:600;padding:14px 0\'>You\'re on the list! We\'ll be in touch.</p>';">
-      <input type="email" class="notify-input" placeholder="you@example.com" required>
+    <form class="notify-form" id="notify-form" onsubmit="submitNotify(event)">
+      <input type="email" id="notify-email" class="notify-input" placeholder="you@example.com" required>
       <button type="submit" class="notify-btn">Notify Me</button>
     </form>
+    <script>
+    async function submitNotify(e) {
+      e.preventDefault();
+      var email = document.getElementById('notify-email').value;
+      try {
+        await fetch('https://app.myrecipehq.com/waitlist', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({email: email, source: 'website_coming_soon'})
+        });
+      } catch(err) {}
+      document.getElementById('notify-form').innerHTML =
+        '<p style="color:#2DD4BF;font-size:16px;font-weight:600;padding:14px 0">You\'re on the list! We\'ll be in touch.</p>';
+    }
+    </script>
 
     <div class="coming-soon-features">
       <div class="cs-feature">
