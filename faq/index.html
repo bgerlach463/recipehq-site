@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — RecipeHQ</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --orange:   #F97316;
+      --orange-d: #EA6A0A;
+      --orange-l: #FFF0E6;
+      --teal:     #0D9488;
+      --teal-l:   #E0F2F1;
+      --amber:    #B45309;
+      --amber-l:  #FEF3C7;
+      --charcoal: #1C1917;
+      --mid:      #57534E;
+      --muted:    #A8A29E;
+      --border:   #E7E5E4;
+      --warm-bg:  #FAFAF9;
+      --white:    #FFFFFF;
+      --ff-head:  'Playfair Display', Georgia, serif;
+      --ff-body:  'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--ff-body);
+      color: var(--charcoal);
+      background: var(--white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1,h2,h3,h4 { font-family: var(--ff-head); line-height: 1.15; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+
+    /* ── Nav ─────────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: flex; align-items: center; gap: 0;
+      padding: 0 24px; height: 64px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--ff-body); font-weight: 600;
+      font-size: 18px; letter-spacing: -0.02em;
+      color: var(--charcoal); cursor: pointer;
+      white-space: nowrap;
+    }
+    .nav-logo span.hq { color: var(--orange); }
+    .nav-links {
+      display: flex; gap: 2px; margin-left: 32px; flex: 1;
+      list-style: none;
+    }
+    .nav-links li a {
+      display: block; padding: 6px 12px;
+      font-size: 14px; font-weight: 500;
+      color: var(--mid); border-radius: 6px;
+      cursor: pointer; transition: color .15s, background .15s;
+    }
+    .nav-links li a:hover { color: var(--charcoal); background: var(--warm-bg); }
+    .nav-links li a.active-link { color: var(--orange); }
+    .nav-actions { display: flex; gap: 10px; align-items: center; margin-left: auto; }
+    .btn-login {
+      padding: 7px 16px; font-size: 14px; font-weight: 500;
+      color: var(--mid); border: 1px solid var(--border);
+      border-radius: 8px; cursor: pointer; background: white;
+      transition: border-color .15s, color .15s;
+    }
+    .btn-login:hover { border-color: var(--orange); color: var(--orange); }
+    .btn-cta {
+      padding: 8px 18px; font-size: 14px; font-weight: 600;
+      background: var(--orange); color: white;
+      border: none; border-radius: 8px; cursor: pointer;
+      transition: background .15s, transform .1s;
+      white-space: nowrap;
+    }
+    .btn-cta:hover { background: var(--orange-d); }
+    .btn-cta:active { transform: scale(.98); }
+
+    /* ── Sections & Layout ───────────────────────────────── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 96px 0; }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--orange);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 44px);
+      color: var(--charcoal); margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 18px; color: var(--mid);
+      max-width: 560px; line-height: 1.7;
+    }
+    .section-header { margin-bottom: 56px; }
+    .section-header.centered { text-align: center; }
+    .section-header.centered .section-sub { margin: 0 auto; }
+
+    /* ── HOME — Hero ─────────────────────────────────────── */
+    .hero {
+      background: var(--charcoal);
+      padding: 100px 0 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 60% 0%, rgba(249,115,22,.18) 0%, transparent 70%);
+    }
+    .hero-inner {
+      max-width: 1160px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+      align-items: center; position: relative;
+    }
+    .hero-text {}
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(249,115,22,.15); border: 1px solid rgba(249,115,22,.3);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 13px; color: #FDB97D; font-weight: 500;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow span { color: var(--orange); font-weight: 700; }
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 60px);
+      color: white; margin-bottom: 20px;
+      letter-spacing: -0.02em; line-height: 1.08;
+    }
+    .hero h1 em { font-style: normal; color: var(--orange); }
+    .hero p {
+      font-size: 18px; color: #A8A29E;
+      line-height: 1.7; margin-bottom: 36px; max-width: 480px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-hero-primary {
+      padding: 14px 28px; font-size: 16px; font-weight: 600;
+      background: var(--orange); color: white;
+      border: none; border-radius: 10px; cursor: pointer;
+      transition: background .15s, transform .1s;
+    }
+    .btn-hero-primary:hover { background: var(--orange-d); }
+    .btn-hero-ghost {
+      padding: 14px 24px; font-size: 16px; font-weight: 500;
+      background: transparent; color: #D6D3D1;
+      border: 1px solid #44403C; border-radius: 10px; cursor: pointer;
+      transition: border-color .15s, color .15s;
+    }
+    .btn-hero-ghost:hover { border-color: #78716C; color: white; }
+    .hero-stat-row {
+      display: flex; gap: 32px; margin-top: 48px;
+      padding-top: 32px; border-top: 1px solid #292524;
+    }
+    .hero-stat strong {
+      display: block; font-size: 26px; font-weight: 700;
+      color: white; font-family: var(--ff-head);
+    }
+    .hero-stat span { font-size: 13px; color: #78716C; }
+    /* App mockup in hero */
+    .hero-app {
+      align-self: flex-end;
+      background: #292524; border-radius: 16px 16px 0 0;
+      border: 1px solid #3C3530; border-bottom: none;
+      overflow: hidden;
+      box-shadow: 0 -8px 40px rgba(0,0,0,.4);
+    }
+    .app-topbar {
+      background: #1C1917; padding: 10px 16px;
+      display: flex; align-items: center; gap: 8px;
+      border-bottom: 1px solid #3C3530;
+    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .d-r { background: #EF4444; } .d-y { background: #EAB308; } .d-g { background: #22C55E; }
+    .app-topbar-title { flex: 1; text-align: center; font-size: 12px; color: #78716C; font-weight: 500; }
+    .app-screen { padding: 20px; }
+    .app-page-title { font-size: 18px; font-weight: 700; color: #E7E5E4; margin-bottom: 14px; }
+    .app-savings-banner {
+      background: rgba(13,148,136,.15); border: 1px solid rgba(13,148,136,.3);
+      border-radius: 10px; padding: 12px 14px; margin-bottom: 14px;
+    }
+    .app-savings-banner strong { font-size: 13px; font-weight: 600; color: #5EEAD4; display: block; }
+    .app-savings-banner span { font-size: 12px; color: #78716C; }
+    .app-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .app-card {
+      background: #1C1917; border: 1px solid #3C3530;
+      border-radius: 10px; overflow: hidden;
+    }
+    .app-card-img {
+      height: 70px; display: flex; align-items: center;
+      justify-content: center; font-size: 2rem;
+    }
+    .app-card-body { padding: 10px 12px; }
+    .app-card-title { font-size: 12px; font-weight: 600; color: #E7E5E4; margin-bottom: 5px; }
+    .app-badge {
+      display: inline-block; font-size: 10px; padding: 1px 7px;
+      border-radius: 100px; font-weight: 500;
+    }
+    .badge-orange { background: rgba(249,115,22,.15); color: #FB923C; }
+    .badge-teal   { background: rgba(13,148,136,.15);  color: #2DD4BF; }
+    .badge-amber  { background: rgba(180,83,9,.2);     color: #FCD34D; }
+
+    /* ── HOME — Value Props ──────────────────────────────── */
+    .props-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    }
+    .prop-card {
+      padding: 32px; border-radius: 16px;
+      border: 1px solid var(--border); background: var(--warm-bg);
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .prop-card:hover { border-color: var(--orange); box-shadow: 0 4px 24px rgba(249,115,22,.08); }
+    .prop-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: var(--orange-l); display: flex; align-items: center;
+      justify-content: center; font-size: 22px; margin-bottom: 20px;
+    }
+    .prop-icon.teal { background: var(--teal-l); }
+    .prop-icon.amber { background: var(--amber-l); }
+    .prop-card h3 { font-family: var(--ff-head); font-size: 20px; margin-bottom: 10px; }
+    .prop-card p { font-size: 15px; color: var(--mid); line-height: 1.65; }
+
+    /* ── HOME — How It Works ─────────────────────────────── */
+    .how-section { background: var(--charcoal); color: white; }
+    .how-section .section-eyebrow { color: #FB923C; }
+    .how-section .section-title { color: white; }
+    .how-section .section-sub { color: #A8A29E; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .step {
+      background: #292524; padding: 36px 28px;
+      position: relative;
+    }
+    .step:first-child { border-radius: 16px 0 0 16px; }
+    .step:last-child  { border-radius: 0 16px 16px 0; }
+    .step-num {
+      font-family: var(--ff-head); font-size: 56px; font-weight: 900;
+      color: rgba(249,115,22,.15); line-height: 1;
+      margin-bottom: 12px;
+    }
+    .step h3 { font-family: var(--ff-head); font-size: 18px; color: white; margin-bottom: 10px; }
+    .step p { font-size: 14px; color: #78716C; line-height: 1.65; }
+    .step-arrow {
+      position: absolute; right: -18px; top: 50%;
+      transform: translateY(-50%);
+      color: rgba(249,115,22,.4); font-size: 24px; z-index: 1;
+    }
+    .step:last-child .step-arrow { display: none; }
+
+    /* ── HOME — Social Proof / Testimonials ──────────────── */
+    .testimonials { background: var(--orange-l); }
+    .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .test-card {
+      background: white; border-radius: 16px;
+      padding: 28px; border: 1px solid rgba(249,115,22,.15);
+    }
+    .test-stars { color: var(--orange); font-size: 14px; margin-bottom: 14px; }
+    .test-card p { font-size: 15px; line-height: 1.7; color: var(--charcoal); margin-bottom: 20px; }
+    .test-author { display: flex; align-items: center; gap: 12px; }
+    .test-avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--orange); display: flex; align-items: center;
+      justify-content: center; font-weight: 700; color: white; font-size: 14px;
+    }
+    .test-name { font-weight: 600; font-size: 14px; }
+    .test-role { font-size: 12px; color: var(--muted); }
+
+    /* ── HOME — CTA Band ─────────────────────────────────── */
+    .cta-band {
+      background: var(--orange); color: white;
+      padding: 72px 0; text-align: center;
+    }
+    .cta-band h2 { font-size: clamp(28px, 4vw, 42px); color: white; margin-bottom: 14px; }
+    .cta-band p { font-size: 17px; color: rgba(255,255,255,.8); margin-bottom: 32px; }
+    .btn-cta-white {
+      padding: 14px 32px; font-size: 16px; font-weight: 700;
+      background: white; color: var(--orange); border: none;
+      border-radius: 10px; cursor: pointer;
+      transition: transform .1s, box-shadow .15s;
+      box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    }
+    .btn-cta-white:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(0,0,0,.2); }
+
+    /* ── FEATURES PAGE ───────────────────────────────────── */
+    .features-hero {
+      background: var(--warm-bg);
+      padding: 72px 0 56px;
+      border-bottom: 1px solid var(--border);
+    }
+    .feat-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
+    }
+    .feat-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; gap: 80px; padding: 80px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .feat-row:last-child { border-bottom: none; }
+    .feat-row.flip { direction: rtl; }
+    .feat-row.flip > * { direction: ltr; }
+    .feat-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 12px;
+    }
+    .feat-row h2 { font-size: 32px; margin-bottom: 16px; }
+    .feat-row p { font-size: 16px; color: var(--mid); line-height: 1.75; margin-bottom: 20px; }
+    .feat-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .feat-bullets li {
+      display: flex; gap: 10px; font-size: 15px; color: var(--mid);
+    }
+    .feat-bullets li::before {
+      content: '✓'; color: var(--teal); font-weight: 700;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .feat-visual {
+      background: var(--warm-bg); border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px;
+      min-height: 280px; display: flex; align-items: center; justify-content: center;
+    }
+    .feat-visual-inner { width: 100%; }
+    /* Mini mockup elements */
+    .mini-card {
+      background: white; border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px; margin-bottom: 10px;
+    }
+    .mini-card:last-child { margin-bottom: 0; }
+    .mini-card-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .mini-icon { font-size: 22px; }
+    .mini-title { font-weight: 600; font-size: 14px; }
+    .mini-sub { font-size: 12px; color: var(--muted); }
+    .mini-bar { height: 6px; border-radius: 3px; background: var(--border); overflow: hidden; margin-top: 8px; }
+    .mini-bar-fill { height: 100%; border-radius: 3px; background: var(--orange); }
+    .overlap-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--teal-l); color: var(--teal);
+      border-radius: 100px; padding: 4px 12px;
+      font-size: 12px; font-weight: 600;
+    }
+
+    /* ── PRICING PAGE ────────────────────────────────────── */
+    .pricing-hero { background: var(--warm-bg); padding: 72px 0 0; }
+    .pricing-toggle { display: flex; align-items: center; gap: 12px; margin: 24px 0 0; font-size: 14px; }
+    .toggle-track {
+      position: relative; width: 44px; height: 24px;
+      background: var(--border); border-radius: 12px; cursor: pointer;
+      transition: background .2s;
+    }
+    .toggle-track.on { background: var(--orange); }
+    .toggle-knob {
+      position: absolute; top: 3px; left: 3px; width: 18px; height: 18px;
+      background: white; border-radius: 50%; transition: transform .2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    }
+    .toggle-track.on .toggle-knob { transform: translateX(20px); }
+    .save-pill {
+      background: var(--orange); color: white;
+      font-size: 11px; font-weight: 700; padding: 2px 8px;
+      border-radius: 100px;
+    }
+    .pricing-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      max-width: 860px; margin: 56px auto 0; padding-bottom: 96px;
+    }
+    .plan-card {
+      border-radius: 20px; padding: 40px; border: 1px solid var(--border);
+      background: white;
+    }
+    .plan-card.featured {
+      border-color: var(--orange); background: var(--charcoal);
+      box-shadow: 0 8px 40px rgba(249,115,22,.2);
+      position: relative;
+    }
+    .plan-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--orange); color: white;
+      font-size: 11px; font-weight: 700; letter-spacing: .06em;
+      padding: 4px 14px; border-radius: 100px; text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .plan-name { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .plan-card.featured .plan-name { color: #78716C; }
+    .plan-price {
+      font-family: var(--ff-head); font-size: 48px; font-weight: 900;
+      line-height: 1; margin-bottom: 4px;
+    }
+    .plan-card.featured .plan-price { color: white; }
+    .plan-per { font-size: 14px; color: var(--muted); margin-bottom: 6px; }
+    .plan-annual { font-size: 13px; color: var(--teal); font-weight: 500; margin-bottom: 28px; min-height: 20px; }
+    .plan-card.featured .plan-annual { color: #2DD4BF; }
+    .plan-divider { height: 1px; background: var(--border); margin-bottom: 28px; }
+    .plan-card.featured .plan-divider { background: #3C3530; }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .plan-features li { display: flex; gap: 10px; font-size: 14px; color: var(--mid); }
+    .plan-card.featured .plan-features li { color: #A8A29E; }
+    .plan-features li.included::before { content: '✓'; color: var(--teal); font-weight: 700; }
+    .plan-features li.not-included { opacity: .4; }
+    .plan-features li.not-included::before { content: '–'; color: var(--muted); }
+    .plan-features li strong { color: var(--charcoal); font-weight: 600; }
+    .plan-card.featured .plan-features li strong { color: white; }
+    .btn-plan {
+      width: 100%; padding: 13px; font-size: 15px; font-weight: 600;
+      border-radius: 10px; cursor: pointer; transition: all .15s;
+      text-align: center; display: block;
+    }
+    .btn-plan-ghost {
+      background: transparent; color: var(--charcoal);
+      border: 1.5px solid var(--border);
+    }
+    .btn-plan-ghost:hover { border-color: var(--charcoal); }
+    .btn-plan-orange {
+      background: var(--orange); color: white; border: none;
+    }
+    .btn-plan-orange:hover { background: var(--orange-d); }
+    .pricing-faq { background: var(--warm-bg); padding: 80px 0; }
+
+    /* ── COMPARISON PAGE ─────────────────────────────────── */
+    .comp-hero { background: var(--warm-bg); padding: 72px 0 56px; border-bottom: 1px solid var(--border); }
+    .comp-table-wrap { overflow-x: auto; padding-bottom: 96px; }
+    .comp-table {
+      width: 100%; border-collapse: collapse;
+      margin-top: 48px;
+    }
+    .comp-table th, .comp-table td {
+      padding: 14px 20px; text-align: center;
+      border-bottom: 1px solid var(--border); font-size: 14px;
+    }
+    .comp-table th:first-child, .comp-table td:first-child { text-align: left; font-weight: 500; }
+    .comp-table thead th {
+      font-size: 13px; font-weight: 700; letter-spacing: .04em;
+      background: var(--warm-bg); padding-bottom: 16px;
+      border-bottom: 2px solid var(--border);
+    }
+    .comp-table thead th.us {
+      background: var(--charcoal); color: white; border-radius: 12px 12px 0 0;
+      border-bottom-color: var(--orange);
+    }
+    .comp-table thead th.us .comp-logo-name { color: var(--orange); }
+    .comp-table tbody tr:hover { background: var(--warm-bg); }
+    .comp-table tbody tr td.us { background: rgba(249,115,22,.04); border-left: 1px solid rgba(249,115,22,.2); border-right: 1px solid rgba(249,115,22,.2); }
+    .comp-table tbody tr:last-child td.us { border-bottom: 1px solid rgba(249,115,22,.2); border-radius: 0 0 12px 12px; }
+    .chk { color: var(--teal); font-size: 16px; font-weight: 700; }
+    .cross { color: var(--muted); font-size: 16px; }
+    .partial { color: var(--amber); font-size: 13px; font-weight: 500; }
+    .comp-category {
+      background: var(--warm-bg); font-weight: 700; font-size: 12px;
+      letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+      padding: 10px 20px !important;
+    }
+    .comp-logo { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .comp-logo-icon { font-size: 24px; }
+    .comp-logo-name { font-weight: 700; font-size: 13px; }
+    .comp-logo-price { font-size: 11px; color: var(--muted); }
+
+    /* ── ABOUT PAGE ──────────────────────────────────────── */
+    .about-hero { padding: 80px 0 56px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: start; }
+    .about-text h1 { font-size: clamp(32px, 4vw, 50px); margin-bottom: 24px; }
+    .about-text h1 em { font-style: italic; color: var(--orange); }
+    .about-body { font-size: 17px; color: var(--mid); line-height: 1.8; }
+    .about-body p { margin-bottom: 20px; }
+    .about-sidebar {}
+    .value-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
+    .value-card {
+      padding: 24px; border-radius: 14px;
+      border-left: 3px solid var(--orange); background: var(--warm-bg);
+    }
+    .value-card h4 { font-family: var(--ff-head); font-size: 17px; margin-bottom: 6px; }
+    .value-card p { font-size: 14px; color: var(--mid); line-height: 1.65; }
+    .about-mission {
+      margin-top: 64px; background: var(--charcoal);
+      border-radius: 20px; padding: 56px; text-align: center;
+    }
+    .about-mission p {
+      font-family: var(--ff-head); font-size: clamp(20px, 3vw, 28px);
+      color: white; line-height: 1.5; max-width: 600px; margin: 0 auto 8px;
+    }
+    .about-mission span { color: var(--orange); }
+
+    /* ── FAQ PAGE ────────────────────────────────────────── */
+    .faq-hero { background: var(--warm-bg); padding: 72px 0 56px; border-bottom: 1px solid var(--border); }
+    .faq-body { padding: 72px 0 96px; }
+    .faq-layout { display: grid; grid-template-columns: 220px 1fr; gap: 64px; align-items: start; }
+    .faq-cats { position: sticky; top: 80px; list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .faq-cat-item {
+      padding: 8px 14px; border-radius: 8px;
+      font-size: 14px; font-weight: 500; cursor: pointer;
+      color: var(--mid); transition: all .15s;
+    }
+    .faq-cat-item:hover { color: var(--charcoal); background: var(--warm-bg); }
+    .faq-cat-item.active { background: var(--orange-l); color: var(--orange); }
+    .faq-section { margin-bottom: 56px; }
+    .faq-section h3 {
+      font-family: var(--ff-head); font-size: 22px;
+      margin-bottom: 24px; padding-bottom: 14px;
+      border-bottom: 2px solid var(--border);
+    }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none;
+      padding: 18px 0; font-size: 15px; font-weight: 600;
+      color: var(--charcoal); cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px; font-family: var(--ff-body);
+    }
+    .faq-q:hover { color: var(--orange); }
+    .faq-chevron { font-size: 18px; color: var(--muted); transition: transform .2s; flex-shrink: 0; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--orange); }
+    .faq-a {
+      display: none; padding: 0 0 18px;
+      font-size: 15px; color: var(--mid); line-height: 1.75;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      background: var(--charcoal); color: #78716C;
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+      margin-bottom: 56px;
+    }
+    .footer-brand .footer-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 18px; font-weight: 600; color: white;
+      margin-bottom: 16px;
+    }
+    .footer-brand .footer-logo span { color: var(--orange); }
+    .footer-brand p { font-size: 14px; line-height: 1.65; max-width: 260px; }
+    .footer-col h5 {
+      font-size: 12px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: #A8A29E; margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a {
+      font-size: 14px; color: #78716C; cursor: pointer;
+      transition: color .15s;
+    }
+    .footer-col ul li a:hover { color: white; }
+    .footer-bottom {
+      padding-top: 28px; border-top: 1px solid #292524;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 13px;
+    }
+    .footer-bottom a { color: #78716C; cursor: pointer; }
+    .footer-bottom a:hover { color: white; }
+
+    /* ── Mobile Nav Drawer ───────────────────────────────── */
+    .nav-hamburger {
+      display: none; background: none; border: none;
+      cursor: pointer; padding: 6px; border-radius: 8px;
+      color: var(--charcoal); margin-left: auto;
+      transition: background .15s;
+    }
+    .nav-hamburger:hover { background: var(--warm-bg); }
+    .nav-hamburger svg { display: block; }
+
+    .mobile-nav-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,.5); z-index: 200;
+    }
+    .mobile-nav-overlay.open { display: block; }
+
+    .mobile-nav-drawer {
+      position: fixed; top: 0; right: -320px; bottom: 0;
+      width: 300px; background: white; z-index: 201;
+      display: flex; flex-direction: column;
+      box-shadow: -8px 0 40px rgba(0,0,0,.15);
+      transition: right .28s cubic-bezier(.4,0,.2,1);
+    }
+    .mobile-nav-drawer.open { right: 0; }
+
+    .mob-nav-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; border-bottom: 1px solid var(--border);
+    }
+    .mob-nav-close {
+      background: none; border: none; cursor: pointer;
+      padding: 6px; color: var(--mid); border-radius: 6px;
+      font-size: 20px; line-height: 1;
+    }
+    .mob-nav-links {
+      flex: 1; overflow-y: auto;
+      display: flex; flex-direction: column;
+      padding: 16px 12px; gap: 2px; list-style: none;
+    }
+    .mob-nav-links li a {
+      display: block; padding: 12px 16px;
+      font-size: 16px; font-weight: 500; color: var(--charcoal);
+      border-radius: 10px; cursor: pointer;
+      transition: background .15s, color .15s;
+    }
+    .mob-nav-links li a:hover { background: var(--warm-bg); }
+    .mob-nav-links li a.active-link { color: var(--orange); background: var(--orange-l); }
+    .mob-nav-footer {
+      padding: 20px; border-top: 1px solid var(--border);
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .mob-nav-footer .btn-login { width: 100%; text-align: center; padding: 11px; }
+    .mob-nav-footer .btn-cta  { width: 100%; text-align: center; padding: 11px; font-size: 15px; }
+
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 900px) {
+      /* Nav */
+      .nav-links { display: none; }
+      .nav-actions .btn-login { display: none; }
+      .nav-actions .btn-cta { display: none; }
+      .nav-hamburger { display: block; }
+
+      /* Hero */
+      .hero { padding: 56px 0 0; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; padding: 0 20px; }
+      .hero-app { display: none; }
+      .hero h1 { font-size: 36px; }
+      .hero p { font-size: 16px; }
+      .hero-stat-row { gap: 20px; flex-wrap: wrap; }
+      .hero-stat strong { font-size: 22px; }
+
+      /* Sections */
+      section { padding: 56px 0; }
+      .container { padding: 0 16px; }
+      .section-title { font-size: 26px; }
+      .section-sub { font-size: 16px; }
+      .section-header { margin-bottom: 36px; }
+
+      /* Cards */
+      .props-grid { grid-template-columns: 1fr; gap: 16px; }
+      .prop-card { padding: 24px; }
+
+      /* Steps */
+      .steps { grid-template-columns: 1fr; gap: 2px; }
+      .steps .step { border-radius: 0; }
+      .steps .step:first-child { border-radius: 16px 16px 0 0; }
+      .steps .step:last-child  { border-radius: 0 0 16px 16px; }
+      .step-arrow { display: none; }
+
+      /* Testimonials */
+      .test-grid { grid-template-columns: 1fr; gap: 16px; }
+
+      /* Pricing */
+      .pricing-grid { grid-template-columns: 1fr; max-width: 100%; margin-top: 36px; padding-bottom: 56px; }
+
+      /* Features */
+      .feat-row { grid-template-columns: 1fr; direction: ltr; gap: 32px; padding: 48px 0; }
+      .feat-row.flip { direction: ltr; }
+      .feat-row h2 { font-size: 26px; }
+      .feat-visual { min-height: auto; padding: 24px; }
+
+      /* About */
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-mission { padding: 36px 24px; border-radius: 16px; }
+
+      /* Comparison */
+      .comp-table th, .comp-table td { padding: 10px 12px; font-size: 12px; }
+      .comp-table th:first-child, .comp-table td:first-child { font-size: 12px; }
+
+      /* FAQ */
+      .faq-layout { grid-template-columns: 1fr; }
+      .faq-cats { display: none; }
+
+      /* Footer */
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+      /* AI spotlight two-col */
+      .ai-spotlight-grid { grid-template-columns: 1fr !important; }
+
+      /* CTA band */
+      .cta-band { padding: 48px 0; }
+      .cta-band h2 { font-size: 26px; }
+    }
+
+    @media (max-width: 540px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .btn-hero-primary, .btn-hero-ghost { width: 100%; text-align: center; }
+      .hero-stat-row { flex-direction: row; gap: 16px; }
+      .plan-card { padding: 28px 24px; }
+      .plan-price { font-size: 40px; }
+      .comp-table th:nth-child(3),
+      .comp-table th:nth-child(4),
+      .comp-table td:nth-child(3),
+      .comp-table td:nth-child(4) { display: none; }
+    }
+  </style>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg width="30" height="30" viewBox="0 0 56 56">
+        <rect width="56" height="56" rx="12" fill="#F97316"/>
+        <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="26" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="35" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="17" y="24" width="23" height="4" fill="white" rx="2"/>
+        <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
+      </svg>
+      Recipe<span class="hq">HQ</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/features/">Features</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/comparison/">Compare</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/faq/" class="active-link">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="https://app.myrecipehq.com" class="btn-login">Log In</a>
+      <a href="https://app.myrecipehq.com" class="btn-cta">Get Started Free</a>
+      <button class="nav-hamburger" onclick="openMobileNav()" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav Drawer -->
+<div class="mobile-nav-overlay" id="mob-overlay" onclick="closeMobileNav()"></div>
+<div class="mobile-nav-drawer" id="mob-drawer">
+  <div class="mob-nav-header">
+    <a href="/" class="nav-logo">
+      <svg width="26" height="26" viewBox="0 0 56 56">
+        <rect width="56" height="56" rx="12" fill="#F97316"/>
+        <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="26" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="35" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="17" y="24" width="23" height="4" fill="white" rx="2"/>
+        <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
+      </svg>
+      Recipe<span class="hq">HQ</span>
+    </a>
+    <button class="mob-nav-close" onclick="closeMobileNav()">&#10005;</button>
+  </div>
+  <ul class="mob-nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/features/">Features</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
+    <li><a href="/comparison/">Compare</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/faq/" class="active-link">FAQ</a></li>
+  </ul>
+  <div class="mob-nav-footer">
+    <a href="https://app.myrecipehq.com" class="btn-login">Log In</a>
+    <a href="https://app.myrecipehq.com" class="btn-cta">Get Started Free</a>
+  </div>
+</div>
+
+
+  <div class="faq-hero">
+    <div class="container">
+      <div class="section-eyebrow">FAQ</div>
+      <h1 class="section-title">Questions? We've got answers.</h1>
+      <p class="section-sub">Can't find what you're looking for? Email us at <strong>hello@myrecipehq.com</strong></p>
+    </div>
+  </div>
+
+  <div class="faq-body">
+    <div class="container">
+      <div class="faq-layout">
+        <ul class="faq-cats">
+          <li class="faq-cat-item active" onclick="scrollToFaqSection('faq-general', this)">General</li>
+          <li class="faq-cat-item" onclick="scrollToFaqSection('faq-import', this)">Importing Recipes</li>
+          <li class="faq-cat-item" onclick="scrollToFaqSection('faq-planning', this)">Meal Planning</li>
+          <li class="faq-cat-item" onclick="scrollToFaqSection('faq-pantry', this)">Pantry Tracking</li>
+          <li class="faq-cat-item" onclick="scrollToFaqSection('faq-pricing', this)">Pricing & Account</li>
+          <li class="faq-cat-item" onclick="scrollToFaqSection('faq-privacy', this)">Privacy & Data</li>
+        </ul>
+
+        <div>
+          <!-- General -->
+          <div class="faq-section" id="faq-general">
+            <h3>General</h3>
+            <div class="faq-item open" onclick="toggleFaq(this)">
+              <button class="faq-q">What is RecipeHQ? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">RecipeHQ is a recipe management and meal planning app focused on reducing grocery waste. You import your recipes, plan your meals for the week, track your pantry, and see which meals share ingredients — so you buy less and cook more.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">Who is it for? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Home cooks who buy fresh groceries regularly — especially people who cook for 1–4 people, shop weekly, and find themselves throwing out ingredients that didn't get used. If you've ever watched good food go bad, RecipeHQ is for you.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">Is there a mobile app? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">RecipeHQ is a mobile-friendly web app, so it works great on iPhone and Android from your browser. A dedicated native app is on the roadmap — we'll announce it when it's ready.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">How does ingredient overlap work? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">When you add meals to your weekly planner, RecipeHQ analyzes the ingredient lists and shows you which ingredients appear in multiple planned meals. The more overlap, the fewer unique items you need to buy — which means less waste and a smaller grocery bill.</div>
+            </div>
+          </div>
+
+          <!-- Import -->
+          <div class="faq-section" id="faq-import">
+            <h3>Importing Recipes</h3>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">How does screenshot import work? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Take a screenshot of any recipe — from a website, a book, a handwritten card, anything. Paste it into RecipeHQ and our AI reads the image and extracts the title, ingredient list, and instructions automatically. It usually takes about 3–5 seconds.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">Which websites work with URL import? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Most major recipe websites work well — NYT Cooking, Serious Eats, AllRecipes, Food52, Bon Appétit, and hundreds more. If a site blocks content scrapers or uses heavy JavaScript rendering, the screenshot import is a reliable fallback.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">How do I import from Google Keep? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Export your Google Keep notes via Google Takeout (free, takes a few minutes). Then select the Keep export folder in RecipeHQ. We'll scan your notes, identify which ones contain recipes, and let you preview before importing. This is a Pro feature.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">What if the AI extracts the recipe incorrectly? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">It happens occasionally, especially with handwritten recipes or unusual formatting. Every imported recipe goes through an edit screen before saving — you can correct any mistakes before they're added to your library.</div>
+            </div>
+          </div>
+
+          <!-- Planning -->
+          <div class="faq-section" id="faq-planning">
+            <h3>Meal Planning</h3>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">Can I plan further than one week out? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">The planner is week-by-week — you can navigate forward as many weeks as you want. We've found most people plan 1–2 weeks ahead, so the weekly view keeps things practical rather than overwhelming.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">What if I eat out and miss a planned meal? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Life happens — that's exactly why we built rescheduling as a first-class feature. Tap any planned meal and move it to another slot. The ingredient overlap scores update automatically so you can see the impact of rearranging.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">How do AI meal suggestions work? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">There are two distinct suggestion modes. <strong>Cook from your fridge</strong> looks at what's currently in your pantry and tells you which of your own recipes you can make right now — prioritizing ingredients that are about to expire so nothing goes to waste. <strong>Plan smarter</strong> looks at meals you've already added to your week and recommends other recipes from your library that share the most ingredients with your current plan, maximizing overlap and minimizing what you need to buy. Both modes only draw from your own recipe library — no random recipes from the internet.</div>
+            </div>
+          </div>
+
+          <!-- Pantry -->
+          <div class="faq-section" id="faq-pantry">
+            <h3>Pantry Tracking</h3>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">Do I have to log every ingredient I buy? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">No — the pantry works best for perishables and fresh items that have a short shelf life (meat, fish, produce, dairy). You don't need to log shelf-stable staples like olive oil or pasta unless you want to track them. The goal is awareness, not bookkeeping.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">How far in advance do I get expiration alerts? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Items are flagged as "Expiring Soon" when they're within 3 days of their expiration date, and "Expired" on or after that date. We show an alert banner at the top of the pantry so you can't miss it.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">What's the pantry limit on the Free plan? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Free accounts can track up to 20 pantry items at once. Pro accounts have unlimited pantry tracking. For most light pantry users, 20 is plenty — it's enough for all your fresh produce, proteins, and dairy.</div>
+            </div>
+          </div>
+
+          <!-- Pricing -->
+          <div class="faq-section" id="faq-pricing">
+            <h3>Pricing & Account</h3>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">What's included in the free plan? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">The free plan lets you add up to 10 new recipes per month (the allowance resets monthly), plus screenshot and URL import, pantry tracking, and ingredient overlap counts. The meal planner, smart suggestions, and PDF/Keep import require Basic ($5/mo) or higher.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">How does the 14-day free trial work? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Both Basic and Pro come with a 14-day free trial. No credit card required to start. At the end of the trial, choose to subscribe or you'll automatically drop back to Free — nothing gets deleted.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">Is there a family or household plan? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Not yet — RecipeHQ is currently single-account. Shared household accounts and collaborative planning are on the roadmap. Sign up for updates if that's important to you.</div>
+            </div>
+          </div>
+
+          <!-- Privacy -->
+          <div class="faq-section" id="faq-privacy">
+            <h3>Privacy & Data</h3>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">Do you sell my data? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Never. We don't sell, rent, or share your personal data with third parties for advertising or marketing purposes. We make money from subscriptions, period.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">Are my recipes used to train AI models? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">No. Your recipes, meal plans, and pantry data are your own. We use a third-party AI API (Anthropic's Claude) for extraction, but your data is not retained or used for model training per their API data policies.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">Can I export all my data? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">Yes. Email us at hello@myrecipehq.com and we'll send you a full export of your recipes, ingredients, and meal plans in JSON and CSV format. No questions asked.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+              <button class="faq-q">How do I delete my account? <span class="faq-chevron">⌄</span></button>
+              <div class="faq-a">You can delete your account from your account settings at any time. All your data is permanently removed within 30 days. No dark patterns, no guilt-trip screens.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="26" height="26" viewBox="0 0 56 56">
+            <rect width="56" height="56" rx="12" fill="#F97316"/>
+            <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
+            <rect x="26" y="10" width="5" height="16" rx="2.5" fill="white"/>
+            <rect x="35" y="10" width="5" height="16" rx="2.5" fill="white"/>
+            <rect x="17" y="24" width="23" height="4" fill="white" rx="2"/>
+            <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
+          </svg>
+          Recipe<span>HQ</span>
+        </div>
+        <p>Cook smart, waste less, save money. Built for home cooks in Pittsburgh, PA.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/comparison/">Compare</a></li>
+          <li><a>Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a>Blog</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a>Privacy Policy</a></li>
+          <li><a>Terms of Service</a></li>
+          <li><a>Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 RecipeHQ &middot; myrecipehq.com</span>
+      <span>Made with &#127859; in Pittsburgh</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* -- Mobile Nav -- */
+  function openMobileNav() {
+    document.getElementById('mob-overlay').classList.add('open');
+    document.getElementById('mob-drawer').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileNav() {
+    document.getElementById('mob-overlay').classList.remove('open');
+    document.getElementById('mob-drawer').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileNav(); });
+</script>
+<script>
+  /* -- FAQ Accordion -- */
+  function toggleFaq(item) {
+    item.classList.toggle('open');
+  }
+
+  /* -- FAQ Category Scroll -- */
+  function scrollToFaqSection(id, el) {
+    document.querySelectorAll('.faq-cat-item').forEach(i => i.classList.remove('active'));
+    el.classList.add('active');
+    const target = document.getElementById(id);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+</body>
+</html>

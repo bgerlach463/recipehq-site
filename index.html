@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecipeHQ — Cook Smart. Waste Less. Save Money.</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -38,8 +38,6 @@
     h1,h2,h3,h4 { font-family: var(--ff-head); line-height: 1.15; }
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; }
-    .page { display: none; }
-    .page.active { display: block; }
 
     /* ── Nav ─────────────────────────────────────────────── */
     nav {
@@ -697,15 +695,11 @@
       .comp-table td:nth-child(4) { display: none; }
     }
   </style>
-</head>
 <body>
 
-<!-- ══════════════════════════════════════════════════════════
-     GLOBAL NAV
-══════════════════════════════════════════════════════════ -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo" onclick="showPage('home')">
+    <a href="/" class="nav-logo">
       <svg width="30" height="30" viewBox="0 0 56 56">
         <rect width="56" height="56" rx="12" fill="#F97316"/>
         <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
@@ -715,18 +709,18 @@
         <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
       </svg>
       Recipe<span class="hq">HQ</span>
-    </div>
+    </a>
     <ul class="nav-links">
-      <li><a onclick="showPage('home')"       id="nl-home">Home</a></li>
-      <li><a onclick="showPage('features')"   id="nl-features">Features</a></li>
-      <li><a onclick="showPage('pricing')"    id="nl-pricing">Pricing</a></li>
-      <li><a onclick="showPage('comparison')" id="nl-comparison">Compare</a></li>
-      <li><a onclick="showPage('about')"      id="nl-about">About</a></li>
-      <li><a onclick="showPage('faq')"        id="nl-faq">FAQ</a></li>
+      <li><a href="/" class="active-link">Home</a></li>
+      <li><a href="/features/">Features</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/comparison/">Compare</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/faq/">FAQ</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="btn-login">Log In</button>
-      <button class="btn-cta" onclick="showPage('pricing')">Get Started Free</button>
+      <a href="https://app.myrecipehq.com" class="btn-login">Log In</a>
+      <a href="https://app.myrecipehq.com" class="btn-cta">Get Started Free</a>
       <button class="nav-hamburger" onclick="openMobileNav()" aria-label="Open menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6"  x2="21" y2="6"/>
@@ -742,7 +736,7 @@
 <div class="mobile-nav-overlay" id="mob-overlay" onclick="closeMobileNav()"></div>
 <div class="mobile-nav-drawer" id="mob-drawer">
   <div class="mob-nav-header">
-    <div class="nav-logo" onclick="showPage('home');closeMobileNav()">
+    <a href="/" class="nav-logo">
       <svg width="26" height="26" viewBox="0 0 56 56">
         <rect width="56" height="56" rx="12" fill="#F97316"/>
         <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
@@ -752,29 +746,24 @@
         <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
       </svg>
       Recipe<span class="hq">HQ</span>
-    </div>
-    <button class="mob-nav-close" onclick="closeMobileNav()">✕</button>
+    </a>
+    <button class="mob-nav-close" onclick="closeMobileNav()">&#10005;</button>
   </div>
   <ul class="mob-nav-links">
-    <li><a onclick="showPage('home');closeMobileNav()"       id="mnl-home">Home</a></li>
-    <li><a onclick="showPage('features');closeMobileNav()"   id="mnl-features">Features</a></li>
-    <li><a onclick="showPage('pricing');closeMobileNav()"    id="mnl-pricing">Pricing</a></li>
-    <li><a onclick="showPage('comparison');closeMobileNav()" id="mnl-comparison">Compare</a></li>
-    <li><a onclick="showPage('about');closeMobileNav()"      id="mnl-about">About</a></li>
-    <li><a onclick="showPage('faq');closeMobileNav()"        id="mnl-faq">FAQ</a></li>
+    <li><a href="/" class="active-link">Home</a></li>
+    <li><a href="/features/">Features</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
+    <li><a href="/comparison/">Compare</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/faq/">FAQ</a></li>
   </ul>
   <div class="mob-nav-footer">
-    <button class="btn-login">Log In</button>
-    <button class="btn-cta" onclick="showPage('pricing');closeMobileNav()">Get Started Free</button>
+    <a href="https://app.myrecipehq.com" class="btn-login">Log In</a>
+    <a href="https://app.myrecipehq.com" class="btn-cta">Get Started Free</a>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════════
-     PAGE: HOME
-══════════════════════════════════════════════════════════ -->
-<div id="page-home" class="page active">
 
-  <!-- Hero -->
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-text">
@@ -782,8 +771,8 @@
         <h1>Cook smart.<br><em>Waste less.</em><br>Save money.</h1>
         <p>RecipeHQ organizes your recipes, plans your meals, and tracks your pantry — so you stop throwing groceries in the trash.</p>
         <div class="hero-actions">
-          <button class="btn-hero-primary" onclick="showPage('pricing')">Start for Free</button>
-          <button class="btn-hero-ghost" onclick="showPage('features')">See how it works →</button>
+          <a href="https://app.myrecipehq.com" class="btn-hero-primary">Start for Free</a>
+          <a href="/features/" class="btn-hero-ghost">See how it works &rarr;</a>
         </div>
         <div class="hero-stat-row">
           <div class="hero-stat"><strong>$38</strong><span>avg. monthly savings</span></div>
@@ -1047,745 +1036,11 @@
     <div class="container">
       <h2>Cook smart, waste less, save money.</h2>
       <p>Free to start. No credit card required. Upgrade when you're ready.</p>
-      <button class="btn-cta-white" onclick="showPage('pricing')">Create Your Free Account</button>
+      <a href="https://app.myrecipehq.com" class="btn-cta-white">Create Your Free Account</a>
     </div>
   </div>
 
-</div><!-- /page-home -->
 
-<!-- ══════════════════════════════════════════════════════════
-     PAGE: FEATURES
-══════════════════════════════════════════════════════════ -->
-<div id="page-features" class="page">
-  <div class="features-hero">
-    <div class="container">
-      <div class="section-eyebrow">Features</div>
-      <h1 class="section-title" style="max-width:600px">Everything built around how you actually cook</h1>
-      <p class="section-sub">No bloat. No social feeds. Just the tools that make cooking at home smarter and cheaper.</p>
-    </div>
-  </div>
-
-  <div class="container">
-    <!-- Feature 1: Import -->
-    <div class="feat-row">
-      <div>
-        <div class="feat-label">Recipe Import</div>
-        <h2>Add recipes any way you want</h2>
-        <p>RecipeHQ accepts recipes however you find them — no reformatting required. AI handles the extraction.</p>
-        <ul class="feat-bullets">
-          <li>Paste a screenshot and watch ingredients auto-populate</li>
-          <li>Drop in any URL — we read the page for you</li>
-          <li>Upload a PDF cookbook and extract multiple recipes at once</li>
-          <li>Import your entire Google Keep recipe collection in minutes</li>
-        </ul>
-      </div>
-      <div class="feat-visual">
-        <div class="feat-visual-inner">
-          <div class="mini-card">
-            <div class="mini-card-top">
-              <div class="mini-icon">📷</div>
-              <div><div class="mini-title">Screenshot paste</div><div class="mini-sub">AI-extracted in ~3 seconds</div></div>
-            </div>
-            <div class="mini-bar"><div class="mini-bar-fill" style="width:100%"></div></div>
-          </div>
-          <div class="mini-card">
-            <div class="mini-card-top">
-              <div class="mini-icon">🔗</div>
-              <div><div class="mini-title">URL import</div><div class="mini-sub">Paste any recipe URL</div></div>
-            </div>
-            <div class="mini-bar"><div class="mini-bar-fill" style="width:90%"></div></div>
-          </div>
-          <div class="mini-card">
-            <div class="mini-card-top">
-              <div class="mini-icon">📄</div>
-              <div><div class="mini-title">PDF — 3 recipes found</div><div class="mini-sub">Batch imported</div></div>
-            </div>
-            <div class="mini-bar"><div class="mini-bar-fill" style="width:75%;background:var(--teal)"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Feature 2: Overlap -->
-    <div class="feat-row flip">
-      <div>
-        <div class="feat-label">Ingredient Overlap</div>
-        <h2>Plan meals that share ingredients</h2>
-        <p>The core of RecipeHQ. See at a glance which meals stretch a single grocery run further — and which combos reduce waste the most.</p>
-        <ul class="feat-bullets">
-          <li>Overlap count displayed on every meal plan combination</li>
-          <li>AI-powered suggestions based on what you already planned</li>
-          <li>Reschedule meals easily when plans change</li>
-          <li>Savings summary shows shared ingredients for the week</li>
-        </ul>
-      </div>
-      <div class="feat-visual">
-        <div class="feat-visual-inner">
-          <div style="margin-bottom:12px">
-            <div style="font-size:13px;font-weight:600;color:var(--mid);margin-bottom:10px">This week's overlap</div>
-            <div style="display:flex;flex-wrap:wrap;gap:8px">
-              <span class="overlap-badge">🧄 garlic ×4</span>
-              <span class="overlap-badge">🫒 olive oil ×3</span>
-              <span class="overlap-badge">🧅 onion ×3</span>
-              <span class="overlap-badge">🫚 ginger ×2</span>
-              <span class="overlap-badge">🍋 lemon ×2</span>
-            </div>
-          </div>
-          <div style="background:var(--teal-l);border-radius:12px;padding:16px;border:1px solid rgba(13,148,136,.2)">
-            <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:4px">✓ Suggested addition</div>
-            <div style="font-size:14px;font-weight:600">Vegetable Stir Fry</div>
-            <div style="font-size:12px;color:var(--mid);margin-top:4px">Shares garlic + ginger + soy sauce with Tikka Masala</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Feature 3: Pantry -->
-    <div class="feat-row">
-      <div>
-        <div class="feat-label">Pantry Tracking</div>
-        <h2>Know what's in your kitchen before you shop</h2>
-        <p>Log what you buy, track when it expires, and get alerts before good food goes bad.</p>
-        <ul class="feat-bullets">
-          <li>Fridge, freezer, and pantry sections</li>
-          <li>Expiration date alerts — days in advance, not the day of</li>
-          <li>Fresh / Expiring / Expired status at a glance</li>
-          <li>Suggest recipes that use what's about to expire</li>
-        </ul>
-      </div>
-      <div class="feat-visual">
-        <div class="feat-visual-inner">
-          <div style="display:flex;flex-direction:column;gap:8px;font-size:13px">
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:white;border:1px solid var(--border);border-radius:10px">
-              <span style="font-weight:600">Chicken breast</span>
-              <span style="background:#dcfce7;color:#166534;padding:2px 10px;border-radius:100px;font-weight:600;font-size:11px">Fresh</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#fffbeb;border:1px solid #fde68a;border-radius:10px">
-              <span style="font-weight:600">Spinach</span>
-              <span style="background:#fef9c3;color:#854d0e;padding:2px 10px;border-radius:100px;font-weight:600;font-size:11px">Expires today!</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#fef2f2;border:1px solid #fecaca;border-radius:10px">
-              <span style="font-weight:600">Milk</span>
-              <span style="background:#fee2e2;color:#991b1b;padding:2px 10px;border-radius:100px;font-weight:600;font-size:11px">Expired</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:white;border:1px solid var(--border);border-radius:10px">
-              <span style="font-weight:600">Arborio rice</span>
-              <span style="background:#dcfce7;color:#166534;padding:2px 10px;border-radius:100px;font-weight:600;font-size:11px">Fresh</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Feature 3: AI Suggestions -->
-    <div class="feat-row">
-      <div>
-        <div class="feat-label">AI Suggestions</div>
-        <h2>Two ways AI tells you exactly what to cook</h2>
-        <p>RecipeHQ's AI doesn't just store your recipes — it actively recommends what to cook based on two powerful signals: what you already have, and what you're already planning.</p>
-        <ul class="feat-bullets">
-          <li><strong style="color:var(--charcoal)">Cook from your fridge</strong> — tells you which recipes you can make right now using ingredients already in your pantry, prioritizing things that are about to expire</li>
-          <li><strong style="color:var(--charcoal)">Plan smarter</strong> — once you have a few meals scheduled, suggests additions from your library that share the most ingredients with your current week</li>
-          <li>Both modes only draw from your own recipe library — no algorithm pushing random results at you</li>
-          <li>Suggestions update live as your pantry and plan change throughout the week</li>
-        </ul>
-      </div>
-      <div class="feat-visual">
-        <div class="feat-visual-inner">
-          <div style="margin-bottom:14px;padding:14px 16px;background:var(--orange-l);border:1px solid rgba(249,115,22,.25);border-radius:12px">
-            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:8px">🧊 Cook from your fridge</div>
-            <div class="mini-card" style="margin-bottom:8px;border-color:rgba(249,115,22,.3)">
-              <div class="mini-card-top">
-                <div class="mini-icon">🍋</div>
-                <div><div class="mini-title">Lemon Garlic Chicken</div><div class="mini-sub" style="color:var(--orange)">6 of 7 ingredients on hand</div></div>
-              </div>
-            </div>
-            <div class="mini-card" style="margin-bottom:0">
-              <div class="mini-card-top">
-                <div class="mini-icon">🍛</div>
-                <div><div class="mini-title">Chicken Tikka Masala</div><div class="mini-sub">8 of 12 ingredients on hand</div></div>
-              </div>
-            </div>
-          </div>
-          <div style="padding:14px 16px;background:var(--teal-l);border:1px solid rgba(13,148,136,.25);border-radius:12px">
-            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--teal);margin-bottom:8px">📅 Based on your plan</div>
-            <div class="mini-card" style="margin-bottom:0;border-color:rgba(13,148,136,.3)">
-              <div class="mini-card-top">
-                <div class="mini-icon">🥢</div>
-                <div><div class="mini-title">Vegetable Stir Fry</div><div class="mini-sub" style="color:var(--teal)">Shares 4 ingredients with your week</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Feature 4: Meal Planning -->
-    <div class="feat-row flip" style="border-bottom:none">
-      <div>
-        <div class="feat-label">Meal Planning</div>
-        <h2>Your week on one screen</h2>
-        <p>A simple weekly calendar that actually works for how home cooks think. Plan dinner for the week, not the month.</p>
-        <ul class="feat-bullets">
-          <li>Breakfast, lunch, and dinner slots for every day</li>
-          <li>Add meals in two taps — search and select from your library</li>
-          <li>Reschedule meals when life happens (takeout happens, it's fine)</li>
-          <li>Navigate forward and back by week</li>
-        </ul>
-      </div>
-      <div class="feat-visual">
-        <div class="feat-visual-inner">
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:11px">
-            <div style="background:var(--warm-bg);border-radius:8px;padding:8px;border:1px solid var(--border)">
-              <div style="font-weight:700;margin-bottom:6px">Mon</div>
-              <div style="color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:4px;text-align:center;margin-bottom:4px">+ add</div>
-              <div style="color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:4px;text-align:center;margin-bottom:4px">+ add</div>
-              <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:5px;font-weight:500">Tikka Masala</div>
-            </div>
-            <div style="background:var(--warm-bg);border-radius:8px;padding:8px;border:1px solid var(--border)">
-              <div style="font-weight:700;margin-bottom:6px">Tue</div>
-              <div style="color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:4px;text-align:center;margin-bottom:4px">+ add</div>
-              <div style="color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:4px;text-align:center;margin-bottom:4px">+ add</div>
-              <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:5px;font-weight:500">Carbonara</div>
-            </div>
-            <div style="background:var(--warm-bg);border-radius:8px;padding:8px;border:1px solid var(--border)">
-              <div style="font-weight:700;margin-bottom:6px">Wed</div>
-              <div style="color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:4px;text-align:center;margin-bottom:4px">+ add</div>
-              <div style="color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:4px;text-align:center;margin-bottom:4px">+ add</div>
-              <div style="color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:4px;text-align:center">+ add</div>
-            </div>
-            <div style="background:var(--warm-bg);border-radius:8px;padding:8px;border:1px solid var(--border)">
-              <div style="font-weight:700;margin-bottom:6px">Thu</div>
-              <div style="color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:4px;text-align:center;margin-bottom:4px">+ add</div>
-              <div style="color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:4px;text-align:center;margin-bottom:4px">+ add</div>
-              <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:5px;font-weight:500">Salmon Bowl</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="cta-band">
-    <div class="container">
-      <h2>Cook smart, waste less, save money.</h2>
-      <p>Free to start. Basic at $5/mo for the full kitchen toolkit.</p>
-      <button class="btn-cta-white" onclick="showPage('pricing')">Get Started Free</button>
-    </div>
-  </div>
-</div><!-- /page-features -->
-
-<!-- ══════════════════════════════════════════════════════════
-     PAGE: PRICING
-══════════════════════════════════════════════════════════ -->
-<div id="page-pricing" class="page">
-  <div class="pricing-hero">
-    <div class="container">
-      <div class="section-eyebrow">Pricing</div>
-      <h1 class="section-title">Simple, honest pricing</h1>
-      <p class="section-sub">Start free. Upgrade when you need more. No hidden fees, no data selling.</p>
-      <div class="pricing-toggle">
-        <span style="color:var(--mid)">Monthly</span>
-        <div class="toggle-track" id="billing-toggle" onclick="toggleBilling()">
-          <div class="toggle-knob"></div>
-        </div>
-        <span style="color:var(--mid)">Annual</span>
-        <span class="save-pill">Save ~20%</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="pricing-grid" style="grid-template-columns:1fr 1fr 1fr;max-width:1060px">
-
-      <!-- Free -->
-      <div class="plan-card">
-        <div class="plan-name">Free</div>
-        <div class="plan-price">$0</div>
-        <div class="plan-per">forever</div>
-        <div class="plan-annual">&nbsp;</div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li class="included"><strong>10 new recipes/month</strong> (resets monthly)</li>
-          <li class="included">Screenshot &amp; URL import</li>
-          <li class="included">Pantry tracking</li>
-          <li class="included">Ingredient overlap counts</li>
-          <li class="not-included">Meal planner</li>
-          <li class="not-included">Smart suggestions</li>
-          <li class="not-included">PDF / Keep bulk import</li>
-          <li class="not-included">Calorie &amp; macro estimates</li>
-          <li class="not-included">Shopping list generation</li>
-        </ul>
-        <button class="btn-plan btn-plan-ghost">Create Free Account</button>
-      </div>
-
-      <!-- Basic -->
-      <div class="plan-card featured">
-        <div class="plan-badge">Most Popular</div>
-        <div class="plan-name">Basic</div>
-        <div class="plan-price" id="basic-price">$5</div>
-        <div class="plan-per" id="basic-period" style="color:#78716C">per month</div>
-        <div class="plan-annual" id="basic-annual">&nbsp;</div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li class="included">Up to <strong>100 recipes</strong></li>
-          <li class="included">Screenshot &amp; URL import</li>
-          <li class="included">Pantry tracking</li>
-          <li class="included">Ingredient overlap counts</li>
-          <li class="included"><strong>Meal planner</strong></li>
-          <li class="included"><strong>Smart suggestions</strong></li>
-          <li class="included"><strong>PDF / Keep bulk import</strong></li>
-          <li class="not-included">Calorie &amp; macro estimates</li>
-          <li class="not-included">Shopping list generation</li>
-        </ul>
-        <button class="btn-plan btn-plan-orange">Start 14-Day Free Trial</button>
-      </div>
-
-      <!-- Pro -->
-      <div class="plan-card" style="border-color:var(--teal)">
-        <div class="plan-name" style="color:var(--teal)">Pro</div>
-        <div class="plan-price" id="pro-price">$10</div>
-        <div class="plan-per" id="pro-period">per month</div>
-        <div class="plan-annual" id="pro-annual">&nbsp;</div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li class="included"><strong>Unlimited</strong> recipes</li>
-          <li class="included">Screenshot &amp; URL import</li>
-          <li class="included">Pantry tracking</li>
-          <li class="included">Ingredient overlap counts</li>
-          <li class="included"><strong>Meal planner</strong></li>
-          <li class="included"><strong>Smart suggestions</strong></li>
-          <li class="included"><strong>PDF / Keep bulk import</strong></li>
-          <li class="included"><strong>Calorie &amp; macro estimates</strong></li>
-          <li class="included"><strong>Shopping list generation</strong></li>
-        </ul>
-        <button class="btn-plan btn-plan-ghost" style="border-color:var(--teal);color:var(--teal)">Start 14-Day Free Trial</button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Pricing FAQ -->
-  <div class="pricing-faq">
-    <div class="container" style="max-width:680px">
-      <h3 style="font-family:var(--ff-head);font-size:28px;margin-bottom:32px;text-align:center">Pricing questions</h3>
-      <div class="faq-item open" onclick="toggleFaq(this)">
-        <button class="faq-q">What happens when I hit the recipe limit on Free? <span class="faq-chevron">⌄</span></button>
-        <div class="faq-a">You can add up to 10 new recipes per month on the Free plan — the allowance resets at the start of each month. Recipes you've already saved stay in your library and don't count against the monthly limit. We'll give you a heads up before you hit it.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <button class="faq-q">What's the difference between Basic and Pro? <span class="faq-chevron">⌄</span></button>
-        <div class="faq-a">Basic gives you the full core experience — up to 100 recipes, the meal planner, smart AI suggestions, and PDF/Keep import. Pro adds unlimited recipes and calorie &amp; macro estimates for people tracking their nutrition. Both tiers get a 14-day free trial.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <button class="faq-q">Can I cancel anytime? <span class="faq-chevron">⌄</span></button>
-        <div class="faq-a">Yes, cancel whenever you want. No questions, no retention flows. You keep your plan's features until the end of the billing period, then drop to Free. Nothing gets deleted.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <button class="faq-q">Do you sell my data? <span class="faq-chevron">⌄</span></button>
-        <div class="faq-a">Never. We're a small, independent app. Your recipes and grocery habits are yours. We make money from subscriptions, full stop.</div>
-      </div>
-    </div>
-  </div>
-</div><!-- /page-pricing -->
-
-<!-- ══════════════════════════════════════════════════════════
-     PAGE: COMPARISON
-══════════════════════════════════════════════════════════ -->
-<div id="page-comparison" class="page">
-  <div class="comp-hero">
-    <div class="container">
-      <div class="section-eyebrow">How We Compare</div>
-      <h1 class="section-title">RecipeHQ vs. the alternatives</h1>
-      <p class="section-sub">Other recipe apps are built around collecting recipes. RecipeHQ is built around cooking smarter and wasting less.</p>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="comp-table-wrap">
-      <table class="comp-table">
-        <thead>
-          <tr>
-            <th style="width:30%">Feature</th>
-            <th class="us">
-              <div class="comp-logo">
-                <svg width="28" height="28" viewBox="0 0 56 56" style="margin:0 auto">
-                  <rect width="56" height="56" rx="12" fill="#F97316"/>
-                  <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
-                  <rect x="26" y="10" width="5" height="16" rx="2.5" fill="white"/>
-                  <rect x="35" y="10" width="5" height="16" rx="2.5" fill="white"/>
-                  <rect x="17" y="24" width="23" height="4" fill="white" rx="2"/>
-                  <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
-                </svg>
-                <div class="comp-logo-name">RecipeHQ</div>
-                <div class="comp-logo-price">Free · $5/mo · $10/mo</div>
-              </div>
-            </th>
-            <th>
-              <div class="comp-logo">
-                <div class="comp-logo-icon">🌶️</div>
-                <div class="comp-logo-name">Paprika</div>
-                <div class="comp-logo-price">$4.99 one-time</div>
-              </div>
-            </th>
-            <th>
-              <div class="comp-logo">
-                <div class="comp-logo-icon">📋</div>
-                <div class="comp-logo-name">AnyList</div>
-                <div class="comp-logo-price">Free / $11.99/yr</div>
-              </div>
-            </th>
-            <th>
-              <div class="comp-logo">
-                <div class="comp-logo-icon">🥄</div>
-                <div class="comp-logo-name">Whisk</div>
-                <div class="comp-logo-price">Free</div>
-              </div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="comp-category" colspan="5">Recipe Management</td></tr>
-          <tr>
-            <td>Recipe library</td>
-            <td class="us"><span class="chk">✓</span></td>
-            <td><span class="chk">✓</span></td>
-            <td><span class="chk">✓</span></td>
-            <td><span class="chk">✓</span></td>
-          </tr>
-          <tr>
-            <td>Import from URL</td>
-            <td class="us"><span class="chk">✓</span></td>
-            <td><span class="chk">✓</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="chk">✓</span></td>
-          </tr>
-          <tr>
-            <td>Screenshot / image import</td>
-            <td class="us"><span class="chk">✓</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-          </tr>
-          <tr>
-            <td>PDF import</td>
-            <td class="us"><span class="chk">✓ Basic+</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-          </tr>
-          <tr>
-            <td>Google Keep import</td>
-            <td class="us"><span class="chk">✓ Basic+</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-          </tr>
-          <tr><td class="comp-category" colspan="5">Meal Planning</td></tr>
-          <tr>
-            <td>Weekly meal planner</td>
-            <td class="us"><span class="chk">✓ Basic+</span></td>
-            <td><span class="chk">✓</span></td>
-            <td><span class="partial">Basic</span></td>
-            <td><span class="chk">✓</span></td>
-          </tr>
-          <tr>
-            <td>Ingredient overlap scoring</td>
-            <td class="us"><span class="chk">✓</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-          </tr>
-          <tr>
-            <td>AI smart suggestions</td>
-            <td class="us"><span class="chk">✓ Basic+</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="partial">Limited</span></td>
-          </tr>
-          <tr>
-            <td>Calorie &amp; macro estimates</td>
-            <td class="us"><span class="chk">✓ Pro</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-          </tr>
-          <tr>
-            <td>Shopping list generation</td>
-            <td class="us"><span class="chk">✓ Pro</span></td>
-            <td><span class="chk">✓</span></td>
-            <td><span class="chk">✓</span></td>
-            <td><span class="chk">✓</span></td>
-          </tr>
-          <tr><td class="comp-category" colspan="5">Pantry & Waste Reduction</td></tr>
-          <tr>
-            <td>Pantry inventory tracking</td>
-            <td class="us"><span class="chk">✓</span></td>
-            <td><span class="partial">Basic</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="partial">Basic</span></td>
-          </tr>
-          <tr>
-            <td>Expiration date alerts</td>
-            <td class="us"><span class="chk">✓</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-          </tr>
-          <tr>
-            <td>Use-before-expiry suggestions</td>
-            <td class="us"><span class="chk">✓ Basic+</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-          </tr>
-          <tr><td class="comp-category" colspan="5">Platform & Access</td></tr>
-          <tr>
-            <td>Web app</td>
-            <td class="us"><span class="chk">✓</span></td>
-            <td><span class="partial">Desktop only</span></td>
-            <td><span class="chk">✓</span></td>
-            <td><span class="chk">✓</span></td>
-          </tr>
-          <tr>
-            <td>Mobile-friendly</td>
-            <td class="us"><span class="chk">✓</span></td>
-            <td><span class="partial">Native app</span></td>
-            <td><span class="chk">✓</span></td>
-            <td><span class="chk">✓</span></td>
-          </tr>
-          <tr>
-            <td>Free tier available</td>
-            <td class="us"><span class="chk">✓</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="chk">✓</span></td>
-            <td><span class="chk">✓</span></td>
-          </tr>
-          <tr>
-            <td>No ads, no data selling</td>
-            <td class="us"><span class="chk">✓</span></td>
-            <td><span class="chk">✓</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="cta-band">
-    <div class="container">
-      <h2>The only app built around waste reduction.</h2>
-      <p>Cook smart, waste less, save money. Free to start — no credit card needed.</p>
-      <button class="btn-cta-white" onclick="showPage('pricing')">Get Started Free</button>
-    </div>
-  </div>
-</div><!-- /page-comparison -->
-
-<!-- ══════════════════════════════════════════════════════════
-     PAGE: ABOUT
-══════════════════════════════════════════════════════════ -->
-<div id="page-about" class="page">
-  <div class="container">
-    <div class="about-hero">
-      <div class="about-grid">
-        <div class="about-text">
-          <div class="section-eyebrow" style="display:block;margin-bottom:20px">Our Story</div>
-          <h1>Built out of <em>frustration</em> with wasted groceries.</h1>
-          <div class="about-body" style="margin-top:28px">
-            <p>RecipeHQ started with a simple problem: we'd plan a week of dinners, buy all the ingredients, and then life would happen. A spontaneous dinner out, a busy Wednesday, a late meeting — and suddenly that bunch of cilantro, the fresh salmon, the spinach we had big plans for were quietly going bad in the fridge.</p>
-            <p>The apps we tried were built around collecting recipes, not cooking them. They had beautiful interfaces and zero help with the actual problem: planning meals that made sense together, tracking what we had on hand, and not throwing $50 of groceries away every week.</p>
-            <p>So we built RecipeHQ — a tool focused squarely on home cooks who buy fresh ingredients and care about not wasting them. No social features, no algorithmic recipe feeds, no ads. Just a genuinely useful kitchen companion.</p>
-            <p>It's built in Pittsburgh, PA, and used daily in our own kitchen. We hope it earns a place in yours.</p>
-          </div>
-        </div>
-        <div class="about-sidebar">
-          <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:20px">What we believe</div>
-          <div class="value-cards">
-            <div class="value-card">
-              <h4>Less waste, more flavor</h4>
-              <p>Planning around ingredient overlap doesn't mean boring meals. It means smarter shopping and more creative cooking.</p>
-            </div>
-            <div class="value-card">
-              <h4>Tools should stay out of your way</h4>
-              <p>RecipeHQ takes 5 minutes to set up and then quietly does its job. No daily habit streaks, no social pressure.</p>
-            </div>
-            <div class="value-card">
-              <h4>Your data is yours</h4>
-              <p>We don't sell data, serve ads, or train AI models on your recipes. We make money from subscriptions — that's it.</p>
-            </div>
-            <div class="value-card">
-              <h4>Built by cooks, for cooks</h4>
-              <p>Every feature in this app exists because we needed it ourselves. If it doesn't help in a real kitchen, it doesn't ship.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="about-mission">
-        <p>"The average American household throws away nearly <span>$1,500 in food</span> every year. RecipeHQ exists to change that, one meal plan at a time."</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="cta-band">
-    <div class="container">
-      <h2>Cook smart, waste less, save money.</h2>
-      <p>Free to start. Basic at $5/mo. Pro at $10/mo. No hidden fees.</p>
-      <button class="btn-cta-white" onclick="showPage('pricing')">Get Started Free</button>
-    </div>
-  </div>
-</div><!-- /page-about -->
-
-<!-- ══════════════════════════════════════════════════════════
-     PAGE: FAQ
-══════════════════════════════════════════════════════════ -->
-<div id="page-faq" class="page">
-  <div class="faq-hero">
-    <div class="container">
-      <div class="section-eyebrow">FAQ</div>
-      <h1 class="section-title">Questions? We've got answers.</h1>
-      <p class="section-sub">Can't find what you're looking for? Email us at <strong>hello@myrecipehq.com</strong></p>
-    </div>
-  </div>
-
-  <div class="faq-body">
-    <div class="container">
-      <div class="faq-layout">
-        <ul class="faq-cats">
-          <li class="faq-cat-item active" onclick="scrollToFaqSection('faq-general', this)">General</li>
-          <li class="faq-cat-item" onclick="scrollToFaqSection('faq-import', this)">Importing Recipes</li>
-          <li class="faq-cat-item" onclick="scrollToFaqSection('faq-planning', this)">Meal Planning</li>
-          <li class="faq-cat-item" onclick="scrollToFaqSection('faq-pantry', this)">Pantry Tracking</li>
-          <li class="faq-cat-item" onclick="scrollToFaqSection('faq-pricing', this)">Pricing & Account</li>
-          <li class="faq-cat-item" onclick="scrollToFaqSection('faq-privacy', this)">Privacy & Data</li>
-        </ul>
-
-        <div>
-          <!-- General -->
-          <div class="faq-section" id="faq-general">
-            <h3>General</h3>
-            <div class="faq-item open" onclick="toggleFaq(this)">
-              <button class="faq-q">What is RecipeHQ? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">RecipeHQ is a recipe management and meal planning app focused on reducing grocery waste. You import your recipes, plan your meals for the week, track your pantry, and see which meals share ingredients — so you buy less and cook more.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">Who is it for? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Home cooks who buy fresh groceries regularly — especially people who cook for 1–4 people, shop weekly, and find themselves throwing out ingredients that didn't get used. If you've ever watched good food go bad, RecipeHQ is for you.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">Is there a mobile app? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">RecipeHQ is a mobile-friendly web app, so it works great on iPhone and Android from your browser. A dedicated native app is on the roadmap — we'll announce it when it's ready.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">How does ingredient overlap work? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">When you add meals to your weekly planner, RecipeHQ analyzes the ingredient lists and shows you which ingredients appear in multiple planned meals. The more overlap, the fewer unique items you need to buy — which means less waste and a smaller grocery bill.</div>
-            </div>
-          </div>
-
-          <!-- Import -->
-          <div class="faq-section" id="faq-import">
-            <h3>Importing Recipes</h3>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">How does screenshot import work? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Take a screenshot of any recipe — from a website, a book, a handwritten card, anything. Paste it into RecipeHQ and our AI reads the image and extracts the title, ingredient list, and instructions automatically. It usually takes about 3–5 seconds.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">Which websites work with URL import? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Most major recipe websites work well — NYT Cooking, Serious Eats, AllRecipes, Food52, Bon Appétit, and hundreds more. If a site blocks content scrapers or uses heavy JavaScript rendering, the screenshot import is a reliable fallback.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">How do I import from Google Keep? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Export your Google Keep notes via Google Takeout (free, takes a few minutes). Then select the Keep export folder in RecipeHQ. We'll scan your notes, identify which ones contain recipes, and let you preview before importing. This is a Pro feature.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">What if the AI extracts the recipe incorrectly? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">It happens occasionally, especially with handwritten recipes or unusual formatting. Every imported recipe goes through an edit screen before saving — you can correct any mistakes before they're added to your library.</div>
-            </div>
-          </div>
-
-          <!-- Planning -->
-          <div class="faq-section" id="faq-planning">
-            <h3>Meal Planning</h3>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">Can I plan further than one week out? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">The planner is week-by-week — you can navigate forward as many weeks as you want. We've found most people plan 1–2 weeks ahead, so the weekly view keeps things practical rather than overwhelming.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">What if I eat out and miss a planned meal? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Life happens — that's exactly why we built rescheduling as a first-class feature. Tap any planned meal and move it to another slot. The ingredient overlap scores update automatically so you can see the impact of rearranging.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">How do AI meal suggestions work? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">There are two distinct suggestion modes. <strong>Cook from your fridge</strong> looks at what's currently in your pantry and tells you which of your own recipes you can make right now — prioritizing ingredients that are about to expire so nothing goes to waste. <strong>Plan smarter</strong> looks at meals you've already added to your week and recommends other recipes from your library that share the most ingredients with your current plan, maximizing overlap and minimizing what you need to buy. Both modes only draw from your own recipe library — no random recipes from the internet.</div>
-            </div>
-          </div>
-
-          <!-- Pantry -->
-          <div class="faq-section" id="faq-pantry">
-            <h3>Pantry Tracking</h3>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">Do I have to log every ingredient I buy? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">No — the pantry works best for perishables and fresh items that have a short shelf life (meat, fish, produce, dairy). You don't need to log shelf-stable staples like olive oil or pasta unless you want to track them. The goal is awareness, not bookkeeping.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">How far in advance do I get expiration alerts? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Items are flagged as "Expiring Soon" when they're within 3 days of their expiration date, and "Expired" on or after that date. We show an alert banner at the top of the pantry so you can't miss it.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">What's the pantry limit on the Free plan? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Free accounts can track up to 20 pantry items at once. Pro accounts have unlimited pantry tracking. For most light pantry users, 20 is plenty — it's enough for all your fresh produce, proteins, and dairy.</div>
-            </div>
-          </div>
-
-          <!-- Pricing -->
-          <div class="faq-section" id="faq-pricing">
-            <h3>Pricing & Account</h3>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">What's included in the free plan? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">The free plan lets you add up to 10 new recipes per month (the allowance resets monthly), plus screenshot and URL import, pantry tracking, and ingredient overlap counts. The meal planner, smart suggestions, and PDF/Keep import require Basic ($5/mo) or higher.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">How does the 14-day free trial work? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Both Basic and Pro come with a 14-day free trial. No credit card required to start. At the end of the trial, choose to subscribe or you'll automatically drop back to Free — nothing gets deleted.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">Is there a family or household plan? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Not yet — RecipeHQ is currently single-account. Shared household accounts and collaborative planning are on the roadmap. Sign up for updates if that's important to you.</div>
-            </div>
-          </div>
-
-          <!-- Privacy -->
-          <div class="faq-section" id="faq-privacy">
-            <h3>Privacy & Data</h3>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">Do you sell my data? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Never. We don't sell, rent, or share your personal data with third parties for advertising or marketing purposes. We make money from subscriptions, period.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">Are my recipes used to train AI models? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">No. Your recipes, meal plans, and pantry data are your own. We use a third-party AI API (Anthropic's Claude) for extraction, but your data is not retained or used for model training per their API data policies.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">Can I export all my data? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">Yes. Email us at hello@myrecipehq.com and we'll send you a full export of your recipes, ingredients, and meal plans in JSON and CSV format. No questions asked.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-              <button class="faq-q">How do I delete my account? <span class="faq-chevron">⌄</span></button>
-              <div class="faq-a">You can delete your account from your account settings at any time. All your data is permanently removed within 30 days. No dark patterns, no guilt-trip screens.</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div><!-- /page-faq -->
-
-<!-- ══════════════════════════════════════════════════════════
-     GLOBAL FOOTER
-══════════════════════════════════════════════════════════ -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1806,17 +1061,17 @@
       <div class="footer-col">
         <h5>Product</h5>
         <ul>
-          <li><a onclick="showPage('features')">Features</a></li>
-          <li><a onclick="showPage('pricing')">Pricing</a></li>
-          <li><a onclick="showPage('comparison')">Compare</a></li>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/comparison/">Compare</a></li>
           <li><a>Changelog</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
         <ul>
-          <li><a onclick="showPage('about')">About</a></li>
-          <li><a onclick="showPage('faq')">FAQ</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/faq/">FAQ</a></li>
           <li><a>Blog</a></li>
           <li><a>Contact</a></li>
         </ul>
@@ -1831,29 +1086,14 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 RecipeHQ · myrecipehq.com</span>
-      <span>Made with 🍳 in Pittsburgh</span>
+      <span>&copy; 2025 RecipeHQ &middot; myrecipehq.com</span>
+      <span>Made with &#127859; in Pittsburgh</span>
     </div>
   </div>
 </footer>
 
 <script>
-  /* ── Page Navigation ───────────────────────── */
-  function showPage(name) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('page-' + name).classList.add('active');
-    // Desktop nav active state
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active-link'));
-    const link = document.getElementById('nl-' + name);
-    if (link) link.classList.add('active-link');
-    // Mobile nav active state
-    document.querySelectorAll('.mob-nav-links a').forEach(a => a.classList.remove('active-link'));
-    const mobLink = document.getElementById('mnl-' + name);
-    if (mobLink) mobLink.classList.add('active-link');
-    window.scrollTo({ top: 0, behavior: 'instant' });
-  }
-
-  /* ── Mobile Nav ────────────────────────────── */
+  /* -- Mobile Nav -- */
   function openMobileNav() {
     document.getElementById('mob-overlay').classList.add('open');
     document.getElementById('mob-drawer').classList.add('open');
@@ -1865,31 +1105,7 @@
     document.body.style.overflow = '';
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileNav(); });
-
-  /* ── Billing Toggle ────────────────────────── */
-  let isAnnual = false;
-  function toggleBilling() {
-    isAnnual = !isAnnual;
-    const track = document.getElementById('billing-toggle');
-    track.classList.toggle('on', isAnnual);
-    document.getElementById('basic-price').textContent  = isAnnual ? '$4'  : '$5';
-    document.getElementById('basic-annual').textContent = isAnnual ? 'Billed $48/year — save ~20%' : '';
-    document.getElementById('pro-price').textContent    = isAnnual ? '$8'  : '$10';
-    document.getElementById('pro-annual').textContent   = isAnnual ? 'Billed $96/year — save ~20%' : '';
-  }
-
-  /* ── FAQ Accordion ─────────────────────────── */
-  function toggleFaq(item) {
-    item.classList.toggle('open');
-  }
-
-  /* ── FAQ Category Scroll ───────────────────── */
-  function scrollToFaqSection(id, el) {
-    document.querySelectorAll('.faq-cat-item').forEach(i => i.classList.remove('active'));
-    el.classList.add('active');
-    const target = document.getElementById(id);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
 </script>
+
 </body>
 </html>
