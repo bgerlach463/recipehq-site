@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon — RecipeHQ</title>
+  <meta name="description" content="RecipeHQ is launching soon. Sign up to be notified when we go live.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#F97316">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .coming-soon-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--charcoal);
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .coming-soon-content {
+      max-width: 560px;
+    }
+    .coming-soon-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .coming-soon-logo span {
+      font-family: var(--ff-body);
+      font-size: 28px;
+      font-weight: 600;
+      color: white;
+    }
+    .coming-soon-logo .hq { color: var(--orange); }
+    .coming-soon-content h1 {
+      font-family: var(--ff-head);
+      font-size: clamp(36px, 5vw, 56px);
+      color: white;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .coming-soon-content h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+    .coming-soon-content p {
+      font-size: 18px;
+      color: #A8A29E;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .notify-form {
+      display: flex;
+      gap: 10px;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    .notify-input {
+      flex: 1;
+      padding: 14px 18px;
+      font-size: 15px;
+      font-family: var(--ff-body);
+      border: 1px solid #44403C;
+      border-radius: 10px;
+      background: #292524;
+      color: white;
+      outline: none;
+      transition: border-color .15s;
+    }
+    .notify-input::placeholder { color: #78716C; }
+    .notify-input:focus { border-color: var(--orange); }
+    .notify-btn {
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: var(--ff-body);
+      background: var(--orange);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background .15s;
+      white-space: nowrap;
+    }
+    .notify-btn:hover { background: var(--orange-d); }
+    .coming-soon-features {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      margin-top: 56px;
+      flex-wrap: wrap;
+    }
+    .cs-feature {
+      text-align: center;
+    }
+    .cs-feature-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .cs-feature-label {
+      font-size: 13px;
+      color: #78716C;
+      font-weight: 500;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 48px;
+      font-size: 14px;
+      color: #78716C;
+      transition: color .15s;
+    }
+    .back-link:hover { color: white; }
+    @media (max-width: 540px) {
+      .notify-form { flex-direction: column; }
+      .notify-btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="coming-soon-hero">
+  <div class="coming-soon-content">
+    <div class="coming-soon-logo">
+      <svg width="44" height="44" viewBox="0 0 56 56">
+        <rect width="56" height="56" rx="12" fill="#F97316"/>
+        <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="26" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="35" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="17" y="24" width="23" height="4" fill="white" rx="2"/>
+        <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
+      </svg>
+      <span>Recipe<span class="hq">HQ</span></span>
+    </div>
+
+    <h1>Something <em>delicious</em> is cooking.</h1>
+    <p>RecipeHQ is almost ready. Be the first to know when we launch — enter your email and we'll notify you.</p>
+
+    <form class="notify-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'color:#2DD4BF;font-size:16px;font-weight:600;padding:14px 0\'>You\'re on the list! We\'ll be in touch.</p>';">
+      <input type="email" class="notify-input" placeholder="you@example.com" required>
+      <button type="submit" class="notify-btn">Notify Me</button>
+    </form>
+
+    <div class="coming-soon-features">
+      <div class="cs-feature">
+        <div class="cs-feature-icon">📸</div>
+        <div class="cs-feature-label">AI Recipe Import</div>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature-icon">🔗</div>
+        <div class="cs-feature-label">Ingredient Overlap</div>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature-icon">📦</div>
+        <div class="cs-feature-label">Pantry Tracking</div>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature-icon">📅</div>
+        <div class="cs-feature-label">Meal Planning</div>
+      </div>
+    </div>
+
+    <a href="/" class="back-link">&larr; Back to RecipeHQ</a>
+  </div>
+</div>
+
+</body>
+</html>
