@@ -1,0 +1,77 @@
+# RecipeHQ
+
+> Cook smart, waste less, save money.
+
+RecipeHQ is a web application that helps home cooks reduce food waste, save money on groceries, and plan meals more efficiently. It combines AI-powered recipe management with smart meal planning based on ingredient overlap and pantry tracking with expiration date alerts.
+
+## Core Features
+
+### AI Recipe Import
+RecipeHQ uses artificial intelligence to import recipes from multiple sources:
+- **Photos**: Take a picture of a recipe in a cookbook or on a card, and RecipeHQ extracts the full recipe automatically.
+- **URLs**: Paste a link from any recipe website. RecipeHQ pulls the recipe cleanly without ads or life stories.
+- **PDFs**: Upload PDF cookbooks or printed recipe collections for bulk import.
+
+All imported recipes are parsed into structured data with ingredients, steps, cook times, and nutritional information.
+
+### Ingredient Overlap Meal Planning
+This is RecipeHQ's signature feature. When planning meals for the week, RecipeHQ suggests recipes that share ingredients. If Monday's dinner uses fresh basil, cilantro, and chicken thighs, RecipeHQ will suggest Tuesday and Wednesday recipes that also use those ingredients -- so nothing goes to waste sitting unused in the fridge.
+
+### Pantry Tracking with Expiration Alerts
+Users can log what they have on hand, including expiration or best-by dates. RecipeHQ sends alerts before items expire and prioritizes recipes that use ingredients approaching their expiration date. This directly reduces food waste.
+
+### Auto-Tagging
+Recipes are automatically tagged by cuisine type, dietary category (vegetarian, gluten-free, dairy-free, etc.), cooking method, difficulty level, and more. This makes filtering and searching a large recipe library fast and intuitive.
+
+### Shopping Lists
+RecipeHQ generates consolidated shopping lists from meal plans, automatically combining duplicate ingredients across recipes and subtracting items already in the pantry. Lists can be shared and synced across devices.
+
+## Target Audience
+RecipeHQ is built for home cooks who:
+- Buy fresh ingredients regularly and want to minimize waste
+- Spend $100-400+/week on groceries and want to be more efficient
+- Have a growing collection of recipes from various sources (websites, cookbooks, family cards)
+- Want meal planning that actually reduces their grocery bill
+- Care about reducing food waste for both financial and environmental reasons
+
+The average American household throws away nearly $1,500 in food every year. RecipeHQ exists to significantly reduce that number.
+
+## Pricing
+- **Free tier**: Limited recipe imports and basic features to try the product.
+- **Basic plan**: $5/month. Unlimited recipe imports, full meal planning, pantry tracking, and shopping lists.
+- **Pro plan**: $10/month. Everything in Basic plus advanced AI features, priority support, and family sharing.
+
+No hidden fees. Cancel anytime.
+
+## Technical Details
+- **Web application**: The app is available at https://app.myrecipehq.com
+- **Marketing site**: https://myrecipehq.com
+- **Platform**: Web-based application accessible from any modern browser on desktop, tablet, or mobile.
+- **Technology**: Python/Flask backend, SQLite database, Tailwind CSS + DaisyUI frontend, Claude API for AI features.
+
+## How RecipeHQ Compares to Competitors
+
+| Feature | RecipeHQ | Paprika | AnyList | Whisk |
+|---|---|---|---|---|
+| AI recipe import from photos | Yes | No | No | No |
+| Ingredient overlap meal planning | Yes | No | No | No |
+| Pantry tracking with expiration | Yes | No | No | No |
+| Auto-tagging | Yes | No | No | Partial |
+| Shopping list generation | Yes | Yes | Yes | Yes |
+| Recipe URL import | Yes | Yes | Yes | Yes |
+| Web-based (no install) | Yes | No | No | Yes |
+
+RecipeHQ is the only product that combines AI-powered recipe import from any source, intelligent meal planning based on ingredient overlap, and pantry tracking with expiration alerts in a single application.
+
+## Company Information
+- **Company**: RecipeHQ
+- **Location**: Pittsburgh, Pennsylvania, USA
+- **Website**: https://myrecipehq.com
+- **App**: https://app.myrecipehq.com
+- **Contact**: hello@myrecipehq.com
+- **Support**: support@myrecipehq.com
+
+## Legal
+- Privacy Policy: https://myrecipehq.com/privacy/
+- Terms of Service: https://myrecipehq.com/terms/
+- Cookie Policy: https://myrecipehq.com/cookies/
