@@ -52,30 +52,32 @@
 /* ── Card hero thumbnail ─────────────────────────────── */
 .card-hero {
   background: #1a4a4a;
-  height: 180px;
-  padding: 16px 18px 14px;
-  display: flex; flex-direction: column;
-  justify-content: space-between;
+  min-height: 220px;
+  padding: 24px;
+  display: flex;
   flex-shrink: 0; overflow: hidden;
 }
 .card-hero-content {
-  display: flex; align-items: flex-end;
-  justify-content: space-between; gap: 10px;
-  flex: 1;
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+  width: 100%;
 }
 .card-hero-title {
-  font-family: var(--ff-head); font-size: 15px;
+  font-family: var(--ff-head); font-size: 20px;
   font-weight: 700; color: #f0ede8; line-height: 1.25; flex: 1;
   margin: 0;
 }
 .card-hero-title .hl { color: var(--orange); }
-.card-hero-icons { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; flex-shrink: 0; }
+.card-hero-icons {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex-shrink: 0;
+}
 .icon-mini {
-  width: 36px; height: 36px;
-  background: rgba(10,48,48,0.75); border-radius: 6px;
+  width: 48px; height: 48px;
+  background: rgba(10,48,48,0.75); border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.06);
   display: flex; align-items: center; justify-content: center;
 }
+.icon-mini svg { width: 24px; height: 24px; }
 .card-accent { height: 3px; background: var(--orange); width: 100%; flex-shrink: 0; }
 
 /* ── Card body ───────────────────────────────────────── */
