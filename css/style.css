@@ -360,8 +360,8 @@ section { padding: 96px 0; }
   border-radius: 100px;
 }
 .pricing-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-  max-width: 860px; margin: 56px auto 0; padding-bottom: 96px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  max-width: 960px; margin: 56px auto 0; padding-bottom: 96px;
 }
 .plan-card {
   border-radius: 20px; padding: 40px; border: 1px solid var(--border);
@@ -679,8 +679,6 @@ footer {
   .hero-stat-row { flex-direction: row; gap: 16px; }
   .plan-card { padding: 28px 24px; }
   .plan-price { font-size: 40px; }
-  .comp-table th:nth-child(3),
-  .comp-table th:nth-child(4),
-  .comp-table td:nth-child(3),
-  .comp-table td:nth-child(4) { display: none; }
+  .comp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .comp-table { min-width: 600px; }
 }
