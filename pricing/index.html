@@ -31,9 +31,9 @@ head_extra: |
         {
           "@type": "Offer",
           "name": "Basic",
-          "price": "5.00",
+          "price": "7.00",
           "priceCurrency": "USD",
-          "description": "Up to 100 recipes, meal planner, AI smart suggestions, PDF & Google Keep bulk import.",
+          "description": "Up to 100 recipes, meal planner with auto-plan, smart suggestions, shopping list, PDF & Google Keep bulk import, recipe sharing.",
           "url": "https://www.myrecipehq.com/pricing/",
           "eligibleQuantity": {
             "@type": "QuantitativeValue",
@@ -43,9 +43,9 @@ head_extra: |
         {
           "@type": "Offer",
           "name": "Pro",
-          "price": "10.00",
+          "price": "14.00",
           "priceCurrency": "USD",
-          "description": "Unlimited recipes, full meal planner, AI suggestions, PDF & Keep import, calorie & macro estimates, shopping list generation.",
+          "description": "Unlimited recipes, everything in Basic plus calorie & macro estimates, AI ingredient substitutions, and priority support.",
           "url": "https://www.myrecipehq.com/pricing/",
           "eligibleQuantity": {
             "@type": "QuantitativeValue",
@@ -73,10 +73,10 @@ body_scripts: |
       isAnnual = !isAnnual;
       const track = document.getElementById('billing-toggle');
       track.classList.toggle('on', isAnnual);
-      document.getElementById('basic-price').textContent  = isAnnual ? '$4'  : '$5';
-      document.getElementById('basic-annual').textContent = isAnnual ? 'Billed $48/year — save ~20%' : '\u00a0';
-      document.getElementById('pro-price').textContent    = isAnnual ? '$8'  : '$10';
-      document.getElementById('pro-annual').textContent   = isAnnual ? 'Billed $96/year — save ~20%' : '\u00a0';
+      document.getElementById('basic-price').textContent  = isAnnual ? '$6'  : '$7';
+      document.getElementById('basic-annual').textContent = isAnnual ? 'Billed $67/year \u2014 save ~20%' : '\u00a0';
+      document.getElementById('pro-price').textContent    = isAnnual ? '$11' : '$14';
+      document.getElementById('pro-annual').textContent   = isAnnual ? 'Billed $134/year \u2014 save ~20%' : '\u00a0';
     }
 
     /* -- FAQ Accordion -- */
@@ -114,14 +114,15 @@ body_scripts: |
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <li class="included"><strong>10 new recipes/month</strong> (resets monthly)</li>
-          <li class="included">Screenshot &amp; URL import</li>
+          <li class="included">Screenshot, URL &amp; camera import</li>
           <li class="included">Pantry tracking</li>
           <li class="included">Ingredient overlap counts</li>
-          <li class="not-included">Meal planner</li>
+          <li class="included">Recipe sharing</li>
+          <li class="not-included">Meal planner &amp; auto-plan</li>
           <li class="not-included">Smart suggestions</li>
+          <li class="not-included">Shopping list</li>
           <li class="not-included">PDF / Keep bulk import</li>
           <li class="not-included">Calorie &amp; macro estimates</li>
-          <li class="not-included">Shopping list generation</li>
         </ul>
         <a href="/coming-soon/" class="btn-plan btn-plan-ghost">Create Free Account</a>
       </div>
@@ -130,20 +131,21 @@ body_scripts: |
       <div class="plan-card featured">
         <div class="plan-badge">Most Popular</div>
         <div class="plan-name">Basic</div>
-        <div class="plan-price" id="basic-price">$5</div>
+        <div class="plan-price" id="basic-price">$7</div>
         <div class="plan-per" id="basic-period" style="color:#78716C">per month</div>
         <div class="plan-annual" id="basic-annual">&nbsp;</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <li class="included">Up to <strong>100 recipes</strong></li>
-          <li class="included">Screenshot &amp; URL import</li>
+          <li class="included">Screenshot, URL &amp; camera import</li>
           <li class="included">Pantry tracking</li>
           <li class="included">Ingredient overlap counts</li>
-          <li class="included"><strong>Meal planner</strong></li>
+          <li class="included">Recipe sharing</li>
+          <li class="included"><strong>Meal planner &amp; auto-plan week</strong></li>
           <li class="included"><strong>Smart suggestions</strong></li>
+          <li class="included"><strong>Shopping list from planner</strong></li>
           <li class="included"><strong>PDF / Keep bulk import</strong></li>
           <li class="not-included">Calorie &amp; macro estimates</li>
-          <li class="not-included">Shopping list generation</li>
         </ul>
         <a href="/coming-soon/" class="btn-plan btn-plan-orange">Start 14-Day Free Trial</a>
       </div>
@@ -151,20 +153,16 @@ body_scripts: |
       <!-- Pro -->
       <div class="plan-card" style="border-color:var(--teal)">
         <div class="plan-name" style="color:var(--teal)">Pro</div>
-        <div class="plan-price" id="pro-price">$10</div>
+        <div class="plan-price" id="pro-price">$14</div>
         <div class="plan-per" id="pro-period">per month</div>
         <div class="plan-annual" id="pro-annual">&nbsp;</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <li class="included"><strong>Unlimited</strong> recipes</li>
-          <li class="included">Screenshot &amp; URL import</li>
-          <li class="included">Pantry tracking</li>
-          <li class="included">Ingredient overlap counts</li>
-          <li class="included"><strong>Meal planner</strong></li>
-          <li class="included"><strong>Smart suggestions</strong></li>
-          <li class="included"><strong>PDF / Keep bulk import</strong></li>
+          <li class="included">Everything in Basic</li>
           <li class="included"><strong>Calorie &amp; macro estimates</strong></li>
-          <li class="included"><strong>Shopping list generation</strong></li>
+          <li class="included"><strong>AI ingredient substitutions</strong></li>
+          <li class="included"><strong>Priority support</strong></li>
         </ul>
         <a href="/coming-soon/" class="btn-plan btn-plan-ghost" style="border-color:var(--teal);color:var(--teal)">Start 14-Day Free Trial</a>
       </div>
