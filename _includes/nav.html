@@ -1,0 +1,34 @@
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg width="30" height="30" viewBox="0 0 56 56">
+        <rect width="56" height="56" rx="12" fill="#F97316"/>
+        <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="26" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="35" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="17" y="24" width="23" height="4" fill="white" rx="2"/>
+        <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
+      </svg>
+      <span>Recipe<span class="hq">HQ</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/features/"{% if page.nav_active == "features" %} class="active-link"{% endif %}>Features</a></li>
+      <li><a href="/pricing/"{% if page.nav_active == "pricing" %} class="active-link"{% endif %}>Pricing</a></li>
+      <li><a href="/comparison/"{% if page.nav_active == "comparison" %} class="active-link"{% endif %}>Compare</a></li>
+      <li><a href="/about/"{% if page.nav_active == "about" %} class="active-link"{% endif %}>About</a></li>
+      <li><a href="/faq/"{% if page.nav_active == "faq" %} class="active-link"{% endif %}>FAQ</a></li>
+      <li><a href="/blog/"{% if page.nav_active == "blog" %} class="active-link"{% endif %}>Blog</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="{{ site.app_url }}" class="btn-login">Log In</a>
+      <a href="/coming-soon/" class="btn-cta">Get Started Free</a>
+      <button class="nav-hamburger" onclick="openMobileNav()" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>

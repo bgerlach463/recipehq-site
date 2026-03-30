@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+{{ page.head_extra }}
+</head>
+<body>
+{% include gtm-noscript.html %}
+{% include nav.html %}
+{% include mobile-nav.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+<script>
+  /* -- Mobile Nav -- */
+  function openMobileNav() {
+    document.getElementById('mob-overlay').classList.add('open');
+    document.getElementById('mob-drawer').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileNav() {
+    document.getElementById('mob-overlay').classList.remove('open');
+    document.getElementById('mob-drawer').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileNav(); });
+</script>
+
+{{ page.body_scripts }}
+
+</body>
+</html>

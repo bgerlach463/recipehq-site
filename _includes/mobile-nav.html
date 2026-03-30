@@ -1,0 +1,30 @@
+<!-- Mobile Nav Drawer -->
+<div class="mobile-nav-overlay" id="mob-overlay" onclick="closeMobileNav()"></div>
+<div class="mobile-nav-drawer" id="mob-drawer">
+  <div class="mob-nav-header">
+    <a href="/" class="nav-logo">
+      <svg width="26" height="26" viewBox="0 0 56 56">
+        <rect width="56" height="56" rx="12" fill="#F97316"/>
+        <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="26" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="35" y="10" width="5" height="16" rx="2.5" fill="white"/>
+        <rect x="17" y="24" width="23" height="4" fill="white" rx="2"/>
+        <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
+      </svg>
+      <span>Recipe<span class="hq">HQ</span></span>
+    </a>
+    <button class="mob-nav-close" onclick="closeMobileNav()">&#10005;</button>
+  </div>
+  <ul class="mob-nav-links">
+    <li><a href="/features/"{% if page.nav_active == "features" %} class="active-link"{% endif %}>Features</a></li>
+    <li><a href="/pricing/"{% if page.nav_active == "pricing" %} class="active-link"{% endif %}>Pricing</a></li>
+    <li><a href="/comparison/"{% if page.nav_active == "comparison" %} class="active-link"{% endif %}>Compare</a></li>
+    <li><a href="/about/"{% if page.nav_active == "about" %} class="active-link"{% endif %}>About</a></li>
+    <li><a href="/faq/"{% if page.nav_active == "faq" %} class="active-link"{% endif %}>FAQ</a></li>
+    <li><a href="/blog/"{% if page.nav_active == "blog" %} class="active-link"{% endif %}>Blog</a></li>
+  </ul>
+  <div class="mob-nav-footer">
+    <a href="{{ site.app_url }}" class="btn-login">Log In</a>
+    <a href="/coming-soon/" class="btn-cta">Get Started Free</a>
+  </div>
+</div>

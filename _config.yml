@@ -1,0 +1,12 @@
+title: RecipeHQ
+description: "The smarter recipe manager. Cook smart, waste less, save money."
+url: "https://www.myrecipehq.com"
+baseurl: ""
+permalink: /blog/:title/
+gtm_id: "GTM-N2DJHFX9"
+app_url: "https://app.myrecipehq.com"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - "Blog Posts for Publishing"

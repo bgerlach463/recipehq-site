@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+
+<link rel="stylesheet" href="/css/blog.css">
+
+<!-- BlogPosting Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.schema_headline | default: page.title }}",
+  "description": "{{ page.description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+  "dateModified": "{{ page.date_modified | default: page.date | date: '%Y-%m-%d' }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author | default: 'Brad Gerlach' }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RecipeHQ",
+    "url": "https://www.myrecipehq.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  }
+}
+</script>
+{% if page.schema_extra %}
+{{ page.schema_extra }}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myrecipehq.com"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.myrecipehq.com/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "{{ page.schema_headline | default: page.title }}", "item": "{{ site.url }}{{ page.url }}"}
+  ]
+}
+</script>
+
+{{ page.head_extra }}
+</head>
+<body>
+{% include gtm-noscript.html %}
+{% include nav.html %}
+{% include mobile-nav.html %}
+
+{{ content }}
+
+<script>
+  /* -- Mobile Nav -- */
+  function openMobileNav() {
+    document.getElementById('mob-overlay').classList.add('open');
+    document.getElementById('mob-drawer').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileNav() {
+    document.getElementById('mob-overlay').classList.remove('open');
+    document.getElementById('mob-drawer').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileNav(); });
+</script>
+
+</body>
+</html>

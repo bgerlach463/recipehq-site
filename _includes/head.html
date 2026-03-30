@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ site.gtm_id }}');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% else %}<meta name="robots" content="noindex, nofollow">{% endif %}
+{% if page.canonical %}<link rel="canonical" href="{{ site.url }}{{ page.canonical }}">{% endif %}
+<meta name="theme-color" content="#F97316">
+
+{% if page.og_title %}
+<!-- Open Graph -->
+<meta property="og:title" content="{{ page.og_title | default: page.title }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description }}">
+<meta property="og:url" content="{{ page.og_url | default: page.canonical | prepend: site.url }}">
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+<meta property="og:site_name" content="RecipeHQ">
+{% if page.og_image %}<meta property="og:image" content="{{ page.og_image }}">{% endif %}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.og_title | default: page.title }}">
+<meta name="twitter:description" content="{{ page.og_description | default: page.description }}">
+{% endif %}
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+{% if page.extra_css %}
+{% for css in page.extra_css %}
+<link rel="stylesheet" href="{{ css }}">
+{% endfor %}
+{% endif %}
