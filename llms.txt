@@ -38,8 +38,8 @@ The average American household throws away nearly $1,500 in food every year. Rec
 
 ## Pricing
 - **Free tier**: Limited recipe imports and basic features to try the product.
-- **Basic plan**: $5/month. Unlimited recipe imports, full meal planning, pantry tracking, and shopping lists.
-- **Pro plan**: $10/month. Everything in Basic plus advanced AI features, priority support, and family sharing.
+- **Basic plan**: $7/month. Up to 100 recipes, meal planner with auto-plan week, smart suggestions, shopping list from planner, PDF & Keep bulk import, recipe sharing.
+- **Pro plan**: $14/month. Unlimited recipes, everything in Basic plus calorie & macro estimates, AI ingredient substitutions, and priority support.
 
 No hidden fees. Cancel anytime.
 
