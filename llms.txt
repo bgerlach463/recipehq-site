@@ -38,8 +38,8 @@ The average American household throws away nearly $1,500 in food every year. Rec
 
 ## Pricing
 - **Free tier**: Limited recipe imports and basic features to try the product.
-- **Basic plan**: $7/month. Up to 100 recipes, meal planner with auto-plan week, smart suggestions, shopping list from planner, PDF & Keep bulk import, recipe sharing.
-- **Pro plan**: $14/month. Unlimited recipes, everything in Basic plus calorie & macro estimates, AI ingredient substitutions, and priority support.
+- **Premium plan**: $7/month. Up to 100 recipes, meal planner with auto-plan week, smart suggestions, shopping list from planner, PDF & Keep bulk import, recipe sharing.
+- **Max plan**: $14/month. Unlimited recipes, everything in Premium plus calorie & macro estimates, AI ingredient substitutions, and priority support.
 
 No hidden fees. Cancel anytime.
 

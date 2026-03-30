@@ -30,7 +30,7 @@ head_extra: |
         },
         {
           "@type": "Offer",
-          "name": "Basic",
+          "name": "Premium",
           "price": "7.00",
           "priceCurrency": "USD",
           "description": "Up to 100 recipes, meal planner with auto-plan, smart suggestions, shopping list, PDF & Google Keep bulk import, recipe sharing.",
@@ -42,10 +42,10 @@ head_extra: |
         },
         {
           "@type": "Offer",
-          "name": "Pro",
+          "name": "Max",
           "price": "14.00",
           "priceCurrency": "USD",
-          "description": "Unlimited recipes, everything in Basic plus calorie & macro estimates, AI ingredient substitutions, and priority support.",
+          "description": "Unlimited recipes, everything in Premium plus calorie & macro estimates, AI ingredient substitutions, and priority support.",
           "url": "https://www.myrecipehq.com/pricing/",
           "eligibleQuantity": {
             "@type": "QuantitativeValue",
@@ -127,10 +127,10 @@ body_scripts: |
         <a href="/coming-soon/" class="btn-plan btn-plan-ghost">Create Free Account</a>
       </div>
 
-      <!-- Basic -->
+      <!-- Premium -->
       <div class="plan-card featured">
         <div class="plan-badge">Most Popular</div>
-        <div class="plan-name">Basic</div>
+        <div class="plan-name">Premium</div>
         <div class="plan-price" id="basic-price">$7</div>
         <div class="plan-per" id="basic-period" style="color:#78716C">per month</div>
         <div class="plan-annual" id="basic-annual">&nbsp;</div>
@@ -150,16 +150,16 @@ body_scripts: |
         <a href="/coming-soon/" class="btn-plan btn-plan-orange">Start 14-Day Free Trial</a>
       </div>
 
-      <!-- Pro -->
+      <!-- Max -->
       <div class="plan-card" style="border-color:var(--teal)">
-        <div class="plan-name" style="color:var(--teal)">Pro</div>
+        <div class="plan-name" style="color:var(--teal)">Max</div>
         <div class="plan-price" id="pro-price">$14</div>
         <div class="plan-per" id="pro-period">per month</div>
         <div class="plan-annual" id="pro-annual">&nbsp;</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <li class="included"><strong>Unlimited</strong> recipes</li>
-          <li class="included">Everything in Basic</li>
+          <li class="included">Everything in Premium</li>
           <li class="included"><strong>Calorie &amp; macro estimates</strong></li>
           <li class="included"><strong>AI ingredient substitutions</strong></li>
           <li class="included"><strong>Priority support</strong></li>
@@ -179,8 +179,8 @@ body_scripts: |
         <div class="faq-a">You can add up to 10 new recipes per month on the Free plan — the allowance resets at the start of each month. Recipes you've already saved stay in your library and don't count against the monthly limit. We'll give you a heads up before you hit it.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
-        <button class="faq-q">What's the difference between Basic and Pro? <span class="faq-chevron">⌄</span></button>
-        <div class="faq-a">Basic gives you the full core experience — up to 100 recipes, the meal planner, smart AI suggestions, and PDF/Keep import. Pro adds unlimited recipes and calorie &amp; macro estimates for people tracking their nutrition. Both tiers get a 14-day free trial.</div>
+        <button class="faq-q">What's the difference between Premium and Max? <span class="faq-chevron">⌄</span></button>
+        <div class="faq-a">Premium gives you the full core experience — up to 100 recipes, the meal planner, smart AI suggestions, and PDF/Keep import. Max adds unlimited recipes and calorie &amp; macro estimates for people tracking their nutrition. Both tiers get a 14-day free trial.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <button class="faq-q">Can I cancel anytime? <span class="faq-chevron">⌄</span></button>
