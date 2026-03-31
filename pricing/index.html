@@ -74,9 +74,9 @@ body_scripts: |
       const track = document.getElementById('billing-toggle');
       track.classList.toggle('on', isAnnual);
       document.getElementById('basic-price').textContent  = isAnnual ? '$5'  : '$7';
-      document.getElementById('basic-annual').textContent = isAnnual ? 'Billed $60/year \u2014 save ~29%' : '\u00a0';
+      document.getElementById('basic-annual').textContent = isAnnual ? 'Billed $60/year' : '\u00a0';
       document.getElementById('pro-price').textContent    = isAnnual ? '$8' : '$10';
-      document.getElementById('pro-annual').textContent   = isAnnual ? 'Billed $96/year \u2014 save ~20%' : '\u00a0';
+      document.getElementById('pro-annual').textContent   = isAnnual ? 'Billed $96/year' : '\u00a0';
     }
 
     /* -- FAQ Accordion -- */
@@ -97,7 +97,7 @@ body_scripts: |
           <div class="toggle-knob"></div>
         </div>
         <span style="color:var(--mid)">Annual</span>
-        <span class="save-pill">Save ~20%</span>
+        <span class="save-pill">Save</span>
       </div>
     </div>
   </div>
