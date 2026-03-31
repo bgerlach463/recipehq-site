@@ -696,6 +696,34 @@ footer {
   .hero-eyebrow { font-size: 11px; }
 }
 
+/* ── Policy Pages ────────────────────────────────────── */
+.policy-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+.policy-page .section-eyebrow { display: block; margin-bottom: 16px; }
+.policy-page h1 {
+  font-family: var(--ff-head); font-size: clamp(28px, 4vw, 38px);
+  margin-bottom: 8px;
+}
+.policy-page .policy-date { color: var(--muted); margin-bottom: 40px; font-size: 14px; }
+.policy-page h2 {
+  font-family: var(--ff-head); font-size: 22px;
+  margin: 40px 0 16px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.policy-page h3 {
+  font-family: var(--ff-body); font-size: 16px; font-weight: 600;
+  margin: 24px 0 8px; color: var(--charcoal);
+}
+.policy-page p { font-size: 15px; color: var(--mid); line-height: 1.75; margin-bottom: 14px; }
+.policy-page ul, .policy-page ol { margin: 8px 0 16px 20px; }
+.policy-page li { font-size: 15px; color: var(--mid); line-height: 1.7; margin-bottom: 6px; }
+.policy-page a { color: var(--orange); }
+.policy-page a:hover { text-decoration: underline; }
+.policy-page strong { color: var(--charcoal); }
+
 @media (max-width: 540px) {
   .footer-grid { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
