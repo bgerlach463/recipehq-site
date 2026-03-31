@@ -31,9 +31,9 @@ head_extra: |
         {
           "@type": "Offer",
           "name": "Premium",
-          "price": "7.00",
+          "price": "5.00",
           "priceCurrency": "USD",
-          "description": "Up to 100 recipes, meal planner with auto-plan, smart suggestions, shopping list, PDF & Google Keep bulk import, recipe sharing.",
+          "description": "Up to 100 recipes, meal planner, smart suggestions, shopping list, pantry with expiration alerts, PDF & Google Keep import.",
           "url": "https://www.myrecipehq.com/pricing/",
           "eligibleQuantity": {
             "@type": "QuantitativeValue",
@@ -43,9 +43,9 @@ head_extra: |
         {
           "@type": "Offer",
           "name": "Max",
-          "price": "14.00",
+          "price": "8.00",
           "priceCurrency": "USD",
-          "description": "Unlimited recipes, everything in Premium plus calorie & macro estimates, AI ingredient substitutions, and priority support.",
+          "description": "Unlimited recipes, full AI auto-planning, Build a Meal, calorie & macro estimates, AI ingredient substitutions, AI image generation.",
           "url": "https://www.myrecipehq.com/pricing/",
           "eligibleQuantity": {
             "@type": "QuantitativeValue",
@@ -73,10 +73,10 @@ body_scripts: |
       isAnnual = !isAnnual;
       const track = document.getElementById('billing-toggle');
       track.classList.toggle('on', isAnnual);
-      document.getElementById('basic-price').textContent  = isAnnual ? '$6'  : '$7';
-      document.getElementById('basic-annual').textContent = isAnnual ? 'Billed $67/year \u2014 save ~20%' : '\u00a0';
-      document.getElementById('pro-price').textContent    = isAnnual ? '$11' : '$14';
-      document.getElementById('pro-annual').textContent   = isAnnual ? 'Billed $134/year \u2014 save ~20%' : '\u00a0';
+      document.getElementById('basic-price').textContent  = isAnnual ? '$4'  : '$5';
+      document.getElementById('basic-annual').textContent = isAnnual ? 'Billed $48/year \u2014 save ~20%' : '\u00a0';
+      document.getElementById('pro-price').textContent    = isAnnual ? '$6' : '$8';
+      document.getElementById('pro-annual').textContent   = isAnnual ? 'Billed $72/year \u2014 save ~25%' : '\u00a0';
     }
 
     /* -- FAQ Accordion -- */
@@ -112,17 +112,17 @@ body_scripts: |
         <div class="plan-per">forever</div>
         <div class="plan-annual">&nbsp;</div>
         <div class="plan-divider"></div>
+        <p style="font-size:13px;color:var(--mid);margin-bottom:20px;font-style:italic">Feel it</p>
         <ul class="plan-features">
-          <li class="included"><strong>10 new recipes/month</strong> (resets monthly)</li>
-          <li class="included">Screenshot, URL &amp; camera import</li>
-          <li class="included">Pantry tracking</li>
-          <li class="included">Ingredient overlap counts</li>
+          <li class="included"><strong>10 recipes/month</strong></li>
+          <li class="included">Manual, camera, screenshot, URL import</li>
+          <li class="included">Editable tags</li>
           <li class="included">Recipe sharing</li>
-          <li class="not-included">Meal planner &amp; auto-plan</li>
-          <li class="not-included">Smart suggestions</li>
+          <li class="included">Duplicate detection</li>
+          <li class="included">Pantry tracking (no expiration alerts)</li>
+          <li class="not-included">Meal planner</li>
           <li class="not-included">Shopping list</li>
-          <li class="not-included">PDF / Keep bulk import</li>
-          <li class="not-included">Calorie &amp; macro estimates</li>
+          <li class="not-included">AI features</li>
         </ul>
         <a href="/coming-soon/" class="btn-plan btn-plan-ghost">Start Free</a>
       </div>
@@ -131,21 +131,23 @@ body_scripts: |
       <div class="plan-card featured">
         <div class="plan-badge">Most Popular</div>
         <div class="plan-name">Premium</div>
-        <div class="plan-price" id="basic-price">$7</div>
+        <div class="plan-price" id="basic-price">$5</div>
         <div class="plan-per" id="basic-period" style="color:#78716C">per month</div>
         <div class="plan-annual" id="basic-annual">&nbsp;</div>
         <div class="plan-divider"></div>
+        <p style="font-size:13px;color:#A8A29E;margin-bottom:20px;font-style:italic">I'll plan, you help me</p>
         <ul class="plan-features">
           <li class="included">Up to <strong>100 recipes</strong></li>
-          <li class="included">Screenshot, URL &amp; camera import</li>
-          <li class="included">Pantry tracking</li>
-          <li class="included">Ingredient overlap counts</li>
-          <li class="included">Recipe sharing</li>
-          <li class="included"><strong>Meal planner &amp; auto-plan week</strong></li>
+          <li class="included">Everything in Free, plus:</li>
+          <li class="included"><strong>PDF + Google Keep import</strong></li>
+          <li class="included"><strong>Pantry + expiration alerts</strong></li>
+          <li class="included"><strong>Ingredient overlap counts</strong></li>
+          <li class="included"><strong>Meal planner</strong> (plan 3–7 days)</li>
+          <li class="included">Set seed meals, <strong>AI fills the rest</strong></li>
           <li class="included"><strong>Smart suggestions</strong></li>
-          <li class="included"><strong>Shopping list from planner</strong></li>
-          <li class="included"><strong>PDF / Keep bulk import</strong></li>
-          <li class="not-included">Calorie &amp; macro estimates</li>
+          <li class="included"><strong>Meal view</strong> (cooking screen)</li>
+          <li class="included"><strong>Shopping list</strong> + pantry transfer</li>
+          <li class="included">Recipe notes &amp; ratings</li>
         </ul>
         <a href="/coming-soon/" class="btn-plan btn-plan-orange">Get Premium</a>
       </div>
@@ -153,16 +155,20 @@ body_scripts: |
       <!-- Max -->
       <div class="plan-card" style="border-color:var(--teal)">
         <div class="plan-name" style="color:var(--teal)">Max</div>
-        <div class="plan-price" id="pro-price">$14</div>
+        <div class="plan-price" id="pro-price">$8</div>
         <div class="plan-per" id="pro-period">per month</div>
         <div class="plan-annual" id="pro-annual">&nbsp;</div>
         <div class="plan-divider"></div>
+        <p style="font-size:13px;color:var(--mid);margin-bottom:20px;font-style:italic">You plan, I'll cook</p>
         <ul class="plan-features">
           <li class="included"><strong>Unlimited</strong> recipes</li>
-          <li class="included">Everything in Premium</li>
+          <li class="included">Everything in Premium, plus:</li>
+          <li class="included"><strong>Multi-component meal detection</strong></li>
+          <li class="included"><strong>Full week auto-plan</strong> from scratch</li>
+          <li class="included"><strong>Build a Meal</strong> / suggest sides on the fly</li>
           <li class="included"><strong>Calorie &amp; macro estimates</strong></li>
           <li class="included"><strong>AI ingredient substitutions</strong></li>
-          <li class="included"><strong>Priority support</strong></li>
+          <li class="included"><strong>AI image generation</strong></li>
         </ul>
         <a href="/coming-soon/" class="btn-plan btn-plan-ghost" style="border-color:var(--teal);color:var(--teal)">Get Max</a>
       </div>
@@ -180,7 +186,7 @@ body_scripts: |
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <button class="faq-q">What's the difference between Premium and Max? <span class="faq-chevron">⌄</span></button>
-        <div class="faq-a">Premium gives you the full core experience — up to 100 recipes, the meal planner, smart AI suggestions, shopping list, and PDF/Keep import. Max adds unlimited recipes, calorie &amp; macro estimates, and AI ingredient substitutions. Start free and upgrade when you're ready.</div>
+        <div class="faq-a">Premium ($5/mo) gives you the core planning experience — meal planner, smart suggestions, shopping list, pantry with expiration alerts, and PDF/Keep import. You plan, AI assists. Max ($8/mo) lets AI do the heavy lifting — full auto-plan, Build a Meal on the fly, calorie &amp; macro estimates, AI substitutions, and AI images. Start free and upgrade when you're ready.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <button class="faq-q">Can I cancel anytime? <span class="faq-chevron">⌄</span></button>

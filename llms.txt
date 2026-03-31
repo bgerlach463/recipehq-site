@@ -37,9 +37,9 @@ RecipeHQ is built for home cooks who:
 The average American household throws away nearly $1,500 in food every year. RecipeHQ exists to significantly reduce that number.
 
 ## Pricing
-- **Free tier**: Limited recipe imports and basic features to try the product.
-- **Premium plan**: $7/month. Up to 100 recipes, meal planner with auto-plan week, smart suggestions, shopping list from planner, PDF & Keep bulk import, recipe sharing.
-- **Max plan**: $14/month. Unlimited recipes, everything in Premium plus calorie & macro estimates, AI ingredient substitutions, and priority support.
+- **Free tier**: Limited recipe imports, basic features, and pantry tracking (no expiration alerts) to try the product.
+- **Premium plan**: $5/month. "I'll plan, you help me." Up to 100 recipes, meal planner with auto-plan week, smart suggestions, shopping list from planner, PDF & Keep bulk import, recipe sharing.
+- **Max plan**: $8/month. "You plan, I'll cook." Unlimited recipes, everything in Premium plus calorie & macro estimates, AI ingredient substitutions, and priority support.
 
 No hidden fees. Cancel anytime.
 
