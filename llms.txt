@@ -38,10 +38,10 @@ The average American household throws away nearly $1,500 in food every year. Rec
 
 ## Pricing
 - **Free tier**: Limited recipe imports, basic features, and pantry tracking (no expiration alerts) to try the product.
-- **Premium plan**: $5/month. "I'll plan, you help me." Up to 100 recipes, meal planner with auto-plan week, smart suggestions, shopping list from planner, PDF & Keep bulk import, recipe sharing.
-- **Max plan**: $8/month. "You plan, I'll cook." Unlimited recipes, everything in Premium plus calorie & macro estimates, AI ingredient substitutions, and priority support.
+- **Premium plan**: $7/month ($5/month billed annually at $60/year). "I'll plan, you help me." Up to 100 recipes, meal planner with auto-plan week, smart suggestions, shopping list from planner, PDF & Keep bulk import, recipe sharing.
+- **Max plan**: $10/month ($8/month billed annually at $96/year). "You plan, I'll cook." Unlimited recipes, everything in Premium plus calorie & macro estimates, AI ingredient substitutions, and priority support.
 
-No hidden fees. Cancel anytime.
+Annual billing is available for both paid plans at a discounted rate. No hidden fees. Cancel anytime.
 
 ## Technical Details
 - **Web application**: The app is available at https://app.myrecipehq.com

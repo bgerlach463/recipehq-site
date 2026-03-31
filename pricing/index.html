@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Pricing | RecipeHQ"
-description: "RecipeHQ pricing starts at $5/month. Import unlimited recipes, plan meals, track your pantry, and reduce grocery waste. Try free."
+description: "RecipeHQ pricing starts at $7/month ($5/month billed annually). Import unlimited recipes, plan meals, track your pantry, and reduce grocery waste. Try free."
 nav_active: pricing
 canonical: /pricing/
 og_title: "Pricing | RecipeHQ"
-og_description: "RecipeHQ pricing starts at $5/month. Import unlimited recipes, plan meals, track your pantry, and reduce grocery waste. Try free."
+og_description: "RecipeHQ pricing starts at $7/month ($5/month billed annually). Import unlimited recipes, plan meals, track your pantry, and reduce grocery waste. Try free."
 og_url: "https://myrecipehq.com/pricing/"
 og_type: website
 og_image: "https://myrecipehq.com/og-image.png"
@@ -31,7 +31,7 @@ head_extra: |
         {
           "@type": "Offer",
           "name": "Premium",
-          "price": "5.00",
+          "price": "7.00",
           "priceCurrency": "USD",
           "description": "Up to 100 recipes, meal planner, smart suggestions, shopping list, pantry with expiration alerts, PDF & Google Keep import.",
           "url": "https://www.myrecipehq.com/pricing/",
@@ -43,7 +43,7 @@ head_extra: |
         {
           "@type": "Offer",
           "name": "Max",
-          "price": "8.00",
+          "price": "10.00",
           "priceCurrency": "USD",
           "description": "Unlimited recipes, full AI auto-planning, Build a Meal, calorie & macro estimates, AI ingredient substitutions, AI image generation.",
           "url": "https://www.myrecipehq.com/pricing/",
@@ -73,10 +73,10 @@ body_scripts: |
       isAnnual = !isAnnual;
       const track = document.getElementById('billing-toggle');
       track.classList.toggle('on', isAnnual);
-      document.getElementById('basic-price').textContent  = isAnnual ? '$4'  : '$5';
-      document.getElementById('basic-annual').textContent = isAnnual ? 'Billed $48/year \u2014 save ~20%' : '\u00a0';
-      document.getElementById('pro-price').textContent    = isAnnual ? '$6' : '$8';
-      document.getElementById('pro-annual').textContent   = isAnnual ? 'Billed $72/year \u2014 save ~25%' : '\u00a0';
+      document.getElementById('basic-price').textContent  = isAnnual ? '$5'  : '$7';
+      document.getElementById('basic-annual').textContent = isAnnual ? 'Billed $60/year \u2014 save ~29%' : '\u00a0';
+      document.getElementById('pro-price').textContent    = isAnnual ? '$8' : '$10';
+      document.getElementById('pro-annual').textContent   = isAnnual ? 'Billed $96/year \u2014 save ~20%' : '\u00a0';
     }
 
     /* -- FAQ Accordion -- */
@@ -131,7 +131,7 @@ body_scripts: |
       <div class="plan-card featured">
         <div class="plan-badge">Most Popular</div>
         <div class="plan-name">Premium</div>
-        <div class="plan-price" id="basic-price">$5</div>
+        <div class="plan-price" id="basic-price">$7</div>
         <div class="plan-per" id="basic-period" style="color:#78716C">per month</div>
         <div class="plan-annual" id="basic-annual">&nbsp;</div>
         <div class="plan-divider"></div>
@@ -155,7 +155,7 @@ body_scripts: |
       <!-- Max -->
       <div class="plan-card" style="border-color:var(--teal)">
         <div class="plan-name" style="color:var(--teal)">Max</div>
-        <div class="plan-price" id="pro-price">$8</div>
+        <div class="plan-price" id="pro-price">$10</div>
         <div class="plan-per" id="pro-period">per month</div>
         <div class="plan-annual" id="pro-annual">&nbsp;</div>
         <div class="plan-divider"></div>
@@ -186,7 +186,7 @@ body_scripts: |
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <button class="faq-q">What's the difference between Premium and Max? <span class="faq-chevron">⌄</span></button>
-        <div class="faq-a">Premium ($5/mo) gives you the core planning experience — meal planner, smart suggestions, shopping list, pantry with expiration alerts, and PDF/Keep import. You plan, AI assists. Max ($8/mo) lets AI do the heavy lifting — full auto-plan, Build a Meal on the fly, calorie &amp; macro estimates, AI substitutions, and AI images. Start free and upgrade when you're ready.</div>
+        <div class="faq-a">Premium ($7/mo, or $5/mo billed annually) gives you the core planning experience — meal planner, smart suggestions, shopping list, pantry with expiration alerts, and PDF/Keep import. You plan, AI assists. Max ($10/mo, or $8/mo billed annually) lets AI do the heavy lifting — full auto-plan, Build a Meal on the fly, calorie &amp; macro estimates, AI substitutions, and AI images. Start free and upgrade when you're ready.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <button class="faq-q">Can I cancel anytime? <span class="faq-chevron">⌄</span></button>
