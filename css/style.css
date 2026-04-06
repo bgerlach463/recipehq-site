@@ -469,7 +469,7 @@ section { padding: 96px 0; }
 .about-text h1 em { font-style: italic; color: var(--orange); }
 .about-body { font-size: 17px; color: var(--mid); line-height: 1.8; }
 .about-body p { margin-bottom: 20px; }
-.about-sidebar {}
+.about-sidebar { padding-top: 160px; }
 .value-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
 .value-card {
   padding: 24px; border-radius: 14px;
@@ -659,6 +659,7 @@ footer {
 
   /* About */
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-sidebar { padding-top: 0; }
   .about-mission { padding: 36px 24px; border-radius: 16px; }
 
   /* Comparison */
