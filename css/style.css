@@ -237,7 +237,7 @@ section { padding: 96px 0; }
 .step:last-child  { border-radius: 0 16px 16px 0; }
 .step-num {
   font-family: var(--ff-head); font-size: 56px; font-weight: 900;
-  color: rgba(249,115,22,.15); line-height: 1;
+  color: #F97316; line-height: 1;
   margin-bottom: 12px;
 }
 .step h3 { font-family: var(--ff-head); font-size: 18px; color: white; margin-bottom: 10px; }
