@@ -469,7 +469,7 @@ section { padding: 96px 0; }
 .about-text h1 em { font-style: italic; color: var(--orange); }
 .about-body { font-size: 17px; color: var(--mid); line-height: 1.8; }
 .about-body p { margin-bottom: 20px; }
-.about-sidebar { padding-top: 160px; }
+.about-sidebar { padding-top: 220px; }
 .founder-card { display: flex; align-items: center; gap: 28px; margin-top: 56px; padding: 40px; background: var(--warm-bg); border-radius: 20px; border: 1px solid var(--border); }
 .founder-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; }
 .value-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
