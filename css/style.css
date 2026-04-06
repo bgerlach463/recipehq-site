@@ -370,7 +370,7 @@ section { padding: 96px 0; }
 }
 .pricing-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-  max-width: 960px; margin: 56px auto 0; padding-bottom: 96px;
+  max-width: 1100px; margin: 56px auto 0; padding-bottom: 96px;
 }
 .plan-card {
   border-radius: 20px; padding: 40px; border: 1px solid var(--border);
@@ -401,7 +401,7 @@ section { padding: 96px 0; }
 .plan-divider { height: 1px; background: var(--border); margin-bottom: 28px; }
 .plan-card.featured .plan-divider { background: #3C3530; }
 .plan-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
-.plan-features li { display: flex; gap: 10px; font-size: 14px; color: var(--mid); }
+.plan-features li { display: flex; gap: 10px; font-size: 13px; color: var(--mid); }
 .plan-card.featured .plan-features li { color: #A8A29E; }
 .plan-features li.included::before { content: '✓'; color: var(--teal); font-weight: 700; }
 .plan-features li.not-included { opacity: .4; }
