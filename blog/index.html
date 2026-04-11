@@ -73,7 +73,7 @@ body_scripts: |
 
     {% for post in site.posts %}
     <a href="{{ post.url }}" class="post-card" data-category="{{ post.category }}">
-      <div class="card-hero">
+      <div class="card-hero{% if post.cluster_tag == 'PILLAR' %} pillar{% endif %}">
         <div class="card-hero-content">
           <h2 class="card-hero-title">{{ post.hero_title }}</h2>
           <div class="card-hero-icons">
