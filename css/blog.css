@@ -60,6 +60,7 @@
 .card-hero.pillar { background: var(--orange); }
 .card-hero.pillar .card-hero-title { color: #fff; }
 .card-hero.pillar .card-hero-title .hl { color: #fff7ed; }
+.card-hero.pillar .card-hero-title .hl-teal { color: var(--teal); }
 .card-hero.pillar .icon-mini { background: rgba(0,0,0,0.15); border-color: rgba(255,255,255,0.2); }
 .card-hero-content {
   display: flex; align-items: center;
