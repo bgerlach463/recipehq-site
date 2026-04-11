@@ -422,6 +422,24 @@ section { padding: 96px 0; }
   background: var(--orange); color: white; border: none;
 }
 .btn-plan-orange:hover { background: var(--orange-d); }
+.btn-plan-charcoal {
+  background: transparent;
+  color: var(--charcoal);
+  border: 1.5px solid var(--charcoal);
+}
+.btn-plan-charcoal:hover {
+  background: var(--charcoal);
+  color: white;
+}
+.btn-plan-teal {
+  background: var(--teal);
+  color: white;
+  border: 1.5px solid var(--teal);
+}
+.btn-plan-teal:hover {
+  background: #0b7a70;
+  border-color: #0b7a70;
+}
 .pricing-faq { background: var(--warm-bg); padding: 80px 0; }
 
 /* ── COMPARISON PAGE ─────────────────────────────────── */
