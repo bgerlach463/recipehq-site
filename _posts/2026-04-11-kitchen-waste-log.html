@@ -1,0 +1,660 @@
+---
+layout: post
+title: "Kitchen Waste Log: How to Track and Fix What You Throw Away — MyRecipeHQ"
+description: "A kitchen waste log shows you exactly what you're throwing away and why. Simple setup, real patterns, and what to do once you find them."
+date: 2026-04-11
+author: Brad Gerlach
+nav_active: blog
+canonical: /blog/kitchen-waste-log/
+permalink: /blog/kitchen-waste-log/
+category: reduce-kitchen-waste
+category_label: "Reduce Kitchen Waste"
+cluster_tag: "TRACK"
+read_time: "9 min read"
+excerpt_text: "A kitchen waste log shows you exactly what you're throwing away and why. Simple setup, real patterns, and what to do once you find them."
+hero_title: 'How to Keep a<br> <span class="hl">Kitchen Waste Log</span><br> and Use What You Learn'
+og_title: "Kitchen Waste Log: How to Track and Fix What You Throw Away"
+og_description: "A kitchen waste log shows you exactly what you're throwing away and why. Simple setup, real patterns, and what to do once you find them."
+og_url: "https://www.myrecipehq.com/blog/kitchen-waste-log"
+og_type: article
+schema_headline: "Kitchen Waste Log: How to Track and Fix What You Throw Away — MyRecipeHQ"
+head_extra: |
+  <style>
+
+      :root {
+        --orange:   #F97316;
+        --orange-d: #EA6A0A;
+        --orange-l: #FFF7ED;
+        --orange-p: #FED7AA;
+        --teal:     #0D9488;
+        --teal-l:   #CCFBF1;
+        --green:    #1a4a4a;
+        --charcoal: #1C1917;
+        --mid:      #57534E;
+        --muted:    #78716C;
+        --light:    #A8A29E;
+        --border:   #E7E5E4;
+        --warm-bg:  #FAFAF9;
+        --white:    #FFFFFF;
+        --ff-head:  'Playfair Display', Georgia, serif;
+        --ff-body:  'DM Sans', system-ui, sans-serif;
+      }
+
+      /* ARTICLE */
+      article { max-width: 740px; margin: 0 auto; padding: 28px 24px 80px; }
+      h2 { font-family: var(--ff-head); font-size: 1.55rem; margin: 2.8rem 0 1rem; color: var(--charcoal); }
+      h3 { font-family: var(--ff-body); font-size: 1.05rem; font-weight: 600; margin: 1.8rem 0 0.5rem; color: var(--charcoal); }
+      p { margin-bottom: 1.2rem; font-size: 1.05rem; color: var(--mid); line-height: 1.75; }
+      ul, ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+      li { margin-bottom: 0.5rem; font-size: 1.05rem; color: var(--mid); }
+      strong { color: var(--charcoal); }
+      a { color: var(--orange); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+  
+      /* HERO */
+      .hero-wrap { margin-bottom: 0; }
+      .hero { background: var(--green); width: 100%; overflow: hidden; font-family: var(--ff-body); }
+      .hero-accent { height: 5px; background: var(--orange); width: 100%; }
+      .hero-body { display: flex; align-items: stretch; justify-content: space-between; padding: 44px 52px; gap: 48px; }
+      .hero-left { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
+      .hero-logo { display: flex; align-items: center; gap: 10px; }
+      .hero-logo-text { font-weight: 600; font-size: 22px; letter-spacing: -0.02em; color: #f0ede8; }
+      .hero-logo-text .hq { color: var(--orange); }
+      .hero-divider { height: 1px; background: var(--orange); opacity: 0.25; }
+      .hero-h1 { font-family: var(--ff-head); font-size: 36px; font-weight: 700; line-height: 1.25; color: #f0ede8; margin: 0; }
+      .hero-h1 .hl { color: var(--orange); }
+      .hero-right { flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+      .hero-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; width: 240px; height: 210px; }
+      .icon-tile { background: rgba(10,48,48,0.75); border-radius: 14px; border: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; flex: 1; flex-direction: column; gap: 6px; padding: 8px; }
+      .icon-tile-label { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(240,237,232,0.5); text-align: center; }
+      .hero-watermark { text-align: center; padding: 10px 0 14px; font-size: 11px; color: #2a6060; background: var(--green); }
+  
+      /* STAT CALLOUT */
+      .stat-callout { background: var(--charcoal); border-radius: 14px; padding: 1.75rem 2rem; margin: 2rem 0; display: flex; gap: 1.5rem; align-items: center; }
+      .stat-num { font-family: var(--ff-head); font-size: 3.75rem; font-weight: 700; color: var(--orange); line-height: 1; flex-shrink: 0; }
+      .stat-body p { color: rgba(240,237,232,0.85); font-size: 1rem; margin-bottom: 0.35rem; line-height: 1.55; }
+      .stat-source { font-size: 0.72rem; color: rgba(240,237,232,0.35); }
+      .stat-source a { color: rgba(240,237,232,0.35); }
+  
+      /* LOG MOCK */
+      .log-mock { background: var(--warm-bg); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin: 1.75rem 0; }
+      .log-mock-bar { background: var(--green); padding: 10px 18px; display: flex; align-items: center; gap: 10px; }
+      .log-mock-dots { display: flex; gap: 5px; }
+      .log-mock-dot { width: 8px; height: 8px; border-radius: 50%; }
+      .log-mock-bar span { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(240,237,232,0.5); }
+      .log-table { width: 100%; border-collapse: collapse; }
+      .log-table th { background: #eeece8; padding: 9px 14px; text-align: left; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--border); }
+      .log-table td { padding: 10px 14px; font-size: 0.88rem; color: var(--mid); border-bottom: 1px solid var(--border); vertical-align: middle; }
+      .log-table tr:last-child td { border-bottom: none; }
+      .tag { display: inline-block; font-size: 0.68rem; font-weight: 600; padding: 2px 8px; border-radius: 100px; white-space: nowrap; }
+  
+      /* FORMAT CARDS */
+      .format-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1.5rem 0; }
+      .format-card { background: var(--warm-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem; }
+      .format-head { display: flex; align-items: center; gap: 10px; margin-bottom: 0.65rem; }
+      .fmt-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+      .fmt-icon svg { width: 18px; height: 18px; }
+      .format-name { font-weight: 600; font-size: 0.95rem; color: var(--charcoal); }
+      .format-card p { font-size: 0.84rem; color: var(--muted); margin-bottom: 0.6rem; line-height: 1.5; }
+      .fmt-pro { font-size: 0.78rem; color: var(--teal); font-weight: 500; display: block; }
+      .fmt-con { font-size: 0.78rem; color: var(--light); font-weight: 500; display: block; margin-top: 2px; }
+  
+      /* PATTERN CARDS */
+      .pattern-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1.5rem 0; }
+      .pattern-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.1rem; display: flex; gap: 0.85rem; align-items: flex-start; }
+      .pat-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+      .pat-icon svg { width: 20px; height: 20px; }
+      .pat-name { font-weight: 600; font-size: 0.875rem; color: var(--charcoal); margin-bottom: 0.2rem; }
+      .pat-desc { font-size: 0.81rem; color: var(--muted); line-height: 1.45; margin: 0; }
+  
+      /* FLOW DIAGRAM */
+      .flow-wrap { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin: 1.75rem 0; }
+      .flow-head { padding: 11px 20px; background: var(--orange-l); border-bottom: 1px solid var(--orange-p); display: grid; grid-template-columns: 1fr 36px 1fr 36px 1fr; }
+      .flow-head span { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--orange-d); }
+      .flow-row { display: grid; grid-template-columns: 1fr 36px 1fr 36px 1fr; align-items: center; padding: 13px 20px; border-bottom: 1px solid var(--border); }
+      .flow-row:last-child { border-bottom: none; }
+      .flow-row:hover { background: rgba(249,115,22,0.025); }
+      .flow-cell strong { color: var(--charcoal); display: block; font-size: 0.875rem; font-weight: 600; }
+      .flow-cell span { color: var(--muted); font-size: 0.8rem; }
+      .flow-arr { text-align: center; color: var(--light); font-size: 0.9rem; }
+      .flow-fix { color: var(--teal); font-size: 0.875rem; font-weight: 500; }
+  
+      /* TIP BOX */
+      .tip-box { background: var(--teal-l); border-left: 3px solid var(--teal); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+      .tip-box p { color: #134e4a; font-size: 0.9rem; margin-bottom: 0; }
+      .tip-box strong { color: var(--teal); }
+  
+      /* CTA BLOCK */
+      .cta-block { background: var(--green); border-radius: 14px; padding: 1.75rem 2rem; margin: 2.5rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+      .cta-block-text h3 { font-family: var(--ff-head); font-size: 1.2rem; font-weight: 700; color: #f0ede8; margin: 0 0 0.35rem 0; line-height: 1.3; }
+      .cta-block-text p { font-size: 0.875rem; color: rgba(240,237,232,0.65); margin: 0; line-height: 1.5; }
+      .cta-btn { background: var(--orange); color: white; padding: 0.65rem 1.4rem; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; white-space: nowrap; flex-shrink: 0; display: inline-block; }
+      .cta-btn:hover { background: var(--orange-d); text-decoration: none; }
+  
+      /* FAQ */
+      .faq-box { background: var(--warm-bg); border: 1px solid var(--border); border-radius: 16px; padding: 36px 40px; margin: 2.8rem 0; }
+      .faq-box h2 { margin-top: 0; padding-bottom: 16px; border-bottom: 1px solid var(--border); margin-bottom: 1.6rem; }
+      .faq-box h3 { color: var(--orange); margin-top: 1.8rem; }
+      .faq-box h3:first-of-type { margin-top: 0; }
+      .faq-box p:last-child { margin-bottom: 0; }
+  
+      /* ── MOBILE RESPONSIVE ── */
+      @media (max-width: 680px) {
+        /* Hero stacks vertically, right panel hidden */
+        .hero-body { flex-direction: column; padding: 32px 24px 28px; gap: 24px; }
+        .hero-right { display: none; }
+        .hero-h1 { font-size: 28px; }
+        .hero-logo-text { font-size: 18px; }
+  
+        /* Article */
+        article { padding: 20px 16px 60px; }
+        h2 { font-size: 1.35rem; margin: 2.2rem 0 0.75rem; }
+  
+        /* Stat callout stacks */
+        .stat-callout { flex-direction: column; gap: 0.75rem; padding: 1.25rem; }
+        .stat-num { font-size: 2.75rem; }
+  
+        /* Log table — hide last column on small screens */
+        .log-table th:last-child, .log-table td:last-child { display: none; }
+        .log-table th, .log-table td { padding: 9px 10px; font-size: 0.82rem; }
+  
+        /* 2-col grids drop to 1-col */
+        .format-grid { grid-template-columns: 1fr; }
+        .pattern-grid { grid-template-columns: 1fr; }
+        .pattern-card.span-2 { grid-column: span 1; }
+  
+        /* Flow diagram — simplified on mobile */
+        .flow-head { display: none; }
+        .flow-row { grid-template-columns: 1fr; gap: 4px; padding: 14px 16px; }
+        .flow-arr { display: none; }
+        .flow-fix { padding-top: 4px; border-top: 1px dashed var(--border); margin-top: 4px; }
+  
+        /* CTA block stacks */
+        .cta-block { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.25rem; }
+  
+        /* FAQ */
+        .faq-box { padding: 24px 20px; }
+      }
+    
+  </style>
+schema_extra: |
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Kitchen Waste Log: How to Track and Fix What You Throw Away",
+          "description": "A kitchen waste log shows you exactly what you're throwing away and why. Simple setup, real patterns, and what to do once you find them.",
+          "url": "https://www.myrecipehq.com/blog/kitchen-waste-log",
+          "datePublished": "2026-04-11",
+          "dateModified": "2026-04-11",
+          "author": {
+            "@type": "Organization",
+            "name": "MyRecipeHQ",
+            "url": "https://www.myrecipehq.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "MyRecipeHQ",
+            "url": "https://www.myrecipehq.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.myrecipehq.com/images/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.myrecipehq.com/blog/kitchen-waste-log"
+          },
+          "image": "https://www.myrecipehq.com/blog/images/kitchen-waste-log.jpg",
+          "articleSection": "Kitchen Waste",
+          "keywords": "kitchen waste log, food waste tracking, reduce food waste, kitchen waste management"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do I have to log every single thing I throw away?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ideally yes, at least for the first two weeks. The value of a waste log comes from completeness — small recurring items add up and you won't see the pattern if you only log the obvious stuff. After the initial tracking period, spot-checking is fine."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if multiple people in my household throw things away?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Either ask everyone to log their own discards, or designate one person and ask others to give a heads-up before tossing something. Multi-person households often have the most to gain from tracking because waste can go completely unnoticed by any one person."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I estimate cost without knowing exact prices?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A rough category estimate works fine — under a dollar, one to three dollars, over three dollars. That's enough to see scale. For more accuracy, check your last grocery receipt and divide the pack price by how much you threw away."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if my log just shows I need to shop differently?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "That's a genuinely useful outcome. A lot of food waste is solved at the store, not in the kitchen — buying less of what you consistently don't use is just as effective as any recipe trick."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.myrecipehq.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.myrecipehq.com/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Kitchen Waste Log",
+              "item": "https://www.myrecipehq.com/blog/kitchen-waste-log"
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+---
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero">
+    <div class="hero-accent"></div>
+    <div class="hero-body">
+      <div class="hero-left">
+        <div class="hero-logo">
+          <svg width="38" height="38" viewBox="0 0 56 56">
+            <rect width="56" height="56" rx="12" fill="#F97316"/>
+            <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
+            <rect x="26" y="10" width="5" height="16" rx="2.5" fill="white"/>
+            <rect x="35" y="10" width="5" height="16" rx="2.5" fill="white"/>
+            <rect x="17" y="24" width="23" height="4" fill="white" rx="2"/>
+            <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
+          </svg>
+          <div class="hero-logo-text">MyRecipe<span class="hq">HQ</span></div>
+        </div>
+        <div class="hero-divider"></div>
+        <h1 class="hero-h1">
+          How to Keep a<br>
+          <span class="hl">Kitchen Waste Log</span><br>
+          and Use What You Learn
+        </h1>
+      </div>
+      <div class="hero-right">
+        <div class="hero-grid">
+          <div class="icon-tile">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="#F97316" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M9 12h6M9 16h4" stroke="rgba(240,237,232,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="icon-tile-label">Track</span>
+          </div>
+          <div class="icon-tile">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+              <circle cx="10" cy="10" r="6.5" stroke="#F97316" stroke-width="1.5"/>
+              <path d="M15 15l5 5" stroke="rgba(240,237,232,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 10h4M10 8v4" stroke="rgba(240,237,232,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="icon-tile-label">Spot Patterns</span>
+          </div>
+          <div class="icon-tile">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2a7 7 0 00-4 12.74V17a1 1 0 001 1h6a1 1 0 001-1v-2.26A7 7 0 0012 2z" stroke="#F97316" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M9 21h6" stroke="rgba(240,237,232,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="icon-tile-label">Root Cause</span>
+          </div>
+          <div class="icon-tile">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="#F97316" stroke-width="1.5"/>
+              <path d="M8 12l3 3 5-6" stroke="rgba(240,237,232,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="icon-tile-label">Fix It</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-accent"></div>
+  </div>
+  <div class="hero-watermark">www.myrecipehq.com</div>
+</div>
+
+<article>
+
+  <p>Most <a href="/blog/kitchen-waste-management-home/">kitchen waste management advice</a> skips straight to solutions — compost this, freeze that, buy less. But you can't fix what you haven't measured. Without knowing which specific foods you throw away and why, you're just guessing — and the guesses rarely stick.</p>
+
+  <p>A kitchen waste log is exactly what it sounds like: a record of what gets thrown out of your kitchen, when, and why. It sounds tedious. It isn't. Two weeks of casual tracking will tell you more about your cooking habits than a month of good intentions. The patterns it surfaces are almost always fixable once you can see them clearly.</p>
+
+  <!-- STAT CALLOUT -->
+  <div class="stat-callout">
+    <div class="stat-num">2/3</div>
+    <div class="stat-body">
+      <p>of at-home food waste happens because food isn't used before it goes bad — not because people don't care, but because they don't have a system to catch it in time.</p>
+      <div class="stat-source">Source: <a href="https://www.rts.com/resources/guides/food-waste-america/" target="_blank">EPA via Recycle Track Systems</a></div>
+    </div>
+  </div>
+
+  <h2>Why Tracking Beats Guessing</h2>
+
+  <p>Ask most home cooks what they waste most and they'll say something like "produce" or "leftovers." That's accurate but not useful. Knowing that salad greens are your specific recurring culprit — that you buy a full container every week and use maybe two-thirds of it — is information you can do something with.</p>
+
+  <p>A waste log turns vague guilt into actionable data. After a couple of weeks, most people find their waste falls into two or three repeating patterns rather than being spread evenly across everything they buy. Fix those patterns and you've solved most of the problem. The other thing a log does: it makes the cost tangible. Tossing half a bunch of cilantro feels minor in the moment. Seeing it happen four weeks in a row registers differently.</p>
+
+  <h2>What to Track</h2>
+
+  <p>Keep it simple enough that you'll actually do it. Three fields are all you need to start:</p>
+
+  <ul>
+    <li><strong>What</strong> — specific, not vague ("half a red bell pepper" not just "vegetables")</li>
+    <li><strong>Why</strong> — went bad, forgot about it, made too much, didn't get to it, impulse buy</li>
+    <li><strong>How much</strong> — a handful, half a bag, a full container</li>
+  </ul>
+
+  <p>Here's what a real week looks like in practice:</p>
+
+  <!-- LOG MOCK -->
+  <div class="log-mock">
+    <div class="log-mock-bar">
+      <div class="log-mock-dots">
+        <div class="log-mock-dot" style="background:#e05252;"></div>
+        <div class="log-mock-dot" style="background:#e0b352;"></div>
+        <div class="log-mock-dot" style="background:#52c46a;"></div>
+      </div>
+      <span>Kitchen Waste Log — Sample Week</span>
+    </div>
+    <table class="log-table">
+      <thead>
+        <tr>
+          <th>What</th>
+          <th>Why</th>
+          <th>How much</th>
+          <th>Where stored</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Fresh cilantro</strong></td>
+          <td><span class="tag" style="background:#FFF7ED;color:#C2410C;">Went bad</span></td>
+          <td>Half a bunch</td>
+          <td>Crisper drawer</td>
+        </tr>
+        <tr>
+          <td><strong>Salad mix</strong></td>
+          <td><span class="tag" style="background:#FFF7ED;color:#C2410C;">Went bad</span></td>
+          <td>Full container</td>
+          <td>Fridge shelf</td>
+        </tr>
+        <tr>
+          <td><strong>Leftover pasta</strong></td>
+          <td><span class="tag" style="background:#F0F9FF;color:#0369A1;">Didn't get to it</span></td>
+          <td>2 portions</td>
+          <td>Fridge (covered)</td>
+        </tr>
+        <tr>
+          <td><strong>Zucchini</strong></td>
+          <td><span class="tag" style="background:#F0FDF4;color:#166534;">Forgot about it</span></td>
+          <td>1 whole</td>
+          <td>Crisper drawer</td>
+        </tr>
+        <tr>
+          <td><strong>Greek yogurt</strong></td>
+          <td><span class="tag" style="background:#FDF4FF;color:#7E22CE;">Expired</span></td>
+          <td>Half container</td>
+          <td>Fridge door</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The "where stored" column is optional but often revealing. Items sitting in the crisper drawer that go bad consistently are almost always a visibility problem, not a buying problem.</p>
+
+  <h2>How to Set It Up</h2>
+
+  <p>The format matters less than the placement. Your log needs to be within arm's reach when you're standing at the trash can — otherwise you'll mean to log things and then forget.</p>
+
+  <!-- FORMAT CARDS -->
+  <div class="format-grid">
+    <div class="format-card">
+      <div class="format-head">
+        <div class="fmt-icon" style="background:#FFF7ED;">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="3" width="13" height="17" rx="2" stroke="#F97316" stroke-width="1.5"/>
+            <path d="M8 8h6M8 11h6M8 14h4" stroke="#F97316" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M14 3v4h4" stroke="#F97316" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="format-name">Notepad on the counter</div>
+      </div>
+      <p>A small spiral notepad near the bin. Write date, item, reason, amount. Ten seconds per entry.</p>
+      <span class="fmt-pro">+ Hardest to ignore — physically there</span>
+      <span class="fmt-con">− Needs a working pen nearby</span>
+    </div>
+    <div class="format-card">
+      <div class="format-head">
+        <div class="fmt-icon" style="background:#F0F9FF;">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="7" y="2" width="10" height="18" rx="3" stroke="#0369A1" stroke-width="1.5"/>
+            <path d="M10 18.5h4" stroke="#0369A1" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M10 7h4M10 10h3" stroke="rgba(3,105,161,0.4)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="format-name">Note on your phone</div>
+      </div>
+      <p>A pinned note in your phone. Voice-to-text makes entries fast. Always in your pocket.</p>
+      <span class="fmt-pro">+ Always with you</span>
+      <span class="fmt-con">− Easier to forget than a visible notepad</span>
+    </div>
+    <div class="format-card">
+      <div class="format-head">
+        <div class="fmt-icon" style="background:#F0FDF4;">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="3" width="18" height="18" rx="2" stroke="#166534" stroke-width="1.5"/>
+            <path d="M3 8h18M8 8v13" stroke="#166534" stroke-width="1.5"/>
+            <path d="M12 12h5M12 15h4M12 18h3" stroke="rgba(22,101,52,0.4)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="format-name">Spreadsheet</div>
+      </div>
+      <p>Google Sheets with columns for date, item, reason, quantity, cost. Sort to find patterns fast.</p>
+      <span class="fmt-pro">+ Best for spotting patterns over time</span>
+      <span class="fmt-con">− Friction if spreadsheets aren't your thing</span>
+    </div>
+    <div class="format-card">
+      <div class="format-head">
+        <div class="fmt-icon" style="background:#FFF7ED;">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M8 3v18M12 3v10M16 3v18" stroke="#F97316" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M8 13h8" stroke="#F97316" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="format-name">MyRecipeHQ</div>
+      </div>
+      <p>Track discards in your pantry. Waste data connects directly to meal suggestions and expiration alerts.</p>
+      <span class="fmt-pro">+ Tied to your meal plan automatically</span>
+      <span class="fmt-con">− Requires the app in your routine</span>
+    </div>
+  </div>
+
+  <h2>How Long to Track</h2>
+
+  <p>Two weeks minimum. Three is better. One week often isn't enough — it might just catch an unusual week. Two filters out anomalies. Three gives you enough to feel confident in what you're seeing.</p>
+
+  <p>After the initial period you don't need to track constantly. Run a two-week log every few months, or any time your shopping or cooking habits shift significantly.</p>
+
+  <div class="tip-box">
+    <p><strong>Quick tip:</strong> Start on a Monday right after a grocery shop. That way your log captures the full arc of a week — what you bought, what you cooked, and what didn't make it.</p>
+  </div>
+
+  <h2>The Five Patterns You'll Probably Find</h2>
+
+  <p>After two weeks, most home cooks land in one of five recurring patterns. Recognizing yours is the fastest path to fixing it.</p>
+
+  <!-- PATTERN CARDS -->
+  <div class="pattern-grid">
+    <div class="pattern-card">
+      <div class="pat-icon" style="background:#FFF7ED;">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 20v-8M12 14c0 0-4-1-5-5 2-1 5 1 5 5zM12 12c0 0 4-1 5-5-2-1-5 1-5 5z" stroke="#F97316" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M8 21h8" stroke="#F97316" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="pat-name">The herb problem</div>
+        <p class="pat-desc">One recipe calls for a tablespoon from a bunch that yields ten. The rest wilts. Fix: plan two or three uses in the same week, or store stems in water.</p>
+      </div>
+    </div>
+    <div class="pattern-card">
+      <div class="pat-icon" style="background:#F0FDF4;">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="#166534" stroke-width="1.5" stroke-linecap="round"/>
+          <rect x="5" y="4" width="4" height="4" rx="1" fill="#166534" opacity="0.3"/>
+        </svg>
+      </div>
+      <div>
+        <div class="pat-name">The salad green cycle</div>
+        <p class="pat-desc">Full container, two salads, then forgotten until it's too far gone. Fix: buy smaller quantities more often, or switch to whole heads.</p>
+      </div>
+    </div>
+    <div class="pattern-card">
+      <div class="pat-icon" style="background:#FDF4FF;">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M6 4h12l1 4H5L6 4z" stroke="#7E22CE" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M5 8l1.5 12h11L19 8" stroke="#7E22CE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 13h4" stroke="#7E22CE" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="pat-name">The leftover gap</div>
+        <p class="pat-desc">Leftovers meant for lunch that get skipped for three days, then tossed. Fix: leftovers need to be on the plan, not just an option.</p>
+      </div>
+    </div>
+    <div class="pattern-card">
+      <div class="pat-icon" style="background:#FFF0F0;">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="#DC2626" stroke-width="1.5"/>
+          <path d="M12 7v5l3 3" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="pat-name">The aspirational buy</div>
+        <p class="pat-desc">The eggplant or leek you bought because you were going to make something. Then didn't. Fix: if it has no meal attached at the store, leave it.</p>
+      </div>
+    </div>
+    <div class="pattern-card" style="grid-column: span 2;">
+      <div class="pat-icon" style="background:#F0F9FF;">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 3C12 3 7 8 7 13a5 5 0 0010 0c0-5-5-10-5-10z" stroke="#0369A1" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M9.5 13a2.5 2.5 0 005 0" stroke="rgba(3,105,161,0.4)" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="pat-name">The over-cooking habit</div>
+        <p class="pat-desc">Consistently making more than your household eats. The fix isn't to stop batch cooking — it's to build the surplus into the next two days' meals before you cook, not after.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>Two of those patterns — the herb problem and the salad green cycle — are really storage problems in disguise. Smarter fridge habits and the right containers buy you days of extra life on the ingredients you already bought. If your log keeps surfacing those two, the <a href="/blog/kitchen-waste-storage/">kitchen waste storage guide</a> is the natural next step.</p>
+
+  <h2>From Pattern to Fix: A Root Cause Map</h2>
+
+  <p>Once you've identified your top culprits, match each one to its actual root cause. The reason column in your log does most of this work automatically.</p>
+
+  <!-- FLOW DIAGRAM -->
+  <div class="flow-wrap">
+    <div class="flow-head">
+      <span>What you logged</span>
+      <span></span>
+      <span>Root cause</span>
+      <span></span>
+      <span>The fix</span>
+    </div>
+    <div class="flow-row">
+      <div class="flow-cell"><strong>Forgot about it</strong><span>Crisper drawer, back of fridge</span></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-cell"><strong>Visibility problem</strong><span>Out of sight, out of mind</span></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-fix">Move to eye-level "use first" shelf</div>
+    </div>
+    <div class="flow-row">
+      <div class="flow-cell"><strong>Went bad before I used it</strong><span>Recurring with one item</span></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-cell"><strong>Quantity problem</strong><span>Buying more than you use</span></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-fix">Buy less, or shop more often</div>
+    </div>
+    <div class="flow-row">
+      <div class="flow-cell"><strong>Made too much</strong><span>Leftovers not eaten</span></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-cell"><strong>Planning gap</strong><span>No slot for leftovers</span></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-fix">Build leftover meals into the plan</div>
+    </div>
+    <div class="flow-row">
+      <div class="flow-cell"><strong>Didn't get to it</strong><span>Life happened</span></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-cell"><strong>Over-planning</strong><span>Too many meals for the week</span></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-fix">Plan fewer meals, be honest about your week</div>
+    </div>
+    <div class="flow-row">
+      <div class="flow-cell"><strong>Impulse buy</strong><span>Looked good at the store</span></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-cell"><strong>Aspirational shopping</strong><span>No meal attached</span></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-fix">Only buy it if you know what meal it's for</div>
+    </div>
+  </div>
+
+  <h2>Change One Thing at a Time</h2>
+
+  <p>Once you've got two or three weeks of data, resist the urge to fix everything at once. Pick your single biggest culprit and address that specifically. Small, specific changes hold better than broad resolutions that fade by week three.</p>
+
+  <p>If salad greens are your top offender, try buying a smaller quantity for one month. That's it. One change. If it works, it becomes a new habit — and the next fix gets easier because you've already built momentum.</p>
+
+  <!-- CTA BLOCK -->
+  <div class="cta-block">
+    <div class="cta-block-text">
+      <h3>Your pantry is already a waste log waiting to happen.</h3>
+      <p>MyRecipeHQ tracks what you have, flags what's expiring, and suggests meals from ingredients you need to use — so less ends up in the trash.</p>
+    </div>
+    <a href="/coming-soon/" class="cta-btn">Try it free →</a>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-box">
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Do I have to log every single thing I throw away?</h3>
+    <p>Ideally yes, at least for the first two weeks. The value of a waste log comes from completeness — small recurring items add up fast and you won't see the pattern if you only log the obvious stuff. After the initial tracking period, spot-checking works fine.</p>
+
+    <h3>What if multiple people in my household throw things away?</h3>
+    <p>Either ask everyone to log their own discards, or designate one person and ask others to give a heads-up before tossing something. Multi-person households often have the most to gain from tracking because waste can go completely unnoticed by any one person.</p>
+
+    <h3>How do I estimate cost without knowing exact prices?</h3>
+    <p>A rough category estimate works fine — under a dollar, one to three dollars, over three dollars. That's enough to see scale. For more accuracy, check your last grocery receipt and divide the pack price by how much you threw away.</p>
+
+    <h3>What if my log just shows I need to shop differently?</h3>
+    <p>That's a genuinely useful outcome. A lot of food waste is solved at the store, not in the kitchen — buying less of what you consistently don't use is just as effective as any recipe trick.</p>
+  </div>
+
+</article>
