@@ -337,64 +337,7 @@ head_extra: |
       <a href="#section6" class="toc-link">Kitchen waste in the garden</a>
       <a href="#section7" class="toc-link">Zero waste tips that stick</a>
       <a href="#faq" class="toc-link">Frequently asked questions</a>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Explore More</div>
-
-      <a href="/blog/what-to-do-with-veggie-scraps/" class="cluster-link">
-        <div class="cluster-link-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 20v-8M12 14c0 0-4-1-5-5 2-1 5 1 5 5zM12 12c0 0 4-1 5-5-2-1-5 1-5 5z" stroke="#78716C" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M8 21h8" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <span>What to Do With Veggie Scraps</span>
-      </a>
-
-      <a href="/blog/kitchen-waste-log/" class="cluster-link">
-        <div class="cluster-link-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M9 12h6M9 16h4" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <span>Kitchen Waste Log</span>
-      </a>
-
-      <a href="/blog/kitchen-waste-storage/" class="cluster-link">
-        <div class="cluster-link-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 4h8l1 3H7L8 4z" stroke="#78716C" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M7 7l1 13h8l1-13" stroke="#78716C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M10 13h4" stroke="#78716C" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 1"/>
-          </svg>
-        </div>
-        <span>Kitchen Waste Storage</span>
-      </a>
-
-      <a href="/blog/compost-using-kitchen-waste/" class="cluster-link">
-        <div class="cluster-link-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 9C18 5.5 14.5 3 11 4C7 5 5 9 5 12" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M5 8v4h4" stroke="#78716C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M5 15c1 3.5 4.5 6 8 5c4-1 6-5 6-8" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M19 16v-4h-4" stroke="#78716C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <span>Compost from Kitchen Scraps</span>
-      </a>
-
-      <a href="/blog/kitchen-waste-gardening/" class="cluster-link">
-        <div class="cluster-link-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 20v-8" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M12 14c0 0-4-1-5-5 2-1 5 1 5 5z" stroke="#78716C" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M12 12c0 0 4-1 5-5-2-1-5 1-5 5z" stroke="#78716C" stroke-width="1.5" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <span>Kitchen Waste for Gardening</span>
-      </a>
+      <a href="#explore" class="toc-link">Explore kitchen waste management</a>
     </div>
     <div class="sidebar-section" id="sidebar-cta-wrap">
       <div class="sidebar-cta">
@@ -678,7 +621,7 @@ head_extra: |
     </div>
 
     <!-- Cluster Cards -->
-    <div class="cluster-section">
+    <div class="cluster-section" id="explore">
       <h2>Explore Kitchen Waste Management</h2>
       <div class="cluster-grid">
         <a href="/blog/what-to-do-with-veggie-scraps/" class="cluster-card">
@@ -753,7 +696,7 @@ head_extra: |
   });
 
   const tocLinks = document.querySelectorAll('.toc-link');
-  const sections = document.querySelectorAll('section[id], .faq-box[id]');
+  const sections = document.querySelectorAll('section[id], .faq-box[id], .cluster-section[id]');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
