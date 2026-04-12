@@ -89,7 +89,8 @@ head_extra: |
     .cluster-link-icon { width: 28px; height: 28px; border-radius: 6px; background: var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
     .cluster-link-icon svg { width: 15px; height: 15px; }
     .cluster-link:hover .cluster-link-icon { background: var(--orange-pale); }
-    .sidebar-cta { background: var(--orange-light); border: 1px solid var(--orange-pale); border-radius: 10px; padding: 1rem; margin-top: 0.5rem; }
+    .sidebar-cta { background: var(--orange-light); border: 1px solid var(--orange-pale); border-radius: 10px; padding: 1rem; margin-top: 0.5rem; transition: opacity .3s, visibility .3s; }
+    .sidebar-cta.hidden { opacity: 0; visibility: hidden; }
     .sidebar-cta p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.45; }
     .sidebar-cta a { display: block; background: var(--orange); color: white; text-align: center; padding: 0.5rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; }
     .sidebar-cta a:hover { background: var(--orange-dark); }
@@ -394,6 +395,12 @@ head_extra: |
         </div>
         <span>Kitchen Waste for Gardening</span>
       </a>
+    </div>
+    <div class="sidebar-section" id="sidebar-cta-wrap">
+      <div class="sidebar-cta">
+        <p>Plan meals around what you already have. MyRecipeHQ flags expiring ingredients first.</p>
+        <a href="/coming-soon/">Try MyRecipeHQ Free →</a>
+      </div>
     </div>
   </aside>
 
@@ -708,7 +715,7 @@ head_extra: |
     </div>
 
     <!-- App CTA -->
-    <div class="app-cta">
+    <div class="app-cta" id="main-cta">
       <div class="app-cta-text">
         <h3>Plan smarter. Waste less. Cook better.</h3>
         <p>MyRecipeHQ suggests meals based on what you already have, with expiring ingredients first.</p>
@@ -757,4 +764,13 @@ head_extra: |
     });
   }, { rootMargin: '-20% 0px -70% 0px' });
   sections.forEach(s => observer.observe(s));
+
+  // Hide sidebar CTA when main CTA is visible
+  var sidebarCta = document.querySelector('.sidebar-cta');
+  var mainCta = document.getElementById('main-cta');
+  if (sidebarCta && mainCta) {
+    new IntersectionObserver(function(entries) {
+      sidebarCta.classList.toggle('hidden', entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(mainCta);
+  }
 </script>
