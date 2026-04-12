@@ -140,10 +140,12 @@ head_extra: |
     .chart-footer a { color: var(--text-light); text-decoration: underline; }
   
     /* FAQ */
-    .faq-item { border-bottom: 1px solid var(--border); padding: 1rem 0; }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-q { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
-    .faq-a { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+    .faq-box { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 36px 40px; margin: 2.8rem 0; }
+    .faq-box h2 { margin-top: 0; padding-bottom: 16px; border-bottom: 1px solid var(--border); margin-bottom: 1.6rem; }
+    .faq-box h3 { color: var(--orange); margin-top: 1.8rem; font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; font-style: italic; }
+    .faq-box h3:first-of-type { margin-top: 0; }
+    .faq-box p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+    .faq-box p:last-child { margin-bottom: 0; }
   
     /* CLUSTER CARDS */
     .cluster-section { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border); }
@@ -204,12 +206,7 @@ head_extra: |
       /* Override site-wide section padding (style.css: section { padding: 96px 0 }) */
       .page-body section, .cluster-section, .infographic-section { padding: 0; }
 
-      /* Override site accordion FAQ styles */
-      .faq-a { display: block !important; }
-      .faq-q { cursor: default; font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; font-style: italic; color: var(--orange); margin-bottom: 0.5rem; }
-      .faq-q:hover { color: var(--orange); }
-      .faq-item { padding: 1.25rem 0; border-bottom: none; }
-      .faq-item + .faq-item { border-top: 1px solid var(--border); }
+      /* FAQ now uses .faq-box pattern — no accordion overrides needed */
       .hero h1 .hl-teal { color: #1C1917; }
   
     </style>
@@ -635,25 +632,21 @@ head_extra: |
     </section>
 
     <!-- FAQ -->
-    <section class="article-section" id="faq">
+    <div class="faq-box" id="faq">
       <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <div class="faq-q">What counts as kitchen waste?</div>
-        <div class="faq-a">Kitchen waste includes anything that leaves your kitchen as garbage or recycling: food scraps, spoiled produce, packaging, and uneaten cooked food. The most impactful category for home cooks is food waste — produce and scraps that were still edible.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Is composting worth it if I don't have a garden?</div>
-        <div class="faq-a">Yes, if your city has a composting program. Many municipalities now collect food scraps curbside or at drop-off sites. Your scraps still become compost — you just don't manage the process yourself.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How do I stop buying more than I can use?</div>
-        <div class="faq-a">Plan meals before you shop rather than shopping and figuring out meals afterward. Even a loose plan helps you buy with purpose instead of stocking up on fresh things that look good in the moment.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What's the easiest way to start reducing kitchen waste?</div>
-        <div class="faq-a">Keep a notepad near your trash can for two weeks and write down everything you throw away. Most people are surprised by how quickly patterns appear — and once you see them, fixing them feels straightforward.</div>
-      </div>
-    </section>
+
+      <h3>What counts as kitchen waste?</h3>
+      <p>Kitchen waste includes anything that leaves your kitchen as garbage or recycling: food scraps, spoiled produce, packaging, and uneaten cooked food. The most impactful category for home cooks is food waste — produce and scraps that were still edible.</p>
+
+      <h3>Is composting worth it if I don't have a garden?</h3>
+      <p>Yes, if your city has a composting program. Many municipalities now collect food scraps curbside or at drop-off sites. Your scraps still become compost — you just don't manage the process yourself.</p>
+
+      <h3>How do I stop buying more than I can use?</h3>
+      <p>Plan meals before you shop rather than shopping and figuring out meals afterward. Even a loose plan helps you buy with purpose instead of stocking up on fresh things that look good in the moment.</p>
+
+      <h3>What's the easiest way to start reducing kitchen waste?</h3>
+      <p>Keep a notepad near your trash can for two weeks and write down everything you throw away. Most people are surprised by how quickly patterns appear — and once you see them, fixing them feels straightforward.</p>
+    </div>
 
     <!-- Cluster Cards -->
     <div class="cluster-section">
