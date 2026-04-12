@@ -18,7 +18,7 @@
       <li><a href="/about/"{% if page.nav_active == "about" %} class="active-link"{% endif %}>About</a></li>
       <li><a href="/faq/"{% if page.nav_active == "faq" %} class="active-link"{% endif %}>FAQ</a></li>
       <li class="nav-dropdown">
-        <a class="nav-dropdown-trigger{% if page.nav_active == 'guides' %} active-link{% endif %}">Guides</a>
+        <a class="nav-dropdown-trigger{% if page.nav_active == 'guides' %} active-link{% endif %}" onclick="this.parentElement.classList.toggle('open'); event.stopPropagation();">Guides</a>
         <div class="nav-dropdown-menu">
           <a href="/guides/kitchen-waste/">
             <span class="dd-label">Kitchen Waste</span>
@@ -41,3 +41,4 @@
     </div>
   </div>
 </nav>
+<script>document.addEventListener('click', function(e) { if (!e.target.closest('.nav-dropdown')) { document.querySelectorAll('.nav-dropdown.open').forEach(function(d) { d.classList.remove('open'); }); } });</script>
