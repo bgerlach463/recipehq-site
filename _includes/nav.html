@@ -17,7 +17,15 @@
       <li><a href="/comparison/"{% if page.nav_active == "comparison" %} class="active-link"{% endif %}>Compare</a></li>
       <li><a href="/about/"{% if page.nav_active == "about" %} class="active-link"{% endif %}>About</a></li>
       <li><a href="/faq/"{% if page.nav_active == "faq" %} class="active-link"{% endif %}>FAQ</a></li>
-      <li><a href="/guides/kitchen-waste/"{% if page.nav_active == "guides" %} class="active-link"{% endif %}>Guides</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-trigger{% if page.nav_active == 'guides' %} active-link{% endif %}">Guides</a>
+        <div class="nav-dropdown-menu">
+          <a href="/guides/kitchen-waste/">
+            <span class="dd-label">Kitchen Waste</span>
+            <span class="dd-title">Reduce Kitchen Waste</span>
+          </a>
+        </div>
+      </li>
       <li><a href="/blog/"{% if page.nav_active == "blog" %} class="active-link"{% endif %}>Blog</a></li>
     </ul>
     <div class="nav-actions">
