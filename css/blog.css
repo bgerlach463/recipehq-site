@@ -57,11 +57,11 @@
   display: flex;
   flex-shrink: 0; overflow: hidden;
 }
-.card-hero.pillar { background: #B45309; }
+.card-hero.pillar { background: var(--orange); }
 .card-hero.pillar .card-hero-title { color: #fff; }
-.card-hero.pillar .card-hero-title .hl { color: #FED7AA; }
-.card-hero.pillar .card-hero-title .hl-teal { color: #5EEAD4; }
-.card-hero.pillar .icon-mini { background: rgba(0,0,0,0.22); border-color: rgba(255,255,255,0.15); }
+.card-hero.pillar .card-hero-title .hl { color: #fff7ed; }
+.card-hero.pillar .card-hero-title .hl-teal { color: var(--charcoal); }
+.card-hero.pillar .icon-mini { background: rgba(0,0,0,0.18); border-color: rgba(255,255,255,0.2); }
 .card-hero-content {
   display: flex; align-items: center;
   justify-content: space-between; gap: 16px;
