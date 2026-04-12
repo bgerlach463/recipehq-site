@@ -718,7 +718,7 @@ head_extra: |
   });
 
   const tocLinks = document.querySelectorAll('.toc-link');
-  const sections = document.querySelectorAll('section[id]');
+  const sections = document.querySelectorAll('section[id], .faq-box[id]');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
