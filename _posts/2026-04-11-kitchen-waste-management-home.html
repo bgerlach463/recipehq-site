@@ -201,6 +201,9 @@ head_extra: |
       .section-icon svg { width: 18px; height: 18px; }
     }
   
+      /* Override site-wide section padding (style.css: section { padding: 96px 0 }) */
+      .page-body section, .cluster-section, .infographic-section { padding: 0; }
+
       /* Override site accordion FAQ styles */
       .faq-a { display: block !important; }
       .faq-q { cursor: default; font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; font-style: italic; color: var(--orange); margin-bottom: 0.5rem; }
