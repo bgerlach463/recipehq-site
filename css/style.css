@@ -54,7 +54,7 @@ nav {
   list-style: none;
 }
 .nav-links li a {
-  display: flex; align-items: center; padding: 6px 12px;
+  display: block; padding: 6px 12px;
   font-size: 14px; font-weight: 500;
   color: var(--mid); border-radius: 6px;
   cursor: pointer; transition: color .15s, background .15s;
@@ -62,7 +62,7 @@ nav {
 .nav-links li a:hover { color: var(--charcoal); background: var(--warm-bg); }
 .nav-links li a.active-link { color: var(--orange); }
 .nav-dropdown { position: relative; }
-.nav-dropdown-trigger { cursor: pointer; display: flex; align-items: center; gap: 4px; }
+.nav-links li a.nav-dropdown-trigger { display: flex; align-items: center; gap: 4px; }
 .nav-dropdown-trigger::after { content: ''; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; opacity: 0.5; margin-top: 1px; transition: transform .2s; }
 .nav-dropdown.open .nav-dropdown-trigger::after { transform: rotate(180deg); }
 .nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 0; min-width: 220px; background: white; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 6px; margin-top: 2px; z-index: 200; }
