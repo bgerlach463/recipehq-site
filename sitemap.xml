@@ -68,7 +68,37 @@
   </url>
   <url>
     <loc>https://myrecipehq.com/blog/what-to-do-with-veggie-scraps/</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myrecipehq.com/guides/kitchen-waste/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://myrecipehq.com/blog/kitchen-waste-log/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myrecipehq.com/blog/kitchen-waste-storage/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myrecipehq.com/blog/compost-using-kitchen-waste/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myrecipehq.com/blog/kitchen-waste-gardening/</loc>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
