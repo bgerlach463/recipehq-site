@@ -7,8 +7,8 @@ author: Brad Gerlach
 nav_active: guides
 canonical: /guides/stocking-a-kitchen-pantry/
 permalink: /guides/stocking-a-kitchen-pantry/
-category: smart-cooking
-category_label: "Smart Cooking"
+category: kitchen-pantry
+category_label: "Kitchen Pantry"
 cluster_tag: "PILLAR"
 read_time: "11 min read"
 excerpt_text: "Stocking a kitchen pantry the right way — what to buy, how to organize it by zone, and how to cook from it before things expire."
@@ -45,18 +45,18 @@ head_extra: |
     .page-body section, .cluster-section, .infographic-section, .explore-section { padding: 0; }
 
     /* ── Pillar Hero ────────────────────────────────────── */
-    .hero {
+    .pillar-hero {
       background: var(--charcoal);
       width: 100%;
       overflow: hidden;
       font-family: var(--ff-body);
       padding: 60px 52px 64px;
     }
-    .hero-inner {
+    .pillar-hero-inner {
       max-width: 800px;
       margin: 0 auto;
     }
-    .hero-eyebrow {
+    .pillar-eyebrow {
       font-size: 0.78rem;
       font-weight: 600;
       letter-spacing: 0.12em;
@@ -64,7 +64,7 @@ head_extra: |
       color: var(--orange);
       margin-bottom: 18px;
     }
-    .hero-h1 {
+    .pillar-hero h1 {
       font-family: var(--ff-head);
       font-size: 2.6rem;
       font-weight: 900;
@@ -73,20 +73,20 @@ head_extra: |
       max-width: 720px;
       margin-bottom: 20px;
     }
-    .hero-h1 .hl-teal { color: var(--orange); }
-    .hero-subtitle {
+    .pillar-hero h1 .hl-teal { color: var(--orange); }
+    .pillar-subtitle {
       font-size: 1.1rem;
       color: rgba(255,255,255,0.88);
       max-width: 640px;
       line-height: 1.65;
       margin-bottom: 28px;
     }
-    .hero-pills {
+    .pillar-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-    .pill {
+    .pillar-pill {
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 100px;
@@ -484,8 +484,8 @@ head_extra: |
 
     /* ── Mobile ─────────────────────────────────────────── */
     @media (max-width: 900px) {
-      .hero { padding: 44px 28px 48px; }
-      .hero-h1 { font-size: 2rem; }
+      .pillar-hero { padding: 44px 28px 48px; }
+      .pillar-hero h1 { font-size: 2rem; }
       .pillar-layout {
         flex-direction: column;
         padding: 32px 20px 60px;
@@ -510,9 +510,9 @@ head_extra: |
       .bottom-cta { padding: 44px 24px; }
     }
     @media (max-width: 680px) {
-      .hero { padding: 36px 20px 40px; }
-      .hero-h1 { font-size: 1.75rem; }
-      .hero-pills { display: none; }
+      .pillar-hero { padding: 36px 20px 40px; }
+      .pillar-hero h1 { font-size: 1.75rem; }
+      .pillar-pills { display: none; }
       .faq-box { padding: 24px 20px; }
     }
   </style>
@@ -612,17 +612,17 @@ head_extra: |
 ---
 
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-inner">
-    <p class="hero-eyebrow">Pantry-First Cooking Guide</p>
-    <h1 class="hero-h1"><span class="hl-teal">Stocking a Kitchen Pantry:</span><br>The Home Cook's Complete Guide</h1>
-    <p class="hero-subtitle">What to buy, how to organize it by zone, and how to cook from it — so your pantry does real work instead of just taking up shelf space.</p>
-    <div class="hero-pills">
-      <span class="pill">What to stock</span>
-      <span class="pill">Pantry zones</span>
-      <span class="pill">Organization tips</span>
-      <span class="pill">Cooking from the pantry</span>
-      <span class="pill">Maintenance habits</span>
+<div class="pillar-hero">
+  <div class="pillar-hero-inner">
+    <p class="pillar-eyebrow">Pantry-First Cooking Guide</p>
+    <h1><span class="hl-teal">Stocking a Kitchen Pantry:</span><br>The Home Cook's Complete Guide</h1>
+    <p class="pillar-subtitle">What to buy, how to organize it by zone, and how to cook from it — so your pantry does real work instead of just taking up shelf space.</p>
+    <div class="pillar-pills">
+      <span class="pillar-pill">What to stock</span>
+      <span class="pillar-pill">Pantry zones</span>
+      <span class="pillar-pill">Organization tips</span>
+      <span class="pillar-pill">Cooking from the pantry</span>
+      <span class="pillar-pill">Maintenance habits</span>
     </div>
   </div>
 </div>
@@ -888,48 +888,48 @@ head_extra: |
       <p>Yes, in two ways. First, a pantry that backs up your fresh ingredients helps you use them up — you're more likely to cook the zucchini if you have pasta and olive oil ready. Second, tracking what's in your pantry and rotating it regularly prevents dry goods and canned items from expiring before you get to them. Both translate directly into less thrown away.</p>
     </div>
 
+    <!-- BOTTOM CTA BANNER -->
+    <div class="bottom-cta" id="main-cta">
+      <h2>See what's in your pantry before you shop.</h2>
+      <p>MyRecipeHQ tracks your pantry, flags what's expiring, and suggests meals based on what you already have.</p>
+      <a href="/coming-soon/">Try it free</a>
+    </div>
+
+    <!-- EXPLORE CLUSTER POSTS -->
+    <section class="explore-section" id="explore">
+      <h2>Explore the Pantry-First Cooking Guide</h2>
+      <div class="cluster-grid cluster-cards">
+
+        <div class="cluster-card">
+          <p class="cluster-card-label">Organization</p>
+          <h3>Kitchen Pantry Organization Tips That Work</h3>
+          <p>Zone setup, rotation habits, and the container decisions that make a real difference — without buying a label maker.</p>
+          <a href="/blog/kitchen-pantry-organization-tips/">Get the organization guide &rarr;</a>
+        </div>
+
+        <div class="cluster-card">
+          <p class="cluster-card-label">Ingredients</p>
+          <h3>Essential Pantry Ingredients Every Home Cook Should Have</h3>
+          <p>The core list filtered by what you cook — with substitutions and what to skip until your cooking calls for it.</p>
+          <a href="/blog/essential-pantry-ingredients/">Build your ingredient list &rarr;</a>
+        </div>
+
+        <div class="cluster-card">
+          <p class="cluster-card-label">Cooking from Pantry</p>
+          <h3>What to Cook with Pantry Ingredients (When the Fridge Runs Low)</h3>
+          <p>Pantry-first meal patterns by ingredient type — so a nearly empty fridge still means dinner.</p>
+          <a href="/blog/what-to-cook-pantry-ingredients/">See pantry-first meals &rarr;</a>
+        </div>
+
+        <div class="cluster-card">
+          <p class="cluster-card-label">Storage</p>
+          <h3>Kitchen Pantry Storage Containers: Top-Rated Picks for Home Cooks</h3>
+          <p>The containers worth buying, tested by reviews — for dry goods, spices, and everything in between.</p>
+          <a href="/blog/pantry-storage-containers/">See top-rated picks &rarr;</a>
+        </div>
+
+      </div>
+    </section>
+
   </main>
-</div>
-
-<!-- EXPLORE CLUSTER POSTS -->
-<section class="explore-section" id="explore">
-  <h2>Explore the Pantry-First Cooking Guide</h2>
-  <div class="cluster-grid cluster-cards">
-
-    <div class="cluster-card">
-      <p class="cluster-card-label">Organization</p>
-      <h3>Kitchen Pantry Organization Tips That Work</h3>
-      <p>Zone setup, rotation habits, and the container decisions that make a real difference — without buying a label maker.</p>
-      <a href="/blog/kitchen-pantry-organization-tips/">Get the organization guide &rarr;</a>
-    </div>
-
-    <div class="cluster-card">
-      <p class="cluster-card-label">Ingredients</p>
-      <h3>Essential Pantry Ingredients Every Home Cook Should Have</h3>
-      <p>The core list filtered by what you cook — with substitutions and what to skip until your cooking calls for it.</p>
-      <a href="/blog/essential-pantry-ingredients/">Build your ingredient list &rarr;</a>
-    </div>
-
-    <div class="cluster-card">
-      <p class="cluster-card-label">Cooking from Pantry</p>
-      <h3>What to Cook with Pantry Ingredients (When the Fridge Runs Low)</h3>
-      <p>Pantry-first meal patterns by ingredient type — so a nearly empty fridge still means dinner.</p>
-      <a href="/blog/what-to-cook-pantry-ingredients/">See pantry-first meals &rarr;</a>
-    </div>
-
-    <div class="cluster-card">
-      <p class="cluster-card-label">Storage</p>
-      <h3>Kitchen Pantry Storage Containers: Top-Rated Picks for Home Cooks</h3>
-      <p>The containers worth buying, tested by reviews — for dry goods, spices, and everything in between.</p>
-      <a href="/blog/pantry-storage-containers/">See top-rated picks &rarr;</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- BOTTOM CTA BANNER -->
-<div class="bottom-cta">
-  <h2>See what's in your pantry before you shop.</h2>
-  <p>MyRecipeHQ tracks your pantry, flags what's expiring, and suggests meals based on what you already have.</p>
-  <a href="/coming-soon/">Try it free</a>
 </div>
