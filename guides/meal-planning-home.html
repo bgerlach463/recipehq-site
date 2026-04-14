@@ -196,6 +196,8 @@ head_extra: |
     }
     .main-content a { color: var(--orange); }
     .main-content a:hover { text-decoration: underline; }
+    .main-content a.btn-cta-orange { color: #fff; }
+    .main-content a.btn-cta-orange:hover { text-decoration: none; }
 
     /* ── Read Link ───────────────────────────────────────── */
     .read-link {
@@ -330,6 +332,7 @@ head_extra: |
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
+    .cluster-cards .cluster-card:nth-child(odd):last-child { grid-column: 1 / -1; }
     .cluster-card {
       background: var(--warm-bg);
       border: 1px solid var(--border);
