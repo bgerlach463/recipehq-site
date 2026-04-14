@@ -41,25 +41,21 @@ head_extra: |
       --ff-body:  'DM Sans', system-ui, sans-serif;
     }
 
-    /* ── Section padding override ───────────────────────── */
-    .page-body section, .cluster-section, .infographic-section, .explore-section { padding: 0; }
-
-    /* ── Pillar Hero ────────────────────────────────────── */
+    /* ── Pillar Hero ─────────────────────────────────────── */
     .pillar-hero {
       background: var(--charcoal);
-      width: 100%;
+      padding: 60px 0 0;
       overflow: hidden;
-      font-family: var(--ff-body);
-      padding: 60px 52px 64px;
     }
     .pillar-hero-inner {
-      max-width: 800px;
+      max-width: 1100px;
       margin: 0 auto;
+      padding: 0 40px 56px;
     }
     .pillar-eyebrow {
       font-size: 0.78rem;
       font-weight: 600;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--orange);
       margin-bottom: 18px;
@@ -70,16 +66,16 @@ head_extra: |
       font-weight: 900;
       line-height: 1.18;
       color: #fff;
-      max-width: 720px;
       margin-bottom: 20px;
+      max-width: 720px;
     }
     .pillar-hero h1 .hl-teal { color: var(--orange); }
     .pillar-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       color: rgba(255,255,255,0.88);
       max-width: 640px;
-      line-height: 1.65;
       margin-bottom: 28px;
+      line-height: 1.65;
     }
     .pillar-pills {
       display: flex;
@@ -90,133 +86,142 @@ head_extra: |
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 100px;
-      padding: 5px 14px;
-      font-size: 0.82rem;
+      padding: 5px 16px;
+      font-size: 0.8rem;
       color: rgba(255,255,255,0.75);
+      font-weight: 500;
     }
 
-    /* ── Pillar layout: sidebar + main ─────────────────── */
-    .pillar-layout {
-      max-width: 1120px;
+    /* ── Page Layout ─────────────────────────────────────── */
+    .page-wrap {
+      max-width: 1100px;
       margin: 0 auto;
-      display: flex;
-      gap: 48px;
-      padding: 48px 32px 80px;
-      align-items: flex-start;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 56px;
+      align-items: start;
     }
 
-    /* ── Sidebar ────────────────────────────────────────── */
+    /* ── Sidebar ─────────────────────────────────────────── */
     .sidebar {
-      width: 240px;
-      flex-shrink: 0;
       position: sticky;
       top: 32px;
+      padding: 48px 0 80px;
     }
-    .sidebar-toc {
-      background: var(--warm-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px 24px;
-      margin-bottom: 20px;
-    }
-    .sidebar-toc-label {
-      font-size: 0.72rem;
-      font-weight: 600;
+    .sidebar-label {
+      font-size: 0.7rem;
+      font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 14px;
+      color: var(--light);
+      margin-bottom: 16px;
     }
+    .sidebar-toc {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+    }
+    .sidebar-toc li { margin-bottom: 4px; }
     .sidebar-toc a {
       display: block;
-      font-size: 0.88rem;
-      color: var(--mid);
+      font-size: 0.875rem;
+      color: var(--muted);
       text-decoration: none;
-      padding: 6px 0;
-      border-bottom: 1px solid var(--border);
+      padding: 5px 0 5px 12px;
+      border-left: 2px solid var(--border);
       line-height: 1.4;
+      transition: color 0.15s, border-color 0.15s;
     }
-    .sidebar-toc a:last-child { border-bottom: none; }
-    .sidebar-toc a:hover { color: var(--orange); }
+    .sidebar-toc a:hover { color: var(--orange); border-left-color: var(--orange); }
     .sidebar-cta {
       background: var(--orange-l);
       border: 1px solid var(--orange-p);
       border-radius: 14px;
-      padding: 20px 22px;
-      text-align: center;
+      padding: 22px 20px;
     }
     .sidebar-cta p {
       font-size: 0.85rem;
       color: var(--mid);
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 14px;
     }
     .sidebar-cta a {
       display: block;
       background: var(--orange);
       color: #fff;
-      font-weight: 600;
-      font-size: 0.85rem;
-      padding: 9px 16px;
+      text-align: center;
+      padding: 10px 16px;
       border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
       text-decoration: none;
+      transition: background 0.15s;
     }
     .sidebar-cta a:hover { background: var(--orange-d); }
 
-    /* ── Main article content ───────────────────────────── */
+    /* ── Main Content ────────────────────────────────────── */
     .main-content {
-      flex: 1;
-      min-width: 0;
-      max-width: 700px;
-    }
-    .main-content p {
-      font-size: 1.05rem;
-      color: var(--mid);
-      line-height: 1.78;
-      margin-bottom: 1.25rem;
+      padding: 48px 0 80px;
     }
     .main-content h2 {
       font-family: var(--ff-head);
-      font-size: 1.55rem;
+      font-size: 1.65rem;
       color: var(--charcoal);
       margin: 3rem 0 1rem;
-      line-height: 1.3;
+      padding-top: 1rem;
     }
+    .main-content h2:first-child { margin-top: 0; padding-top: 0; }
     .main-content h3 {
       font-family: var(--ff-body);
       font-size: 1.05rem;
       font-weight: 600;
       color: var(--charcoal);
-      margin: 2rem 0 0.6rem;
+      margin: 1.8rem 0 0.6rem;
+    }
+    .main-content p {
+      font-size: 1.05rem;
+      color: var(--mid);
+      line-height: 1.78;
+      margin-bottom: 1.2rem;
     }
     .main-content ul, .main-content ol {
-      margin: 0.8rem 0 1.25rem 1.4rem;
+      margin: 0.8rem 0 1.2rem 1.4rem;
     }
     .main-content li {
       font-size: 1.05rem;
       color: var(--mid);
       margin-bottom: 0.5rem;
-      line-height: 1.65;
+      line-height: 1.7;
     }
     .main-content a { color: var(--orange); }
     .main-content a:hover { text-decoration: underline; }
     .main-content a.btn-cta-orange { color: #fff; }
     .main-content a.btn-cta-orange:hover { text-decoration: none; }
 
-    /* ── Read-link buttons ──────────────────────────────── */
+    /* ── Read Link ───────────────────────────────────────── */
     .read-link {
       display: inline-block;
-      margin-top: 0.5rem;
+      margin-top: 8px;
       font-size: 0.9rem;
       font-weight: 600;
       color: var(--orange);
       text-decoration: none;
-      border-bottom: 1px solid var(--orange-p);
-      padding-bottom: 2px;
     }
-    .read-link:hover { color: var(--orange-d); border-color: var(--orange-d); }
+    .read-link:hover { text-decoration: underline; }
 
-    /* ── Reference table ────────────────────────────────── */
+    /* ── Tip Box ─────────────────────────────────────────── */
+    .tip-box {
+      background: var(--teal-l);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 2rem 0;
+    }
+    .tip-box p { margin: 0; font-size: 0.95rem; color: var(--charcoal); }
+    .tip-box strong { color: var(--charcoal); }
+
+    /* ── Reference table (pantry-specific) ───────────────── */
     .ref-table {
       width: 100%;
       border-collapse: collapse;
@@ -244,52 +249,32 @@ head_extra: |
     .ref-table tr:last-child td { border-bottom: none; }
     .ref-table tr:nth-child(even) td { background: var(--warm-bg); }
 
-    /* ── Split card ─────────────────────────────────────── */
+    /* ── Split Card ──────────────────────────────────────── */
     .split-card {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0;
+      gap: 16px;
+      margin: 2rem 0;
+    }
+    .split-panel {
+      background: var(--warm-bg);
       border: 1px solid var(--border);
       border-radius: 14px;
-      overflow: hidden;
-      margin: 1.5rem 0 2rem;
+      padding: 20px 22px;
     }
-    .split-col {
-      padding: 24px 26px;
-    }
-    .split-col:first-child {
-      border-right: 1px solid var(--border);
-      background: var(--orange-l);
-    }
-    .split-col:last-child {
-      background: var(--warm-bg);
-    }
-    .split-col-label {
-      font-size: 0.75rem;
+    .split-panel-label {
+      font-size: 0.72rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 14px;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
     }
-    .split-col:last-child .split-col-label {
-      color: var(--muted);
-    }
-    .split-col ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .split-col li {
-      font-size: 0.95rem;
-      color: var(--mid);
-      padding: 5px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-      line-height: 1.5;
-    }
-    .split-col li:last-child { border-bottom: none; }
+    .split-panel-label.orange { color: var(--orange); }
+    .split-panel-label.teal { color: var(--teal); }
+    .split-panel ul { margin-left: 1.2rem; }
+    .split-panel li { font-size: 0.9rem; color: var(--mid); margin-bottom: 6px; }
 
-    /* ── Step sequence ──────────────────────────────────── */
+    /* ── Step sequence (pantry-specific) ─────────────────── */
     .step-list {
       list-style: none;
       margin: 1.5rem 0 2rem;
@@ -331,7 +316,7 @@ head_extra: |
       line-height: 1.6;
     }
 
-    /* ── Pattern cards ──────────────────────────────────── */
+    /* ── Pattern cards (pantry-specific) ─────────────────── */
     .pattern-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -365,156 +350,112 @@ head_extra: |
       line-height: 1.55;
     }
 
-    /* ── FAQ Box ────────────────────────────────────────── */
+    /* ── FAQ Box ─────────────────────────────────────────── */
     .faq-box {
       background: var(--warm-bg);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 36px 40px;
-      margin: 3rem 0;
+      margin: 2.8rem 0;
     }
-    .faq-box h2 {
-      margin-top: 0;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 1.6rem;
-      font-family: var(--ff-head);
-      font-size: 1.35rem;
-    }
-    .faq-box h3 {
-      color: var(--orange);
-      margin-top: 1.8rem;
-      font-family: var(--ff-head);
-      font-size: 1rem;
-      font-weight: 700;
-      font-style: italic;
-    }
+    .faq-box h2 { margin-top: 0; padding-bottom: 16px; border-bottom: 1px solid var(--border); margin-bottom: 1.6rem; }
+    .faq-box h3 { color: var(--orange); margin-top: 1.8rem; font-family: var(--ff-head); font-size: 1rem; font-weight: 700; font-style: italic; }
     .faq-box h3:first-of-type { margin-top: 0; }
-    .faq-box p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
+    .faq-box p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
     .faq-box p:last-child { margin-bottom: 0; }
 
-    /* ── Bottom CTA banner ──────────────────────────────── */
-    .bottom-cta {
+    /* ── Bottom CTA Banner ───────────────────────────────── */
+    .app-cta {
       background: var(--charcoal);
-      padding: 56px 32px;
-      text-align: center;
+      border-radius: 18px;
+      padding: 40px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      margin: 3rem 0 2rem;
     }
-    .bottom-cta h2 {
-      font-family: var(--ff-head);
-      font-size: 1.8rem;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-    .bottom-cta p {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.75);
-      max-width: 520px;
-      margin: 0 auto 28px;
-      line-height: 1.65;
-    }
-    .bottom-cta a {
-      display: inline-block;
+    .app-cta-text h3 { font-family: var(--ff-head); font-size: 1.4rem; color: #fff; margin: 0 0 10px 0; }
+    .app-cta-text p { font-size: 0.95rem; color: rgba(255,255,255,0.7); margin: 0; }
+    .btn-cta-orange {
       background: var(--orange);
       color: #fff;
-      font-weight: 700;
-      font-size: 1rem;
       padding: 14px 32px;
       border-radius: 100px;
+      font-size: 0.95rem;
+      font-weight: 600;
       text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background 0.15s;
     }
-    .bottom-cta a:hover { background: var(--orange-d); }
+    .btn-cta-orange:hover { background: var(--orange-d); }
 
-    /* ── Cluster post cards ─────────────────────────────── */
-    .explore-section {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 56px 32px 80px;
-    }
-    .explore-section h2 {
-      font-family: var(--ff-head);
-      font-size: 1.5rem;
-      color: var(--charcoal);
-      margin-bottom: 28px;
-    }
-    .cluster-grid {
+    /* ── Explore / Bottom Cards ──────────────────────────── */
+    .explore-section { margin: 3rem 0; }
+    .explore-section h2 { font-family: var(--ff-head); font-size: 1.4rem; color: var(--charcoal); margin-bottom: 20px; }
+    .cluster-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      gap: 16px;
     }
     .cluster-cards .cluster-card:nth-child(odd):last-child { grid-column: 1 / -1; }
     .cluster-card {
       background: var(--warm-bg);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 26px 28px;
+      padding: 22px 24px;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.15s, box-shadow 0.15s;
     }
-    .cluster-card-label {
-      font-size: 0.72rem;
+    .cluster-card:hover { border-color: var(--orange); box-shadow: 0 4px 16px rgba(249,115,22,0.1); }
+    .cluster-card-tag {
+      font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--orange);
       margin-bottom: 8px;
     }
-    .cluster-card h3 {
+    .cluster-card-title {
       font-family: var(--ff-head);
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--charcoal);
-      margin-bottom: 10px;
-      line-height: 1.35;
+      line-height: 1.4;
+      margin-bottom: 8px;
     }
-    .cluster-card p {
-      font-size: 0.9rem;
+    .cluster-card-desc {
+      font-size: 0.85rem;
       color: var(--muted);
       line-height: 1.6;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-    .cluster-card a {
-      font-size: 0.88rem;
+    .cluster-card-cta {
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--orange);
-      text-decoration: none;
     }
-    .cluster-card a:hover { text-decoration: underline; }
 
-    /* ── Mobile ─────────────────────────────────────────── */
+    /* ── Mobile ──────────────────────────────────────────── */
     @media (max-width: 900px) {
-      .pillar-hero { padding: 44px 28px 48px; }
+      .page-wrap { grid-template-columns: 1fr; gap: 0; padding: 0 24px; }
+      .sidebar { position: static; padding: 32px 0 0; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+      .pillar-hero-inner { padding: 0 24px 44px; }
       .pillar-hero h1 { font-size: 2rem; }
-      .pillar-layout {
-        flex-direction: column;
-        padding: 32px 20px 60px;
-        gap: 0;
-      }
-      .sidebar {
-        width: 100%;
-        position: static;
-        margin-bottom: 32px;
-      }
-      .sidebar-toc {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-        border-radius: 14px;
-      }
-      .main-content { max-width: 100%; }
-      .split-card { grid-template-columns: 1fr; }
-      .split-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
       .pattern-grid { grid-template-columns: 1fr; }
-      .cluster-grid { grid-template-columns: 1fr; }
-      .explore-section { padding: 40px 20px 60px; }
-      .bottom-cta { padding: 44px 24px; }
+      .cluster-cards { grid-template-columns: 1fr; }
+      .app-cta { flex-direction: column; align-items: flex-start; padding: 28px 28px; }
     }
-    @media (max-width: 680px) {
-      .pillar-hero { padding: 36px 20px 40px; }
-      .pillar-hero h1 { font-size: 1.75rem; }
-      .pillar-pills { display: none; }
+    @media (max-width: 600px) {
+      .split-card { grid-template-columns: 1fr; }
       .faq-box { padding: 24px 20px; }
+      .pillar-hero h1 { font-size: 1.75rem; }
     }
+
+    /* Section padding override (layout: post applies global section { padding: 96px 0; }) */
+    .page-body section, .cluster-section, .infographic-section { padding: 0; }
   </style>
 
   <script type="application/ld+json">
@@ -627,24 +568,24 @@ head_extra: |
   </div>
 </div>
 
-<!-- PILLAR LAYOUT -->
-<div class="pillar-layout">
+<!-- PAGE BODY -->
+<div class="page-wrap">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-    <div class="sidebar-toc">
-      <p class="sidebar-toc-label">In This Guide</p>
-      <a href="#what-stocking-means">What a working pantry is for</a>
-      <a href="#pantry-zones">The core pantry zones</a>
-      <a href="#essential-ingredients">Essential pantry ingredients</a>
-      <a href="#organization">How to organize it</a>
-      <a href="#what-to-cook">What to cook from it</a>
-      <a href="#maintenance">Keeping it current</a>
-      <a href="#faq">FAQ</a>
-    </div>
+    <div class="sidebar-label">In This Guide</div>
+    <ul class="sidebar-toc">
+      <li><a href="#what-stocking-means">What a working pantry is for</a></li>
+      <li><a href="#pantry-zones">The core pantry zones</a></li>
+      <li><a href="#essential-ingredients">Essential pantry ingredients</a></li>
+      <li><a href="#organization">How to organize it</a></li>
+      <li><a href="#what-to-cook">What to cook from it</a></li>
+      <li><a href="#maintenance">Keeping it current</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
     <div class="sidebar-cta">
       <p>Track your pantry and get suggestions based on what you already have.</p>
-      <a href="/coming-soon/">Try MyRecipeHQ free</a>
+      <a href="/coming-soon/">Try MyRecipeHQ free &rarr;</a>
     </div>
   </aside>
 
@@ -720,8 +661,8 @@ head_extra: |
     <p>Not everything belongs in every kitchen. Here's a more useful split: the items that belong in nearly every cooking pantry, and the items worth adding only when your cooking calls for them.</p>
 
     <div class="split-card">
-      <div class="split-col">
-        <p class="split-col-label">Start with these</p>
+      <div class="split-panel">
+        <div class="split-panel-label orange">Start with these</div>
         <ul>
           <li>Extra-virgin olive oil</li>
           <li>Neutral oil (vegetable or avocado)</li>
@@ -741,8 +682,8 @@ head_extra: |
           <li>Panko breadcrumbs</li>
         </ul>
       </div>
-      <div class="split-col">
-        <p class="split-col-label">Add when your cooking calls for it</p>
+      <div class="split-panel">
+        <div class="split-panel-label teal">Add when your cooking calls for it</div>
         <ul>
           <li>Canned coconut milk (Asian and curry cooking)</li>
           <li>Fish sauce (Southeast Asian cooking)</li>
@@ -888,46 +829,43 @@ head_extra: |
       <p>Yes, in two ways. First, a pantry that backs up your fresh ingredients helps you use them up — you're more likely to cook the zucchini if you have pasta and olive oil ready. Second, tracking what's in your pantry and rotating it regularly prevents dry goods and canned items from expiring before you get to them. Both translate directly into less thrown away.</p>
     </div>
 
-    <!-- BOTTOM CTA BANNER -->
-    <div class="bottom-cta" id="main-cta">
-      <h2>See what's in your pantry before you shop.</h2>
-      <p>MyRecipeHQ tracks your pantry, flags what's expiring, and suggests meals based on what you already have.</p>
-      <a href="/coming-soon/">Try it free</a>
+    <!-- BOTTOM CTA -->
+    <div class="app-cta" id="main-cta">
+      <div class="app-cta-text">
+        <h3>See what's in your pantry before you shop.</h3>
+        <p>MyRecipeHQ tracks your pantry, flags what's expiring, and suggests meals based on what you already have.</p>
+      </div>
+      <a href="/coming-soon/" class="btn-cta-orange">Try MyRecipeHQ Free</a>
     </div>
 
-    <!-- EXPLORE CLUSTER POSTS -->
+    <!-- EXPLORE / BOTTOM CARDS -->
     <section class="explore-section" id="explore">
       <h2>Explore the Pantry-First Cooking Guide</h2>
-      <div class="cluster-grid cluster-cards">
-
-        <div class="cluster-card">
-          <p class="cluster-card-label">Organization</p>
-          <h3>Kitchen Pantry Organization Tips That Work</h3>
-          <p>Zone setup, rotation habits, and the container decisions that make a real difference — without buying a label maker.</p>
-          <a href="/blog/kitchen-pantry-organization-tips/">Get the organization guide &rarr;</a>
-        </div>
-
-        <div class="cluster-card">
-          <p class="cluster-card-label">Ingredients</p>
-          <h3>Essential Pantry Ingredients Every Home Cook Should Have</h3>
-          <p>The core list filtered by what you cook — with substitutions and what to skip until your cooking calls for it.</p>
-          <a href="/blog/essential-pantry-ingredients/">Build your ingredient list &rarr;</a>
-        </div>
-
-        <div class="cluster-card">
-          <p class="cluster-card-label">Cooking from Pantry</p>
-          <h3>What to Cook with Pantry Ingredients (When the Fridge Runs Low)</h3>
-          <p>Pantry-first meal patterns by ingredient type — so a nearly empty fridge still means dinner.</p>
-          <a href="/blog/what-to-cook-pantry-ingredients/">See pantry-first meals &rarr;</a>
-        </div>
-
-        <div class="cluster-card">
-          <p class="cluster-card-label">Storage</p>
-          <h3>Kitchen Pantry Storage Containers: Top-Rated Picks for Home Cooks</h3>
-          <p>The containers worth buying, tested by reviews — for dry goods, spices, and everything in between.</p>
-          <a href="/blog/pantry-storage-containers/">See top-rated picks &rarr;</a>
-        </div>
-
+      <div class="cluster-cards">
+        <a href="/blog/kitchen-pantry-organization-tips/" class="cluster-card">
+          <div class="cluster-card-tag">Organization</div>
+          <div class="cluster-card-title">Kitchen Pantry Organization Tips That Work</div>
+          <div class="cluster-card-desc">Zone setup, rotation habits, and the container decisions that make a real difference — without buying a label maker.</div>
+          <div class="cluster-card-cta">Get the organization guide &rarr;</div>
+        </a>
+        <a href="/blog/essential-pantry-ingredients/" class="cluster-card">
+          <div class="cluster-card-tag">Ingredients</div>
+          <div class="cluster-card-title">Essential Pantry Ingredients Every Home Cook Should Have</div>
+          <div class="cluster-card-desc">The core list filtered by what you cook — with substitutions and what to skip until your cooking calls for it.</div>
+          <div class="cluster-card-cta">Build your ingredient list &rarr;</div>
+        </a>
+        <a href="/blog/what-to-cook-pantry-ingredients/" class="cluster-card">
+          <div class="cluster-card-tag">Cooking from Pantry</div>
+          <div class="cluster-card-title">What to Cook with Pantry Ingredients (When the Fridge Runs Low)</div>
+          <div class="cluster-card-desc">Pantry-first meal patterns by ingredient type — so a nearly empty fridge still means dinner.</div>
+          <div class="cluster-card-cta">See pantry-first meals &rarr;</div>
+        </a>
+        <a href="/blog/pantry-storage-containers/" class="cluster-card">
+          <div class="cluster-card-tag">Storage</div>
+          <div class="cluster-card-title">Kitchen Pantry Storage Containers: Top-Rated Picks for Home Cooks</div>
+          <div class="cluster-card-desc">The containers worth buying, tested by reviews — for dry goods, spices, and everything in between.</div>
+          <div class="cluster-card-cta">See top-rated picks &rarr;</div>
+        </a>
       </div>
     </section>
 
