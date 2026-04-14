@@ -1,0 +1,811 @@
+---
+layout: post
+title: "Kitchen Waste Management at Home (v2 preview) | MyRecipeHQ"
+description: "Practical kitchen waste management at home — from smarter meal planning to composting scraps. Built for cooks who care about what gets thrown away."
+date: 2026-04-13
+author: Brad Gerlach
+nav_active: guides
+canonical: /guides/kitchen-waste-v2/
+permalink: /guides/kitchen-waste-v2/
+category: reduce-kitchen-waste
+category_label: "Reduce Kitchen Waste"
+cluster_tag: "PILLAR"
+read_time: "12 min read"
+excerpt_text: "Practical kitchen waste management at home — from smarter meal planning to composting scraps."
+hero_title: '<span class="hl-teal">Kitchen Waste Management at Home</span>'
+og_title: "Kitchen Waste Management at Home (v2 preview)"
+og_description: "Practical kitchen waste management at home — from smarter meal planning to composting scraps."
+og_url: "https://www.myrecipehq.com/guides/kitchen-waste-v2/"
+og_type: article
+schema_headline: "Kitchen Waste Management at Home"
+robots: "noindex, nofollow"
+head_extra: |
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange:   #F97316;
+      --orange-d: #EA6A0A;
+      --orange-l: #FFF7ED;
+      --orange-p: #FED7AA;
+      --teal:     #0D9488;
+      --teal-l:   #CCFBF1;
+      --green:    #1a4a4a;
+      --charcoal: #1C1917;
+      --mid:      #57534E;
+      --muted:    #78716C;
+      --light:    #A8A29E;
+      --border:   #E7E5E4;
+      --warm-bg:  #FAFAF9;
+      --white:    #FFFFFF;
+      --ff-head:  'Playfair Display', Georgia, serif;
+      --ff-body:  'DM Sans', system-ui, sans-serif;
+    }
+
+    /* ── Pillar Hero ─────────────────────────────────────── */
+    .pillar-hero {
+      background: var(--charcoal);
+      padding: 60px 0 0;
+      overflow: hidden;
+    }
+    .pillar-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px 56px;
+    }
+    .pillar-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 18px;
+    }
+    .pillar-hero h1 {
+      font-family: var(--ff-head);
+      font-size: 2.6rem;
+      font-weight: 900;
+      line-height: 1.18;
+      color: #fff;
+      margin-bottom: 20px;
+      max-width: 720px;
+    }
+    .pillar-hero h1 .hl-teal { color: var(--orange); }
+    .pillar-subtitle {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.88);
+      max-width: 640px;
+      margin-bottom: 28px;
+      line-height: 1.65;
+    }
+    .pillar-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pillar-pill {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 100px;
+      padding: 5px 16px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 500;
+    }
+
+    /* ── Page Layout ─────────────────────────────────────── */
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* ── Sidebar ─────────────────────────────────────────── */
+    .sidebar {
+      position: sticky;
+      top: 32px;
+      padding: 48px 0 80px;
+    }
+    .sidebar-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 16px;
+    }
+    .sidebar-toc {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+    }
+    .sidebar-toc li { margin-bottom: 4px; }
+    .sidebar-toc a {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 5px 0 5px 12px;
+      border-left: 2px solid var(--border);
+      line-height: 1.4;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .sidebar-toc a:hover { color: var(--orange); border-left-color: var(--orange); }
+    .sidebar-toc a.active { color: var(--orange); border-left-color: var(--orange); font-weight: 600; }
+    .sidebar-cta {
+      background: var(--orange-l);
+      border: 1px solid var(--orange-p);
+      border-radius: 14px;
+      padding: 22px 20px;
+      transition: opacity .3s, visibility .3s;
+    }
+    .sidebar-cta.hidden { opacity: 0; visibility: hidden; }
+    .sidebar-cta p {
+      font-size: 0.85rem;
+      color: var(--mid);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .sidebar-cta a {
+      display: block;
+      background: var(--orange);
+      color: #fff;
+      text-align: center;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .sidebar-cta a:hover { background: var(--orange-d); }
+
+    /* ── Main Content ────────────────────────────────────── */
+    .main-content {
+      padding: 48px 0 80px;
+    }
+    .main-content h2 {
+      font-family: var(--ff-head);
+      font-size: 1.65rem;
+      color: var(--charcoal);
+      margin: 3rem 0 1rem;
+      padding-top: 1rem;
+      scroll-margin-top: 80px;
+    }
+    .main-content h2:first-child { margin-top: 0; padding-top: 0; }
+    .main-content h3 {
+      font-family: var(--ff-body);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.6rem;
+    }
+    .main-content p {
+      font-size: 1.05rem;
+      color: var(--mid);
+      line-height: 1.78;
+      margin-bottom: 1.2rem;
+    }
+    .main-content ul, .main-content ol {
+      margin: 0.8rem 0 1.2rem 1.4rem;
+    }
+    .main-content li {
+      font-size: 1.05rem;
+      color: var(--mid);
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    .main-content a { color: var(--orange); }
+    .main-content a:hover { text-decoration: underline; }
+
+    /* ── Read Link ───────────────────────────────────────── */
+    .read-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .read-link:hover { text-decoration: underline; }
+
+    /* ── Tip Box ─────────────────────────────────────────── */
+    .tip-box {
+      background: var(--teal-l);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 2rem 0;
+    }
+    .tip-box p { margin: 0; font-size: 0.95rem; color: var(--charcoal); }
+    .tip-box strong { color: var(--charcoal); }
+
+    /* ── Stat Cards ──────────────────────────────────────── */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 2rem 0;
+    }
+    .stat-card {
+      background: var(--warm-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 18px;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: var(--ff-head);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--orange);
+      display: block;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .stat-source-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.72rem;
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .stat-source-link:hover { text-decoration: underline; }
+
+    /* ── Chart Card ──────────────────────────────────────── */
+    .chart-card {
+      background: var(--warm-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin: 2rem 0;
+    }
+    .chart-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .chart-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      font-family: var(--ff-body);
+    }
+    .chart-legend {
+      display: flex;
+      gap: 14px;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      display: inline-block;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+    .chart-footer {
+      font-size: 0.72rem;
+      color: var(--light);
+      margin-top: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chart-footer a {
+      color: var(--light);
+      text-decoration: underline;
+    }
+
+    /* ── FAQ Box ─────────────────────────────────────────── */
+    .faq-box {
+      background: var(--warm-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 40px;
+      margin: 2.8rem 0;
+      scroll-margin-top: 80px;
+    }
+    .faq-box h2 { margin-top: 0; padding-bottom: 16px; border-bottom: 1px solid var(--border); margin-bottom: 1.6rem; }
+    .faq-box h3 { color: var(--orange); margin-top: 1.8rem; font-family: var(--ff-head); font-size: 1rem; font-weight: 700; font-style: italic; }
+    .faq-box h3:first-of-type { margin-top: 0; }
+    .faq-box p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+    .faq-box p:last-child { margin-bottom: 0; }
+
+    /* ── Bottom CTA Banner ───────────────────────────────── */
+    .app-cta {
+      background: var(--charcoal);
+      border-radius: 18px;
+      padding: 40px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      margin: 3rem 0 2rem;
+    }
+    .app-cta-text h3 { font-family: var(--ff-head); font-size: 1.4rem; color: #fff; margin: 0 0 10px 0; }
+    .app-cta-text p { font-size: 0.95rem; color: rgba(255,255,255,0.7); margin: 0; }
+    .btn-cta-orange {
+      background: var(--orange);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    .btn-cta-orange:hover { background: var(--orange-d); }
+
+    /* ── Explore / Bottom Cards ──────────────────────────── */
+    .explore-section { margin: 3rem 0; scroll-margin-top: 80px; }
+    .explore-section h2 { font-family: var(--ff-head); font-size: 1.4rem; color: var(--charcoal); margin-bottom: 20px; }
+    .cluster-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .cluster-card {
+      background: var(--warm-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .cluster-card:hover { border-color: var(--orange); box-shadow: 0 4px 16px rgba(249,115,22,0.1); }
+    .cluster-card-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+    .cluster-card-title {
+      font-family: var(--ff-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .cluster-card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .cluster-card-cta {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--orange);
+    }
+
+    /* ── Mobile ──────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .page-wrap { grid-template-columns: 1fr; gap: 0; padding: 0 24px; }
+      .sidebar { position: static; padding: 32px 0 0; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+      .pillar-hero-inner { padding: 0 24px 44px; }
+      .pillar-hero h1 { font-size: 2rem; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+      .cluster-cards { grid-template-columns: 1fr; }
+      .app-cta { flex-direction: column; align-items: flex-start; padding: 28px 28px; }
+    }
+    @media (max-width: 600px) {
+      .stat-grid { grid-template-columns: 1fr; }
+      .faq-box { padding: 24px 20px; }
+      .pillar-hero h1 { font-size: 1.75rem; }
+      .chart-top { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* Section padding override (layout: post applies global section { padding: 96px 0; }) */
+    .page-body section, .cluster-section, .infographic-section { padding: 0; }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Kitchen Waste Management at Home: A Practical Guide for From-Scratch Cooks",
+        "description": "Practical kitchen waste management at home — from smarter meal planning to composting scraps. Built for cooks who care about what gets thrown away.",
+        "url": "https://www.myrecipehq.com/guides/kitchen-waste-v2/",
+        "datePublished": "2026-04-11",
+        "dateModified": "2026-04-13",
+        "author": {
+          "@type": "Organization",
+          "name": "MyRecipeHQ",
+          "url": "https://www.myrecipehq.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "MyRecipeHQ",
+          "url": "https://www.myrecipehq.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.myrecipehq.com/images/logo.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.myrecipehq.com/guides/kitchen-waste-v2/"
+        },
+        "articleSection": "Kitchen Waste",
+        "keywords": "kitchen waste management at home, waste management in the kitchen, zero waste kitchen tips"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What counts as kitchen waste?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kitchen waste includes anything that leaves your kitchen as garbage or recycling: food scraps, spoiled produce, packaging, and uneaten cooked food. The most impactful category for home cooks is food waste — produce and scraps that were still edible."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is composting worth it if I don't have a garden?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — there are plenty of uses for compost beyond gardening. Finished compost is great for the lawn: a thin top-dressing adds organic matter and slow-release nutrients back into the soil. You can also mix it into potting soil for houseplants, container flowers, and patio planters."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I stop buying more than I can use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Plan meals before you shop rather than shopping and figuring out meals afterward. Even a loose plan helps you buy with purpose instead of stocking up on fresh things that look good in the moment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the easiest way to start reducing kitchen waste?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Keep a notepad near your trash can for two weeks and write down everything you throw away. Patterns surface fast once you start tracking — and once you see them, fixing them feels straightforward."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.myrecipehq.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://www.myrecipehq.com/guides/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Kitchen Waste Management at Home",
+            "item": "https://www.myrecipehq.com/guides/kitchen-waste-v2/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+---
+
+<!-- HERO -->
+<div class="pillar-hero">
+  <div class="pillar-hero-inner">
+    <div class="pillar-eyebrow">Kitchen Waste Guide</div>
+    <h1><span class="hl-teal">Kitchen Waste Management at Home</span></h1>
+    <p class="pillar-subtitle">A practical, end-to-end guide for from-scratch cooks who want to waste less, compost smarter, and actually use what they buy.</p>
+    <div class="pillar-pills">
+      <span class="pillar-pill">Waste Prevention</span>
+      <span class="pillar-pill">Composting</span>
+      <span class="pillar-pill">Storage Tips</span>
+      <span class="pillar-pill">Gardening</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE BODY -->
+<div class="page-wrap">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-label">In This Guide</div>
+    <ul class="sidebar-toc">
+      <li><a href="#section1" class="active">Why kitchen waste happens</a></li>
+      <li><a href="#section-stats">The state of kitchen waste</a></li>
+      <li><a href="#section2">The upstream fix: meal planning</a></li>
+      <li><a href="#section3">Tracking what you actually waste</a></li>
+      <li><a href="#section-scraps">What to do with veggie scraps</a></li>
+      <li><a href="#section4">Kitchen waste storage</a></li>
+      <li><a href="#section5">Composting at home</a></li>
+      <li><a href="#section6">Kitchen waste in the garden</a></li>
+      <li><a href="#section7">Zero waste tips that stick</a></li>
+      <li><a href="#faq">Frequently asked questions</a></li>
+      <li><a href="#explore">Explore kitchen waste management</a></li>
+    </ul>
+    <div class="sidebar-cta">
+      <p>Plan meals around what you already have. MyRecipeHQ flags expiring ingredients first.</p>
+      <a href="/coming-soon/">Try MyRecipeHQ Free &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <p>Kitchen waste is rarely a carelessness problem. It's a planning gap — the space between what gets bought and what ends up cooked — and closing that gap reaches into meal planning upstream and composting downstream. Work through the whole system below, or jump to the section you need most.</p>
+
+    <h2 id="section1">Why Kitchen Waste Happens to Careful Cooks</h2>
+
+    <p>Ask most home cooks what they waste most and they'll say "produce" or "leftovers." That's accurate but not useful. Knowing that salad greens are your specific recurring culprit — that you buy a full container every week and use maybe two-thirds — is information you can do something with.</p>
+
+    <p>The gap is almost always upstream. It lives in the planning stage, not the disposal stage. Waste management in the kitchen gets easier when you work on two layers at once:</p>
+
+    <ul>
+      <li><strong>Upstream prevention</strong> — shopping smarter, planning meals around ingredient overlap, using expiring items first</li>
+      <li><strong>Downstream recovery</strong> — proper storage for scraps, composting, using kitchen waste in the garden</li>
+    </ul>
+
+    <div class="tip-box">
+      <p><strong>The fix starts before you shop.</strong> Composting is valuable, but treating the compost bin as the primary solution to kitchen waste is like mopping the floor while the faucet is still running.</p>
+    </div>
+
+    <h2 id="section-stats">The State of Kitchen Waste in America</h2>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="stat-number">30–40%</span>
+        <div class="stat-label">of the US food supply is wasted before it's eaten</div>
+        <a class="stat-source-link" href="https://www.usda.gov/about-food/food-safety/food-loss-and-waste/food-waste-faqs" target="_blank" rel="noopener">USDA Food Waste FAQs &#8599;</a>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">$2,913</span>
+        <div class="stat-label">wasted per household of four, every year</div>
+        <a class="stat-source-link" href="https://www.epa.gov/land-research/estimating-cost-food-waste-american-consumers" target="_blank" rel="noopener">EPA Cost of Food Waste, 2025 &#8599;</a>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">#1</span>
+        <div class="stat-label">food is the largest single material in US landfills — 24% of all waste</div>
+        <a class="stat-source-link" href="https://www.fda.gov/food/consumers/food-loss-and-waste" target="_blank" rel="noopener">FDA Food Loss and Waste &#8599;</a>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-top">
+        <div class="chart-title">Most wasted food categories in US households</div>
+        <div class="chart-legend">
+          <span><span class="legend-dot" style="background:#F97316;"></span>Produce</span>
+          <span><span class="legend-dot" style="background:#D6D3D1;"></span>Other</span>
+        </div>
+      </div>
+      <div style="position:relative; width:100%; height:236px;">
+        <canvas id="wasteChart" role="img" aria-label="Horizontal bar chart showing most wasted US household food categories. Vegetables top the list by a wide margin, followed by fruit, prepared foods, dairy and eggs, grains, and proteins.">Vegetables are the most wasted household food category, followed by fruit, prepared foods, dairy and eggs, grains, and proteins.</canvas>
+      </div>
+      <div class="chart-footer">
+        <span>Two-thirds of at-home food waste is due to food not being used before it goes bad.</span>
+        <span>
+          <a href="https://refed.org/uploads/2026-refed-charts-infographics-food-types.png" target="_blank" rel="noopener">ReFED 2026 &#8599;</a>
+          &nbsp;·&nbsp;
+          <a href="https://www.mitre.org/news-insights/publication/state-food-waste" target="_blank" rel="noopener">MITRE–Gallup 2023 &#8599;</a>
+        </span>
+      </div>
+    </div>
+
+    <h2 id="section2">The Upstream Fix: Meal Planning as Waste Prevention</h2>
+
+    <p>The single most effective thing you can do to reduce kitchen waste is plan meals so that ingredients work across more than one dish. Buy cilantro for tacos Monday and it should show up in a grain bowl Wednesday and soup Friday. That's not obsessive — it's just smart shopping.</p>
+
+    <h3>Habits that make a real difference</h3>
+
+    <ul>
+      <li><strong>Plan around what's already in your kitchen</strong> — expiring items should anchor the week's first meals, not get pushed to the back of the fridge.</li>
+      <li><strong>Buy whole, flexible ingredients</strong> — a head of cabbage goes further than pre-shredded slaw. Flexibility reduces waste.</li>
+      <li><strong>Don't over-plan</strong> — planning six dinners when you realistically cook four is its own form of waste.</li>
+    </ul>
+
+    <div class="tip-box">
+      <p><strong>MyRecipeHQ</strong> suggests recipes based on what you already have, flags ingredients close to expiring, and helps you find ingredient overlap across a week of meals. <a href="/coming-soon/" style="color: var(--teal); font-weight: 600;">Try it free &rarr;</a></p>
+    </div>
+
+    <h2 id="section3">Tracking What You Actually Waste</h2>
+
+    <p>You can't fix what you can't see. A kitchen waste log — two weeks of casual tracking — will tell you more about your cooking habits than a month of good intentions. Once patterns surface, fixes get easier.</p>
+
+    <p>Track what got thrown away, why, and roughly how much. Do it for two or three weeks and patterns will emerge fast. Once you know your patterns, you can fix them.</p>
+
+    <a href="/blog/kitchen-waste-log/" class="read-link">Start a kitchen waste log &rarr;</a>
+
+    <h2 id="section-scraps">What to Do With Veggie Scraps</h2>
+
+    <p>Not all scraps are equal. Onion skins make great stock; broccoli stems belong in a sauté; carrot tops work as an herb. Sort them into categories the moment they come off the cutting board: freeze for stock, regrow, cook tonight, or compost.</p>
+
+    <p>Produce scraps get tossed by default in most kitchens. A simple four-bucket system turns that reflex into a decision — and most of what you'd normally bin has a second use that takes less than a minute to set up.</p>
+
+    <a href="/blog/what-to-do-with-veggie-scraps/" class="read-link">The 4-bucket system for veggie scraps &rarr;</a>
+
+    <h2 id="section4">Kitchen Waste Storage: Keeping Scraps Useful</h2>
+
+    <p>Not everything that can't be used right away needs to go in the trash. Vegetable peels, herb stems, parmesan rinds, chicken bones — all have real value if stored properly instead of tossed on reflex.</p>
+
+    <h3>The freezer scrap bag</h3>
+
+    <p>A zip-lock or reusable freezer bag that collects vegetable scraps over a week or two. When full, simmer with water for 45 minutes to 2 hours (longer for deeper flavor) and strain. You get vegetable stock from what you'd otherwise pay $4 for at the store.</p>
+
+    <h3>Storage upgrades that actually help</h3>
+
+    <ul>
+      <li>Herb stems in a glass of water keep cilantro and parsley fresh days longer</li>
+      <li>A damp paper towel around cut lettuce slows wilting significantly</li>
+      <li>Onions, garlic, and potatoes do better out of the fridge in a cool, dark spot</li>
+      <li>Berries last longer if you don't wash them until right before eating</li>
+    </ul>
+
+    <a href="/blog/kitchen-waste-storage/" class="read-link">How to store kitchen waste before it goes bad &rarr;</a>
+
+    <h2 id="section5">Composting Kitchen Waste at Home</h2>
+
+    <p>Even the most organized kitchen generates scraps that can't be eaten — coffee grounds, eggshells, fruit peels, wilted greens past saving. Composting is where those go.</p>
+
+    <p>What you can compost from the kitchen: all fruit and vegetable scraps (including citrus and onions), coffee grounds and paper filters, tea bags, and eggshells. For closed tumbler bins: bread, grains, and moderate amounts of cooked food are also manageable.</p>
+
+    <a href="/blog/compost-using-kitchen-waste/" class="read-link">How to compost kitchen waste at home &rarr;</a>
+
+    <h2 id="section6">Putting Kitchen Waste to Work in the Garden</h2>
+
+    <p>Beyond compost, several scraps go directly to the garden without composting first. Coffee grounds work well around acid-loving plants like tomatoes. Crushed eggshells add calcium to soil. Banana peels, chopped and buried near roses or flowering plants, release potassium as they break down.</p>
+
+    <a href="/blog/kitchen-waste-gardening/" class="read-link">Using kitchen waste in your garden &rarr;</a>
+
+    <h2 id="section7">Zero Waste Kitchen Tips That Actually Stick</h2>
+
+    <p>The zero waste kitchen tips that hold are small and specific — the ones that slot into how you already cook rather than demanding a whole new approach.</p>
+
+    <ul>
+      <li><strong>Do a "use it up" dinner once a week</strong> — one meal where the only rule is to cook from what's already in the fridge and pantry.</li>
+      <li><strong>Keep a "use first" spot in your fridge</strong> — one shelf or bin at eye level where anything close to expiring lives.</li>
+      <li><strong>Make stock a habit, not a project</strong> — the scrap bag system turns stock from a big production into a natural byproduct of cooking.</li>
+      <li><strong>Shop more often, buy less each time</strong> — a mid-week fresh top-up often generates less waste than one big weekly shop.</li>
+    </ul>
+
+    <!-- FAQ -->
+    <div class="faq-box" id="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>What counts as kitchen waste?</h3>
+      <p>Kitchen waste includes anything that leaves your kitchen as garbage or recycling: food scraps, spoiled produce, packaging, and uneaten cooked food. The most impactful category for home cooks is food waste — produce and scraps that were still edible.</p>
+
+      <h3>Is composting worth it if I don't have a garden?</h3>
+      <p>Yes — there are plenty of uses for compost beyond gardening. Finished compost is great for the lawn: a thin top-dressing adds organic matter and slow-release nutrients back into the soil. You can also mix it into potting soil for houseplants, container flowers, and patio planters.</p>
+
+      <h3>How do I stop buying more than I can use?</h3>
+      <p>Plan meals before you shop rather than shopping and figuring out meals afterward. Even a loose plan helps you buy with purpose instead of stocking up on fresh things that look good in the moment.</p>
+
+      <h3>What's the easiest way to start reducing kitchen waste?</h3>
+      <p>Keep a notepad near your trash can for two weeks and write down everything you throw away. Patterns surface fast once you start tracking — and once you see them, fixing them feels straightforward.</p>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div class="app-cta" id="main-cta">
+      <div class="app-cta-text">
+        <h3>Plan smarter. Waste less. Cook better.</h3>
+        <p>MyRecipeHQ suggests meals based on what you already have, with expiring ingredients first.</p>
+      </div>
+      <a href="/coming-soon/" class="btn-cta-orange">Try MyRecipeHQ Free</a>
+    </div>
+
+    <!-- EXPLORE / BOTTOM CARDS -->
+    <div class="explore-section" id="explore">
+      <h2>Explore Kitchen Waste Management</h2>
+      <div class="cluster-cards">
+        <a href="/blog/what-to-do-with-veggie-scraps/" class="cluster-card">
+          <div class="cluster-card-tag">Use</div>
+          <div class="cluster-card-title">What to Do With Veggie Scraps</div>
+          <div class="cluster-card-desc">The 4-bucket system: stock, regrow, cook, or compost — sorted at the cutting board.</div>
+          <div class="cluster-card-cta">Sort your scraps &rarr;</div>
+        </a>
+        <a href="/blog/kitchen-waste-log/" class="cluster-card">
+          <div class="cluster-card-tag">Track</div>
+          <div class="cluster-card-title">Kitchen Waste Log</div>
+          <div class="cluster-card-desc">Figure out exactly what you're throwing away and why — then fix the patterns.</div>
+          <div class="cluster-card-cta">Start tracking waste &rarr;</div>
+        </a>
+        <a href="/blog/kitchen-waste-storage/" class="cluster-card">
+          <div class="cluster-card-tag">Store</div>
+          <div class="cluster-card-title">Kitchen Waste Storage</div>
+          <div class="cluster-card-desc">The right containers and habits that keep scraps in play longer. Includes product picks.</div>
+          <div class="cluster-card-cta">Better storage habits &rarr;</div>
+        </a>
+        <a href="/blog/compost-using-kitchen-waste/" class="cluster-card">
+          <div class="cluster-card-tag">Compost</div>
+          <div class="cluster-card-title">Compost from Kitchen Scraps</div>
+          <div class="cluster-card-desc">Set up a home composting system from scratch — beginner-friendly, no fuss.</div>
+          <div class="cluster-card-cta">Set up composting &rarr;</div>
+        </a>
+        <a href="/blog/kitchen-waste-gardening/" class="cluster-card">
+          <div class="cluster-card-tag">Garden</div>
+          <div class="cluster-card-title">Kitchen Waste for Gardening</div>
+          <div class="cluster-card-desc">What goes directly to soil vs. what needs to compost first.</div>
+          <div class="cluster-card-cta">Scraps to garden &rarr;</div>
+        </a>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+  new Chart(document.getElementById('wasteChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Vegetables', 'Fruit', 'Prepared foods', 'Dairy & eggs', 'Grains & dry goods', 'Proteins'],
+      datasets: [{
+        data: [100, 52, 48, 37, 28, 17],
+        backgroundColor: ['#F97316','#FDBA74','#D6D3D1','#D6D3D1','#D6D3D1','#D6D3D1'],
+        borderRadius: 4,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => ctx.dataIndex === 0 ? ' Most wasted by wide margin' : ' Relative to vegetables' } } },
+      scales: {
+        x: { display: false, grid: { display: false }, max: 115 },
+        y: { grid: { color: 'rgba(0,0,0,0.05)', drawBorder: false }, ticks: { color: '#78716C', font: { size: 12, family: 'DM Sans' }, padding: 8 }, border: { display: false } }
+      },
+      layout: { padding: { right: 12 } }
+    }
+  });
+
+  const tocLinks = document.querySelectorAll('.sidebar-toc a');
+  const sections = document.querySelectorAll('.main-content h2[id], .faq-box[id], .explore-section[id]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.sidebar-toc a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+
+  // Hide sidebar CTA when main CTA is visible
+  var sidebarCta = document.querySelector('.sidebar-cta');
+  var mainCta = document.getElementById('main-cta');
+  if (sidebarCta && mainCta) {
+    new IntersectionObserver(function(entries) {
+      sidebarCta.classList.toggle('hidden', entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(mainCta);
+  }
+</script>
