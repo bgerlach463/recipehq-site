@@ -1,32 +1,24 @@
----
-layout: post
-title: "Family Meal Planning on a Budget: A Practical Approach | MyRecipeHQ"
-description: "Family meal planning on a budget without sacrificing fresh ingredients — how to stretch the weekly shop, use ingredient overlap, and keep everyone fed without the grocery bill creep."
-date: 2026-04-08
-author: Brad Gerlach
-nav_active: blog
-canonical: /blog/family-meal-planning-budget/
-permalink: /blog/family-meal-planning-budget/
-category: meal-planning
-category_label: "Meal Planning"
-card_cta: "Stretch your grocery run"
-read_time: "6 min read"
-excerpt_text: "Family meal planning on a budget without sacrificing fresh ingredients — how to stretch the weekly shop, use ingredient overlap, and keep everyone fed without the grocery bill creep."
-hero_title: '<span class="hl">Family Meal Planning</span><br>on a Budget'
-og_title: "Family Meal Planning on a Budget: A Practical Approach"
-og_description: "Family meal planning on a budget without sacrificing fresh ingredients — how to stretch the weekly shop, use ingredient overlap, and keep everyone fed without the grocery bill creep."
-og_url: "https://www.myrecipehq.com/blog/family-meal-planning-budget/"
-og_type: article
-schema_headline: "Family Meal Planning on a Budget: A Practical Approach"
-icons:
-  - '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="rgba(240,237,232,0.45)"/><circle cx="9" cy="7" r="4" stroke="rgba(240,237,232,0.45)"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#F97316"/></svg>'
-  - '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23" stroke="rgba(240,237,232,0.45)"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#F97316"/></svg>'
-  - '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="rgba(240,237,232,0.45)"/><line x1="3" y1="6" x2="21" y2="6" stroke="#F97316"/><path d="M16 10a4 4 0 01-8 0" stroke="#F97316"/></svg>'
-  - '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="5" stroke="#F97316"/><circle cx="15" cy="12" r="5" stroke="rgba(240,237,232,0.45)"/></svg>'
-head_extra: |
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Family Meal Planning on a Budget: A Practical Approach | MyRecipeHQ</title>
+  <meta name="description" content="Family meal planning on a budget without sacrificing fresh ingredients — how to stretch the weekly shop, use ingredient overlap, and keep everyone fed without the grocery bill creep.">
+  <link rel="canonical" href="https://www.myrecipehq.com/blog/family-meal-planning-budget/">
+
+  <meta property="og:title" content="Family Meal Planning on a Budget: A Practical Approach">
+  <meta property="og:description" content="Family meal planning on a budget without sacrificing fresh ingredients — how to stretch the weekly shop, use ingredient overlap, and keep everyone fed without the grocery bill creep.">
+  <meta property="og:url" content="https://www.myrecipehq.com/blog/family-meal-planning-budget/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MyRecipeHQ">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --orange:   #F97316;
       --orange-d: #EA6A0A;
@@ -44,24 +36,30 @@ head_extra: |
       --ff-head:  'Playfair Display', Georgia, serif;
       --ff-body:  'DM Sans', system-ui, sans-serif;
     }
+    body { font-family: var(--ff-body); color: var(--charcoal); background: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
 
     .hero { background: #1a4a4a; width: 100%; overflow: hidden; }
     .hero-accent { height: 5px; background: var(--orange); width: 100%; }
     .hero-body { display: flex; align-items: stretch; justify-content: space-between; padding: 44px 52px; gap: 48px; }
     .hero-left { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; }
+    .hero-logo { display: flex; align-items: center; gap: 10px; }
+    .hero-logo-text { font-weight: 600; font-size: 22px; letter-spacing: -0.02em; color: #f0ede8; }
+    .hero-logo-text .hq { color: var(--orange); }
+    .hero-divider { height: 1px; background: var(--orange); opacity: 0.25; }
     .hero-h1 { font-family: var(--ff-head); font-size: 36px; font-weight: 700; line-height: 1.25; color: #f0ede8; margin: 0; }
     .hero-h1 .hl { color: var(--orange); }
     .hero-right { flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
     .hero-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; width: 220px; height: 200px; }
     .icon-tile { background: rgba(10,48,48,0.75); border-radius: 14px; border: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; flex: 1; padding: 12px; }
     .icon-tile-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(240,237,232,0.5); font-weight: 600; text-align: center; }
+    .hero-watermark { text-align: center; padding: 10px 0 14px; font-size: 11px; color: #2a6060; background: #1a4a4a; }
 
     article { max-width: 740px; margin: 0 auto; padding: 40px 24px 80px; }
     h2 { font-family: var(--ff-head); font-size: 1.55rem; margin: 2.8rem 0 1rem; color: var(--charcoal); }
     h3 { font-family: var(--ff-body); font-size: 1.05rem; font-weight: 600; margin: 1.8rem 0 0.6rem; color: var(--charcoal); }
     p { margin-bottom: 1.2rem; font-size: 1.05rem; color: var(--mid); line-height: 1.78; }
-    article ul, article ol { margin: 0.8rem 0 1.2rem 1.4rem; }
-    article li { margin-bottom: 0.5rem; font-size: 1.05rem; color: var(--mid); line-height: 1.7; }
+    ul, ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+    li { margin-bottom: 0.5rem; font-size: 1.05rem; color: var(--mid); line-height: 1.7; }
     a { color: var(--orange); }
     a:hover { text-decoration: underline; }
     .page-body section { padding: 0; }
@@ -110,17 +108,18 @@ head_extra: |
       .faq-box { padding: 24px 20px; }
     }
   </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "BlogPosting",
+        "@type": "Article",
         "headline": "Family Meal Planning on a Budget: A Practical Approach",
         "description": "Family meal planning on a budget without sacrificing fresh ingredients — how to stretch the weekly shop, use ingredient overlap, and keep everyone fed without the grocery bill creep.",
         "url": "https://www.myrecipehq.com/blog/family-meal-planning-budget/",
-        "datePublished": "2026-04-08",
-        "dateModified": "2026-04-08",
+        "datePublished": "2026-04-01",
+        "dateModified": "2026-04-01",
         "author": { "@type": "Person", "name": "Brad Gerlach" },
         "publisher": { "@type": "Organization", "name": "MyRecipeHQ", "url": "https://www.myrecipehq.com" }
       },
@@ -160,11 +159,25 @@ head_extra: |
     ]
   }
   </script>
----
+</head>
+<body>
+
 <div class="hero">
   <div class="hero-accent"></div>
   <div class="hero-body">
     <div class="hero-left">
+      <div class="hero-logo">
+        <svg width="38" height="38" viewBox="0 0 56 56">
+          <rect width="56" height="56" rx="12" fill="#F97316"/>
+          <rect x="17" y="10" width="5" height="16" rx="2.5" fill="white"/>
+          <rect x="26" y="10" width="5" height="16" rx="2.5" fill="white"/>
+          <rect x="35" y="10" width="5" height="16" rx="2.5" fill="white"/>
+          <rect x="17" y="24" width="23" height="4" fill="white" rx="2"/>
+          <rect x="26" y="28" width="5" height="18" rx="2.5" fill="white"/>
+        </svg>
+        <div class="hero-logo-text">MyRecipe<span class="hq">HQ</span></div>
+      </div>
+      <div class="hero-divider"></div>
       <h1 class="hero-h1">
         <span class="hl">Family Meal Planning</span><br>
         on a Budget
@@ -207,6 +220,7 @@ head_extra: |
   </div>
   <div class="hero-accent"></div>
 </div>
+<div class="hero-watermark">www.myrecipehq.com</div>
 
 <article>
 
@@ -270,7 +284,7 @@ head_extra: |
       <h3>See what's in your kitchen before you spend anything.</h3>
       <p>MyRecipeHQ suggests dinners based on what you already have, so the weekly shop only covers what's actually missing.</p>
     </div>
-    <a href="/coming-soon/" class="btn-cta-white">Join the Waitlist</a>
+    <a href="/coming-soon/" class="btn-cta-white">Try MyRecipeHQ Free</a>
   </div>
 
   <!-- FAQ -->
@@ -291,3 +305,6 @@ head_extra: |
   </div>
 
 </article>
+
+</body>
+</html>

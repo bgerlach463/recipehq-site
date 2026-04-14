@@ -1,27 +1,24 @@
----
-layout: post
-title: "Meal Planning at Home: The Complete Guide | MyRecipeHQ"
-description: "Meal planning at home for home cooks who cook fresh and hate waste — how to plan dinners, use ingredients across meals, and make the weekly shop pay off."
-date: 2026-04-13
-author: Brad Gerlach
-nav_active: guides
-canonical: /guides/meal-planning-home/
-permalink: /guides/meal-planning-home/
-category: meal-planning
-category_label: "Meal Planning"
-cluster_tag: "PILLAR"
-read_time: "10 min read"
-excerpt_text: "A practical system for home cooks who want to plan dinners that actually use up what they buy, reduce what gets thrown away, and make the weekly shop feel less like a gamble."
-hero_title: '<span class="hl-teal">Meal Planning at Home:</span><br>The Complete Guide'
-og_title: "Meal Planning at Home: The Complete Guide"
-og_description: "Meal planning at home for home cooks who cook fresh and hate waste — how to plan dinners, use ingredients across meals, and make the weekly shop pay off."
-og_url: "https://www.myrecipehq.com/guides/meal-planning-home/"
-og_type: article
-schema_headline: "Meal Planning at Home: The Complete Guide"
-head_extra: |
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meal Planning at Home: The Complete Guide | MyRecipeHQ</title>
+  <meta name="description" content="Meal planning at home for home cooks who cook fresh and hate waste — how to plan dinners, use ingredients across meals, and make the weekly shop actually work.">
+  <link rel="canonical" href="https://www.myrecipehq.com/guides/meal-planning-home/">
+
+  <meta property="og:title" content="Meal Planning at Home: The Complete Guide">
+  <meta property="og:description" content="Meal planning at home for home cooks who cook fresh and hate waste — how to plan dinners, use ingredients across meals, and make the weekly shop actually work.">
+  <meta property="og:url" content="https://www.myrecipehq.com/guides/meal-planning-home/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MyRecipeHQ">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --orange:   #F97316;
       --orange-d: #EA6A0A;
@@ -40,6 +37,7 @@ head_extra: |
       --ff-head:  'Playfair Display', Georgia, serif;
       --ff-body:  'DM Sans', system-ui, sans-serif;
     }
+    body { font-family: var(--ff-body); color: var(--charcoal); background: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
 
     /* ── Pillar Hero ─────────────────────────────────────── */
     .pillar-hero {
@@ -196,8 +194,6 @@ head_extra: |
     }
     .main-content a { color: var(--orange); }
     .main-content a:hover { text-decoration: underline; }
-    .main-content a.btn-cta-orange { color: #fff; }
-    .main-content a.btn-cta-orange:hover { text-decoration: none; }
 
     /* ── Read Link ───────────────────────────────────────── */
     .read-link {
@@ -313,8 +309,8 @@ head_extra: |
     .btn-cta-orange {
       background: var(--orange);
       color: #fff;
-      padding: 14px 32px;
-      border-radius: 100px;
+      padding: 14px 28px;
+      border-radius: 10px;
       font-size: 0.95rem;
       font-weight: 600;
       text-decoration: none;
@@ -332,7 +328,6 @@ head_extra: |
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
-    .cluster-cards .cluster-card:nth-child(odd):last-child { grid-column: 1 / -1; }
     .cluster-card {
       background: var(--warm-bg);
       border: 1px solid var(--border);
@@ -387,9 +382,6 @@ head_extra: |
       .faq-box { padding: 24px 20px; }
       .pillar-hero h1 { font-size: 1.75rem; }
     }
-
-    /* Section padding override (layout: post applies global section { padding: 96px 0; }) */
-    .page-body section, .cluster-section, .infographic-section { padding: 0; }
   </style>
 
   <script type="application/ld+json">
@@ -399,7 +391,7 @@ head_extra: |
       {
         "@type": "Article",
         "headline": "Meal Planning at Home: The Complete Guide",
-        "description": "Meal planning at home for home cooks who cook fresh and hate waste — how to plan dinners, use ingredients across meals, and make the weekly shop pay off.",
+        "description": "Meal planning at home for home cooks who cook fresh and hate waste — how to plan dinners, use ingredients across meals, and make the weekly shop actually work.",
         "url": "https://www.myrecipehq.com/guides/meal-planning-home/",
         "datePublished": "2026-04-01",
         "dateModified": "2026-04-01",
@@ -426,7 +418,7 @@ head_extra: |
           {
             "@type": "Question",
             "name": "How many meals should I plan per week?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Anywhere from 2 to 5 dinners, depending on how often you shop. If you shop twice a week, 2 or 3 dinners per trip keeps things fresh and flexible. If you do one weekly shop, 4 or 5 dinners covers the week with room for leftovers, a meal out, and the occasional unplanned night." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Most households do well planning 4 to 5 dinners. That leaves room for leftovers, a meal out, and nights when plans change. Planning every single night often falls apart by Wednesday." }
           },
           {
             "@type": "Question",
@@ -441,7 +433,7 @@ head_extra: |
           {
             "@type": "Question",
             "name": "Does meal planning actually reduce food waste?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes, but only if your plan accounts for ingredient overlap. Buying produce for five separate recipes with no shared ingredients is what creates waste. Choose meals where the same ingredient — spinach, cilantro, half a cabbage — appears in two or three dinners that week, and most of the waste disappears." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, but only if your plan accounts for ingredient overlap. Buying produce for five separate recipes with no shared ingredients is what creates waste. The key is choosing meals where the same ingredient — spinach, cilantro, half a cabbage — appears in two or three dinners that week." }
           },
           {
             "@type": "Question",
@@ -453,7 +445,8 @@ head_extra: |
     ]
   }
   </script>
----
+</head>
+<body>
 
 <!-- HERO -->
 <div class="pillar-hero">
@@ -487,18 +480,18 @@ head_extra: |
     </ul>
     <div class="sidebar-cta">
       <p>Plan meals around what you already have. MyRecipeHQ flags expiring ingredients first so nothing gets wasted.</p>
-      <a href="/coming-soon/">Join the Waitlist &rarr;</a>
+      <a href="/coming-soon/">Try MyRecipeHQ Free &rarr;</a>
     </div>
   </aside>
 
   <!-- MAIN CONTENT -->
   <main class="main-content">
 
-    <p>You buy a bunch of cilantro for one recipe. You use two tablespoons. The rest wilts by Friday. That pattern — buying for the recipe instead of the week — is the biggest reason fresh ingredients end up in the bin, and it's what meal planning at home is designed to fix.</p>
+    <p>Most households throw away food every single week. Not because they're careless, but because the way they shop and cook doesn't account for how fresh ingredients actually behave. You buy a bunch of cilantro for one recipe. You use two tablespoons. The rest wilts by Friday.</p>
 
-    <p>The useful version of meal planning isn't a rigid Sunday prep session or a container stack full of identical lunches. It's choosing a week of dinners that share ingredients, so nothing gets bought that won't get used.</p>
+    <p>Meal planning at home fixes that — but not in the way most guides describe it. It's not about rigid schedules, batch cooking on Sundays, or optimizing your macros. It's about choosing a week of dinners that share ingredients, so nothing gets bought that won't get used.</p>
 
-    <p>There are four moving pieces, each with its own section below: planning dinners that reduce waste, building in ingredient overlap, handling lunches without a separate plan, and running a weekly session in under 20 minutes.</p>
+    <p>This guide covers the whole system: how to plan dinners that reduce waste, how ingredient overlap actually works, what to do about lunches, and how to run a planning session that takes less than 20 minutes.</p>
 
     <!-- STATS -->
     <div class="stat-grid">
@@ -634,7 +627,7 @@ head_extra: |
     </div>
 
     <div class="tip-box">
-      <p><strong>MyRecipeHQ</strong> handles this whole process in one place, suggesting meals based on what's already in your pantry, flagging what's expiring first, and showing ingredient overlap across your plan. <a href="/coming-soon/" style="color:var(--teal);font-weight:600;">Join the Waitlist &rarr;</a></p>
+      <p><strong>MyRecipeHQ</strong> handles this whole process in one place, suggesting meals based on what's already in your pantry, flagging what's expiring first, and showing ingredient overlap across your plan. <a href="/coming-soon/" style="color:var(--teal);font-weight:600;">Try it free &rarr;</a></p>
     </div>
 
     <a href="/blog/family-meal-planning-budget/" class="read-link">Plan meals for the family on a budget &rarr;</a>
@@ -644,7 +637,7 @@ head_extra: |
       <h2>Frequently Asked Questions</h2>
 
       <h3>How many meals should I plan per week?</h3>
-      <p>Anywhere from 2 to 5 dinners, depending on how often you shop. If you shop twice a week, 2 or 3 dinners per trip keeps things fresh and flexible. If you do one weekly shop, 4 or 5 dinners covers the week with room for leftovers, a meal out, and the occasional unplanned night.</p>
+      <p>Most households do well planning 4 to 5 dinners. That leaves room for leftovers, a meal out, and nights when plans change. Planning every single night often falls apart by Wednesday.</p>
 
       <h3>Do I need to plan lunches, or just dinners?</h3>
       <p>Dinner planning is the highest-impact place to start. Lunch tends to take care of itself once dinner is planned well — leftovers, simple meals using the same produce, or a repeated easy meal through the week. Planning dinners first reduces the most waste.</p>
@@ -653,7 +646,7 @@ head_extra: |
       <p>Start each planning session by checking what's already in your fridge and pantry before choosing recipes. Look for what's close to its use-by date and build at least one meal around it. This single habit prevents the most food waste in a household kitchen.</p>
 
       <h3>Does meal planning actually reduce food waste?</h3>
-      <p>Yes, but only if your plan accounts for ingredient overlap. Buying produce for five separate recipes with no shared ingredients still creates waste. Choose meals where the same ingredient appears in two or three dinners that week, and most of the waste disappears.</p>
+      <p>Yes, but only if your plan accounts for ingredient overlap. Buying produce for five separate recipes with no shared ingredients still creates waste. The key is choosing meals where the same ingredient appears in two or three dinners that week.</p>
 
       <h3>What's the best day to do meal planning?</h3>
       <p>Whatever day is one to two days before your main grocery shop. If you shop Saturday, plan Thursday or Friday. The goal is planning while you still have time to check what needs using up before you buy more.</p>
@@ -665,7 +658,7 @@ head_extra: |
         <h3>Plan smarter. Waste less. Cook better.</h3>
         <p>MyRecipeHQ suggests meals based on what you already have, with expiring ingredients first.</p>
       </div>
-      <a href="/coming-soon/" class="btn-cta-orange">Join the Waitlist</a>
+      <a href="/coming-soon/" class="btn-cta-orange">Try MyRecipeHQ Free</a>
     </div>
 
     <!-- EXPLORE / BOTTOM CARDS -->
@@ -701,3 +694,6 @@ head_extra: |
 
   </main>
 </div>
+
+</body>
+</html>
