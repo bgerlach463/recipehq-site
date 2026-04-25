@@ -1,0 +1,262 @@
+---
+layout: default
+title: "Help | MyRecipeHQ"
+description: "How to use MyRecipeHQ — importing recipes, managing your pantry, planning meals, and building your shopping list."
+canonical: /help/
+og_title: "Help | MyRecipeHQ"
+og_description: "How to use MyRecipeHQ — importing recipes, managing your pantry, planning meals, and building your shopping list."
+og_url: "https://myrecipehq.com/help/"
+og_type: website
+og_image: "https://myrecipehq.com/og-image.png"
+head_extra: |
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myrecipehq.com"},
+        {"@type": "ListItem", "position": 2, "name": "Help", "item": "https://www.myrecipehq.com/help/"}
+      ]
+    }
+    </script>
+body_scripts: |
+  <script>
+    function toggleFaq(item) {
+      item.classList.toggle('open');
+    }
+    function scrollToFaqSection(id, el) {
+      document.querySelectorAll('.faq-cat-item').forEach(i => i.classList.remove('active'));
+      el.classList.add('active');
+      const target = document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
+---
+
+<div class="faq-hero">
+  <div class="container">
+    <div class="section-eyebrow">Help</div>
+    <h1 class="section-title">How to use MyRecipeHQ</h1>
+    <p class="section-sub">Still stuck? <a href="/contact/" style="color:var(--orange);font-weight:600;text-decoration:none">Send us a message</a> and we'll get back to you.</p>
+  </div>
+</div>
+
+<div class="faq-body">
+  <div class="container">
+    <div class="faq-layout">
+
+      <ul class="faq-cats">
+        <li class="faq-cat-item active" onclick="scrollToFaqSection('help-started', this)">Getting Started</li>
+        <li class="faq-cat-item" onclick="scrollToFaqSection('help-import', this)">Importing Recipes</li>
+        <li class="faq-cat-item" onclick="scrollToFaqSection('help-pantry', this)">Your Pantry</li>
+        <li class="faq-cat-item" onclick="scrollToFaqSection('help-planner', this)">Meal Planning</li>
+        <li class="faq-cat-item" onclick="scrollToFaqSection('help-shopping', this)">Shopping List</li>
+        <li class="faq-cat-item" onclick="scrollToFaqSection('help-account', this)">Your Account</li>
+      </ul>
+
+      <div>
+
+        <!-- Getting Started -->
+        <div class="faq-section" id="help-started">
+          <h3>Getting Started</h3>
+
+          <div class="faq-item open" onclick="toggleFaq(this)">
+            <button class="faq-q">What should I do first? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Import a few recipes — that's what unlocks everything else. MyRecipeHQ works best once you have a small library to draw from. Start by importing 3–5 recipes you actually cook regularly, either by pasting a URL, uploading a photo, or entering them manually. Once your library has some recipes in it, the pantry, planner, and shopping list all become useful.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I get to the app? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">The app lives at <a href="https://app.myrecipehq.com" style="color:var(--orange);font-weight:500" target="_blank">app.myrecipehq.com</a>. It works in any modern browser on your phone, tablet, or computer — no download required. On iPhone or Android, you can add it to your home screen from your browser's share menu for one-tap access.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">What's the recommended workflow? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Most people follow this pattern: (1) Build your recipe library by importing the meals you cook regularly. (2) After each grocery shop, spend 60 seconds adding what you bought to your pantry. (3) At the start of the week, open the Meal Planner, pick your dinners, and tap <strong>Shopping List</strong> to generate your grocery list for the following week. That's it — the app handles the ingredient math from there.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">Is there a mobile app? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">MyRecipeHQ is a mobile-first web app — it's designed to work great from your phone's browser without a separate download. A native app is on the roadmap. In the meantime, adding the site to your home screen gives you the same one-tap experience.</div>
+          </div>
+        </div>
+
+        <!-- Importing Recipes -->
+        <div class="faq-section" id="help-import">
+          <h3>Importing Recipes</h3>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">What are the four ways to add a recipe? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Tap <strong>Add Recipe</strong> from your library and you'll see four tabs:
+              <br><br>
+              <strong>Manual</strong> — Type or paste the title, ingredients, and instructions yourself. Best for family recipes or anything that doesn't have a digital version.
+              <br><br>
+              <strong>Photo</strong> — Take a photo with your camera, upload an image file, or paste a screenshot (Ctrl/Cmd+V on desktop). AI reads the image and extracts the recipe in a few seconds. Works with cookbook pages, handwritten cards, screenshots from websites, anything.
+              <br><br>
+              <strong>URL</strong> — Paste a link to any recipe page and we'll extract it for you. Works with most major recipe sites — NYT Cooking, Serious Eats, AllRecipes, Food52, and hundreds more.
+              <br><br>
+              <strong>PDF</strong> — Upload a PDF containing one or more recipes. Useful for recipe books, meal plan documents, or scanned pages. Each recipe is extracted separately.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I import from a photo or screenshot? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Tap <strong>Add Recipe</strong>, then select the <strong>Photo</strong> tab. From there you have three options: tap <strong>Take Photo</strong> to use your camera directly, tap <strong>Choose File</strong> to upload a saved image, or click inside the paste area on desktop and press <strong>Ctrl+V</strong> (or Cmd+V on Mac) to paste a screenshot from your clipboard. Once the image appears, tap <strong>Extract Recipe</strong> — AI will pull out the title, ingredients, and instructions in a few seconds.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">What if the AI extracts something incorrectly? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Every import goes through a review screen before it's saved to your library. You can edit any field — title, ingredients, quantities, instructions — right there before saving. If a recipe imports cleanly, you can save it with one tap. If the source image is blurry or oddly formatted, the photo import is the most reliable fallback for tricky cases.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">Which method should I use? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a"><strong>URL import</strong> is the easiest starting point for anything with a web link — paste the URL and you're done. <strong>Photo import</strong> is the most flexible — it handles anything you can point a camera at, including books and handwritten cards. <strong>PDF</strong> is great if you have a collection of recipes in one file. <strong>Manual</strong> is there when you want full control or are typing something from memory.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">Can I edit a recipe after it's been saved? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Yes. Open any recipe from your library and tap the three-dot menu (⋯) in the bottom bar, then choose <strong>Edit</strong>. You can change the title, ingredients, quantities, instructions, servings, and any other details. Changes save immediately.</div>
+          </div>
+        </div>
+
+        <!-- Your Pantry -->
+        <div class="faq-section" id="help-pantry">
+          <h3>Your Pantry</h3>
+
+          <div class="faq-item open" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I add items to my pantry? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">There are two ways. Tap the orange <strong>Add Item</strong> button to enter an ingredient manually — give it a name, quantity, unit, and where it's stored (Fridge, Freezer, or Pantry). Set the purchase date and we'll calculate the expiration automatically.<br><br>Or tap <strong>Scan</strong> to use your camera. Point it at your ingredients, fridge shelf, or grocery haul and AI will identify the items in the photo. You'll get a review screen where you can set quantities and storage location for each one before they're added.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">Do I need to track every single ingredient? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">No — and you shouldn't try to. The pantry works best for perishables with a short shelf life: fresh produce, meat, fish, dairy, and opened packages. Don't bother logging shelf-stable staples like olive oil, pasta, or canned goods unless you want to. The goal is awareness, not bookkeeping. Approximate quantities are completely fine.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I update or remove an item? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Tap any item in your pantry to edit it inline — you can update the quantity, unit, and storage location right there. To delete an item, hover over it (on desktop) or tap the row to reveal the trash icon, then tap it. Items are removed immediately.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">What do the expiration colours mean? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Items show their status based on the expiration date we calculated from your purchase date and storage location. <strong>Fresh</strong> (green) means you have plenty of time. <strong>Expiring</strong> (orange) means it expires within 3 days — use it soon. <strong>Expired</strong> (red) means it's past date. An expiring items banner also appears at the top of the pantry so you can't miss the urgent ones.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">What is "Cook from my kitchen"? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">The teal <strong>Cook from my kitchen</strong> card at the top of your pantry generates meal ideas based purely on what you currently have. Tap it and the app looks at your pantry — prioritising things that are expiring soon — and suggests recipes from your library that you can make right now without buying anything extra. It's the fastest way to answer "what should I make tonight?"</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I filter the pantry? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Use the filter chips at the top of the pantry to show just <strong>Fridge</strong>, <strong>Freezer</strong>, <strong>Pantry</strong>, or <strong>Expiring</strong> items. The <strong>Expiring</strong> filter is handy when you're trying to decide what to cook before something goes bad. You can also search by name using the search bar above the filters.</div>
+          </div>
+        </div>
+
+        <!-- Meal Planning -->
+        <div class="faq-section" id="help-planner">
+          <h3>Meal Planning</h3>
+
+          <div class="faq-item open" onclick="toggleFaq(this)">
+            <button class="faq-q">How does the planner work? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">The planner shows a rolling 7-day view — your next seven days, starting from today. Each day has three dinner slots (Entrée, Side 1, Side 2) plus optional breakfast and lunch. Tap any empty slot to fill it. Use the <strong>Previous</strong> and <strong>Next</strong> arrows to move further out or look back at past days.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I add a meal to a day? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Tap any empty slot (Entrée, Side 1, or Side 2) on a day. A sheet appears with two options: <strong>Suggest for me</strong> shows AI-ranked recommendations from your library based on what's in your pantry right now — recipes that use more of what you have score higher. <strong>Browse my recipes</strong> lets you search and pick from your full library manually. Tap a recipe to add it to that slot.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">What is "Get Suggestions"? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">The <strong>Get Suggestions</strong> button at the bottom of the planner looks at your whole week — what's already planned, what's in your pantry, and what's expiring — and recommends recipes that would maximise ingredient overlap across your planned meals. The more meals share ingredients, the fewer unique things you need to buy and the less likely something goes unused.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">Can I add breakfast and lunch? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Yes. Each day shows an <strong>Add lunch</strong> and <strong>Add breakfast</strong> link below the dinner slots. Tap either one to add a meal to those slots the same way you would for dinner. Breakfast and lunch slots are hidden by default to keep the view clean — they only appear once you add something or tap the link.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I remove or swap a planned meal? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Tap any meal already in a slot. A menu appears with options to <strong>Swap</strong> it (pick a different recipe for the same slot) or <strong>Remove</strong> it entirely. Swapping re-opens the suggestion sheet so you can pick a replacement.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">What is "Cook From Kitchen" in the planner? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">The <strong>Cook From Kitchen</strong> button at the bottom of the planner is the same feature as on the pantry page — it generates meal ideas from what's currently in your pantry. Use it when you want to fill a slot with something you can make tonight without going to the store.</div>
+          </div>
+        </div>
+
+        <!-- Shopping List -->
+        <div class="faq-section" id="help-shopping">
+          <h3>Shopping List</h3>
+
+          <div class="faq-item open" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I generate a shopping list? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Plan your meals in the planner first, then open the Shopping List and tap <strong>Generate from Planner</strong>. MyRecipeHQ combines the ingredient lists from every recipe you've planned, removes duplicates, and organises everything by grocery section (Produce, Dairy, Bakery, and so on). Any ingredient already in your pantry is flagged so you know you might not need to buy it.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">What are Smart Swaps? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Tap <strong>Smart Swaps</strong> to see a list of items on your shopping list that you might already have in your pantry — things you could skip buying this trip. It's a quick sanity check before you head to the store so you don't double up on something you already have at home.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">Can I add items manually? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Yes. Tap <strong>+ Add Item</strong> to add anything to the list that isn't coming from a planned recipe — household supplies, snacks, things you need to restock. You can set the name, quantity, unit, and which grocery section it belongs to.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I use the list while shopping? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Tap any item to check it off as you put it in your cart. Checked items stay on the list but appear faded so you know what's done. When you're finished, tap <strong>Clear checked</strong> to remove everything you've ticked.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">What is "Scan to Pantry"? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">After you've shopped and are putting groceries away, tap <strong>Scan to Pantry</strong>. It uses your camera to scan the items you bought and adds them directly to your pantry — no manual entry needed. It's the fastest way to keep your pantry up to date after a shop.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">Why does an item say "Already in your pantry"? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">If a recipe ingredient matches something already tracked in your pantry, the shopping list flags it with an "Already in your pantry — buy more?" label. It's a reminder, not a block — you can still buy more if you need it, or skip it if you have enough at home.</div>
+          </div>
+        </div>
+
+        <!-- Your Account -->
+        <div class="faq-section" id="help-account">
+          <h3>Your Account</h3>
+
+          <div class="faq-item open" onclick="toggleFaq(this)">
+            <button class="faq-q">What's included on each plan? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a"><strong>Free</strong> — up to 10 AI-imported recipes per month, pantry tracking, and manual planning and shopping lists.<br><br><strong>Premium</strong> — up to 100 AI-imported recipes per month, the full meal planner with smart suggestions, PDF import, and AI-generated shopping lists from your plan.<br><br><strong>Max</strong> — unlimited AI imports, Cook From My Kitchen, calorie and macro estimates, AI ingredient substitutions, and everything in Premium.<br><br>Pantry tracking is unlimited on every plan including Free.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I upgrade my plan? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Go to <strong>Settings</strong> in the app and tap <strong>Upgrade</strong>. You can choose Premium or Max on a monthly or annual billing cycle. Annual plans work out cheaper — the pricing page has the full breakdown.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I reset my password? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">On the login screen, tap <strong>Forgot password</strong> and enter your email address. You'll receive a reset link within a couple of minutes. Check your spam folder if it doesn't arrive. If you're still stuck, <a href="/contact/" style="color:var(--orange);font-weight:500">contact us</a> and we'll sort it out.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">Can I export my recipes? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">Yes. Go to <strong>Settings</strong> and tap <strong>Export Recipes</strong>. Your full library downloads as a JSON file you can keep as a backup. Your data is yours.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-q">How do I delete my account? <span class="faq-chevron">⌄</span></button>
+            <div class="faq-a">You can delete your account from <strong>Settings</strong> at any time. All your data — recipes, pantry, meal plans — is permanently removed. No guilt-trip screens. If you're having trouble finding the option, <a href="/contact/" style="color:var(--orange);font-weight:500">contact us</a> and we'll take care of it for you.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
