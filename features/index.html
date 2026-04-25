@@ -32,7 +32,7 @@ head_extra: |
         "Duplicate recipe detection",
         "Multi-component meal detection on upload",
         "Recipe sharing via public link",
-        "3-to-7-day meal planner matching shopping rhythm",
+        "Rolling 7-day meal planner",
         "Set seed meals with AI overlap optimization",
         "Auto-plan full week from scratch",
         "Build a Meal — suggest sides on the fly",
@@ -141,7 +141,7 @@ head_extra: |
         <p>The core of MyRecipeHQ. See at a glance which meals stretch a single grocery run further — and which combos reduce waste the most.</p>
         <ul class="feat-bullets">
           <li>Ingredient overlap counts show exactly how many items are shared across your week</li>
-          <li>"Plan My Week" auto-fills your entire week maximizing shared ingredients</li>
+          <li>Auto-plan fills your entire week maximizing shared ingredients (Max tier)</li>
           <li>Pick a recipe and get instant suggestions for what pairs best from your library</li>
           <li>Multiple courses per meal — entree, side, dessert/snack in one slot</li>
           <li>Anti-repetition — won't suggest the same meals you had recently</li>
@@ -228,7 +228,7 @@ head_extra: |
           <li>Once you have a few meals scheduled, get suggestions that share the most ingredients with your current week</li>
           <li>Build a meal on the fly — suggest sides to complement any main dish</li>
           <li>AI picks side pairings based on flavor, texture, and cuisine cohesion — not just shared ingredients</li>
-          <li>Cook From My Kitchen — AI generates 3 complete meals from your pantry ingredients, prioritizing what's about to expire</li>
+          <li>Cook From My Kitchen — AI generates complete meals from your pantry ingredients</li>
           <li>Smart Swaps — AI ingredient substitutions when you're missing something</li>
           <li>All suggestions draw from your own recipe library and pantry — no algorithm pushing random results at you</li>
           <li>Suggestions update live as your pantry and plan change throughout the week</li>
@@ -269,9 +269,9 @@ head_extra: |
       <div>
         <div class="feat-label">Meal Planning</div>
         <h2>Your week on one screen</h2>
-        <p>Plan 3 to 7 days at a time to match your shopping rhythm. Premium lets you set seed meals and AI fills the rest with overlap optimization. Max auto-plans your full week from scratch.</p>
+        <p>Plan your week day by day to match your shopping rhythm. Set seed meals and AI fills the rest with overlap optimization. Max auto-plans your full week from scratch.</p>
         <ul class="feat-bullets">
-          <li>Plan 3-7 days — match your grocery run cadence</li>
+          <li>Rolling 7-day view — always a full week on one screen</li>
           <li>Set seed meals, AI fills the rest with overlap optimization</li>
           <li>Full week auto-plan from scratch — AI pairs entrees with cohesive sides and skips sides for complete meals like pot pies</li>
           <li>Meal view — dedicated cooking screen for the recipe you're making</li>
@@ -285,35 +285,48 @@ head_extra: |
       </div>
       <div class="feat-visual">
         <div class="feat-visual-inner">
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;font-size:11px">
-            <div style="background:white;border-radius:14px;padding:12px;border:1px solid var(--border)">
-              <div style="font-weight:700;font-size:13px;color:#1C1917;margin-bottom:4px">Mon</div>
-              <div style="font-size:10px;color:var(--mid);margin-bottom:8px">Apr 7</div>
-              <div style="display:flex;flex-direction:column;gap:4px">
-                <div style="background:#F97316;border-radius:8px;padding:6px 8px;font-weight:500;font-size:11px;color:white">Tikka Masala</div>
-                <div style="background:#FAFAF9;border-radius:8px;padding:6px 8px;font-size:11px;color:var(--mid);font-weight:500">+ Garlic Rice</div>
-              </div>
+          <!-- Week strip -->
+          <div style="display:flex;gap:4px;margin-bottom:12px">
+            <div style="background:#F97316;border-radius:10px;padding:7px 0;text-align:center;flex:1">
+              <div style="font-weight:700;font-size:11px;color:white">Mon</div>
+              <div style="font-size:9px;color:rgba(255,255,255,.75);margin-top:1px">Apr 7</div>
             </div>
-            <div style="background:white;border-radius:14px;padding:12px;border:1px solid var(--border)">
-              <div style="font-weight:700;font-size:13px;color:#1C1917;margin-bottom:4px">Tue</div>
-              <div style="font-size:10px;color:var(--mid);margin-bottom:8px">Apr 8</div>
-              <div style="display:flex;flex-direction:column;gap:4px">
-                <div style="background:#F97316;border-radius:8px;padding:6px 8px;font-weight:500;font-size:11px;color:white">Carbonara</div>
-                <div style="background:#FAFAF9;border-radius:8px;padding:6px 8px;font-size:11px;color:var(--mid);font-weight:500">+ Caesar Salad</div>
-              </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:7px 0;text-align:center;flex:1">
+              <div style="font-weight:600;font-size:11px;color:#1C1917">Tue</div>
+              <div style="font-size:9px;color:var(--mid);margin-top:1px">Apr 8</div>
             </div>
-            <div style="background:white;border-radius:14px;padding:12px;border:1px solid var(--border)">
-              <div style="font-weight:700;font-size:13px;color:#1C1917;margin-bottom:4px">Wed</div>
-              <div style="font-size:10px;color:var(--mid);margin-bottom:8px">Apr 9</div>
-              <div style="display:flex;flex-direction:column;gap:4px">
-                <div style="color:var(--mid);border:1px dashed var(--border);border-radius:8px;padding:6px 8px;text-align:center;font-size:11px;font-weight:500">+ add meal</div>
-              </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:7px 0;text-align:center;flex:1">
+              <div style="font-weight:600;font-size:11px;color:#1C1917">Wed</div>
+              <div style="font-size:9px;color:var(--mid);margin-top:1px">Apr 9</div>
             </div>
-            <div style="background:white;border-radius:14px;padding:12px;border:1px solid var(--border)">
-              <div style="font-weight:700;font-size:13px;color:#1C1917;margin-bottom:4px">Thu</div>
-              <div style="font-size:10px;color:var(--mid);margin-bottom:8px">Apr 10</div>
-              <div style="display:flex;flex-direction:column;gap:4px">
-                <div style="background:#F97316;border-radius:8px;padding:6px 8px;font-weight:500;font-size:11px;color:white">Chicken Tacos</div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:7px 0;text-align:center;flex:1">
+              <div style="font-weight:600;font-size:11px;color:#1C1917">Thu</div>
+              <div style="font-size:9px;color:var(--mid);margin-top:1px">Apr 10</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:7px 0;text-align:center;flex:1">
+              <div style="font-weight:600;font-size:11px;color:#1C1917">Fri</div>
+              <div style="font-size:9px;color:var(--mid);margin-top:1px">Apr 11</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:7px 0;text-align:center;flex:1">
+              <div style="font-weight:600;font-size:11px;color:#1C1917">Sat</div>
+              <div style="font-size:9px;color:var(--mid);margin-top:1px">Apr 12</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:7px 0;text-align:center;flex:1">
+              <div style="font-weight:600;font-size:11px;color:#1C1917">Sun</div>
+              <div style="font-size:9px;color:var(--mid);margin-top:1px">Apr 13</div>
+            </div>
+          </div>
+          <!-- Expanded day view -->
+          <div style="background:white;border:1px solid var(--border);border-radius:14px;padding:14px 16px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:12px">Monday · Apr 7</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div>
+                <div style="font-size:10px;color:var(--mid);font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em">Entrée</div>
+                <div style="background:#F97316;border-radius:8px;padding:9px 12px;font-weight:600;font-size:13px;color:white">Tikka Masala</div>
+              </div>
+              <div>
+                <div style="font-size:10px;color:var(--mid);font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em">Side</div>
+                <div style="background:#FAFAF9;border:1px solid var(--border);border-radius:8px;padding:9px 12px;font-size:13px;color:var(--mid);font-weight:500">Garlic Naan</div>
               </div>
             </div>
           </div>
