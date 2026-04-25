@@ -172,6 +172,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           body: JSON.stringify({email: email, source: 'website_coming_soon'})
         });
       } catch(err) {}
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({event: 'generate_lead', email: email});
       document.getElementById('notify-form').innerHTML =
         '<p style="color:#2DD4BF;font-size:16px;font-weight:600;padding:14px 0">You\'re on the list! We\'ll be in touch.</p>';
     }
