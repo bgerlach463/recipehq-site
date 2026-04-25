@@ -3,11 +3,13 @@ layout: default
 title: "Help | MyRecipeHQ"
 description: "How to use MyRecipeHQ — importing recipes, managing your pantry, planning meals, and building your shopping list."
 canonical: /help/
+nav_active: ""
 og_title: "Help | MyRecipeHQ"
 og_description: "How to use MyRecipeHQ — importing recipes, managing your pantry, planning meals, and building your shopping list."
 og_url: "https://myrecipehq.com/help/"
 og_type: website
 og_image: "https://myrecipehq.com/og-image.png"
+robots: "index, follow"
 head_extra: |
     <script type="application/ld+json">
     {
@@ -19,6 +21,83 @@ head_extra: |
       ]
     }
     </script>
+    <style>
+      /* ── Help page walkthrough cards ── */
+      .walkthrough-card {
+        background: var(--warm-bg);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        margin-bottom: 24px;
+      }
+      .walkthrough-gif {
+        width: 100%;
+        display: block;
+      }
+      .walkthrough-gif-placeholder {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #1C1917;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        color: rgba(255,255,255,0.35);
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+      }
+      .walkthrough-caption {
+        padding: 12px 18px;
+        font-size: 13px;
+        color: var(--mid);
+        border-top: 1px solid var(--border);
+        line-height: 1.5;
+      }
+      .walkthrough-caption strong {
+        color: var(--charcoal);
+        font-weight: 600;
+      }
+      .step-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 28px;
+      }
+      .step-pill {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--warm-bg);
+        border: 1px solid var(--border);
+        border-radius: 99px;
+        padding: 5px 12px 5px 6px;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--mid);
+        white-space: nowrap;
+      }
+      .step-pill-num {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--orange);
+        color: white;
+        font-size: 11px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      @media (max-width: 700px) {
+        .walkthrough-gif-placeholder { aspect-ratio: 4 / 3; }
+        .step-pills { gap: 6px; }
+        .step-pill { font-size: 11px; }
+      }
+    </style>
 body_scripts: |
   <script>
     function toggleFaq(item) {
@@ -35,7 +114,7 @@ body_scripts: |
 
 <div class="faq-hero">
   <div class="container">
-    <div class="section-eyebrow">Help</div>
+    <div class="section-eyebrow">Help Center</div>
     <h1 class="section-title">How to use MyRecipeHQ</h1>
     <p class="section-sub">Still stuck? <a href="/contact/" style="color:var(--orange);font-weight:600;text-decoration:none">Send us a message</a> and we'll get back to you.</p>
   </div>
@@ -56,7 +135,7 @@ body_scripts: |
 
       <div>
 
-        <!-- Getting Started -->
+        <!-- ── Getting Started ─────────────────────────── -->
         <div class="faq-section" id="help-started">
           <h3>Getting Started</h3>
 
@@ -81,9 +160,45 @@ body_scripts: |
           </div>
         </div>
 
-        <!-- Importing Recipes -->
+        <!-- ── Importing Recipes ───────────────────────── -->
         <div class="faq-section" id="help-import">
           <h3>Importing Recipes</h3>
+
+          <div class="walkthrough-card">
+            <div class="walkthrough-gif-placeholder">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none"/></svg>
+              <span>URL import walkthrough — coming soon</span>
+            </div>
+            <div class="walkthrough-caption">
+              <strong>Importing by URL:</strong> paste any recipe link and AI extracts the title, ingredients, and instructions in seconds.
+            </div>
+          </div>
+
+          <div class="step-pills">
+            <div class="step-pill"><span class="step-pill-num">1</span>Tap Add Recipe</div>
+            <div class="step-pill"><span class="step-pill-num">2</span>Choose the URL tab</div>
+            <div class="step-pill"><span class="step-pill-num">3</span>Paste the link</div>
+            <div class="step-pill"><span class="step-pill-num">4</span>Tap Extract Recipe</div>
+            <div class="step-pill"><span class="step-pill-num">5</span>Review and save</div>
+          </div>
+
+          <div class="walkthrough-card">
+            <div class="walkthrough-gif-placeholder">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none"/></svg>
+              <span>Photo import walkthrough — coming soon</span>
+            </div>
+            <div class="walkthrough-caption">
+              <strong>Importing by photo:</strong> snap a cookbook page, a recipe card, or a screenshot — AI reads it for you.
+            </div>
+          </div>
+
+          <div class="step-pills">
+            <div class="step-pill"><span class="step-pill-num">1</span>Tap Add Recipe</div>
+            <div class="step-pill"><span class="step-pill-num">2</span>Choose the Photo tab</div>
+            <div class="step-pill"><span class="step-pill-num">3</span>Take a photo or upload an image</div>
+            <div class="step-pill"><span class="step-pill-num">4</span>Tap Extract Recipe</div>
+            <div class="step-pill"><span class="step-pill-num">5</span>Review and save</div>
+          </div>
 
           <div class="faq-item" onclick="toggleFaq(this)">
             <button class="faq-q">What are the four ways to add a recipe? <span class="faq-chevron">⌄</span></button>
@@ -106,7 +221,7 @@ body_scripts: |
 
           <div class="faq-item" onclick="toggleFaq(this)">
             <button class="faq-q">What if the AI extracts something incorrectly? <span class="faq-chevron">⌄</span></button>
-            <div class="faq-a">Every import goes through a review screen before it's saved to your library. You can edit any field — title, ingredients, quantities, instructions — right there before saving. If a recipe imports cleanly, you can save it with one tap. If the source image is blurry or oddly formatted, the photo import is the most reliable fallback for tricky cases.</div>
+            <div class="faq-a">Every import goes through a review screen before it's saved to your library. You can edit any field — title, ingredients, quantities, instructions — right there before saving. If a recipe imports cleanly, you can save it with one tap.</div>
           </div>
 
           <div class="faq-item" onclick="toggleFaq(this)">
@@ -120,9 +235,26 @@ body_scripts: |
           </div>
         </div>
 
-        <!-- Your Pantry -->
+        <!-- ── Your Pantry ──────────────────────────────── -->
         <div class="faq-section" id="help-pantry">
           <h3>Your Pantry</h3>
+
+          <div class="walkthrough-card">
+            <div class="walkthrough-gif-placeholder">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none"/></svg>
+              <span>Pantry walkthrough — coming soon</span>
+            </div>
+            <div class="walkthrough-caption">
+              <strong>Your Pantry:</strong> add items manually or scan a photo of your fridge — takes under a minute after each shop.
+            </div>
+          </div>
+
+          <div class="step-pills">
+            <div class="step-pill"><span class="step-pill-num">1</span>Open Pantry</div>
+            <div class="step-pill"><span class="step-pill-num">2</span>Tap Add Item or Scan</div>
+            <div class="step-pill"><span class="step-pill-num">3</span>Set name, quantity, location</div>
+            <div class="step-pill"><span class="step-pill-num">4</span>Save — expiry calculated automatically</div>
+          </div>
 
           <div class="faq-item open" onclick="toggleFaq(this)">
             <button class="faq-q">How do I add items to my pantry? <span class="faq-chevron">⌄</span></button>
@@ -155,9 +287,27 @@ body_scripts: |
           </div>
         </div>
 
-        <!-- Meal Planning -->
+        <!-- ── Meal Planning ────────────────────────────── -->
         <div class="faq-section" id="help-planner">
           <h3>Meal Planning</h3>
+
+          <div class="walkthrough-card">
+            <div class="walkthrough-gif-placeholder">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none"/></svg>
+              <span>Meal planner walkthrough — coming soon</span>
+            </div>
+            <div class="walkthrough-caption">
+              <strong>Meal Planner:</strong> tap a day slot, get AI suggestions based on your pantry, or browse your full recipe library.
+            </div>
+          </div>
+
+          <div class="step-pills">
+            <div class="step-pill"><span class="step-pill-num">1</span>Open Planner</div>
+            <div class="step-pill"><span class="step-pill-num">2</span>Tap an empty slot</div>
+            <div class="step-pill"><span class="step-pill-num">3</span>Suggest for me or Browse</div>
+            <div class="step-pill"><span class="step-pill-num">4</span>Tap a recipe to add it</div>
+            <div class="step-pill"><span class="step-pill-num">5</span>Repeat for the week</div>
+          </div>
 
           <div class="faq-item open" onclick="toggleFaq(this)">
             <button class="faq-q">How does the planner work? <span class="faq-chevron">⌄</span></button>
@@ -186,13 +336,31 @@ body_scripts: |
 
           <div class="faq-item" onclick="toggleFaq(this)">
             <button class="faq-q">What is "Cook From Kitchen" in the planner? <span class="faq-chevron">⌄</span></button>
-            <div class="faq-a">The <strong>Cook From Kitchen</strong> button at the bottom of the planner is the same feature as on the pantry page — it generates meal ideas from what's currently in your pantry. Use it when you want to fill a slot with something you can make tonight without going to the store. You get 2 uses per week (resets Monday).</div>
+            <div class="faq-a">The <strong>Cook From Kitchen</strong> button at the bottom of the planner generates meal ideas from what's currently in your pantry. Use it when you want to fill a slot with something you can make tonight without going to the store. You get 2 uses per week (resets Monday).</div>
           </div>
         </div>
 
-        <!-- Shopping List -->
+        <!-- ── Shopping List ────────────────────────────── -->
         <div class="faq-section" id="help-shopping">
           <h3>Shopping List</h3>
+
+          <div class="walkthrough-card">
+            <div class="walkthrough-gif-placeholder">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none"/></svg>
+              <span>Shopping list walkthrough — coming soon</span>
+            </div>
+            <div class="walkthrough-caption">
+              <strong>Shopping List:</strong> generate from your plan, check items off at the store, move them straight to your pantry when you're home.
+            </div>
+          </div>
+
+          <div class="step-pills">
+            <div class="step-pill"><span class="step-pill-num">1</span>Plan your meals first</div>
+            <div class="step-pill"><span class="step-pill-num">2</span>Open Shopping List</div>
+            <div class="step-pill"><span class="step-pill-num">3</span>Tap Generate from Planner</div>
+            <div class="step-pill"><span class="step-pill-num">4</span>Check items off at the store</div>
+            <div class="step-pill"><span class="step-pill-num">5</span>Tap To Pantry when home</div>
+          </div>
 
           <div class="faq-item open" onclick="toggleFaq(this)">
             <button class="faq-q">How do I generate a shopping list? <span class="faq-chevron">⌄</span></button>
@@ -216,7 +384,7 @@ body_scripts: |
 
           <div class="faq-item" onclick="toggleFaq(this)">
             <button class="faq-q">How do I move my shopping list into my pantry? <span class="faq-chevron">⌄</span></button>
-            <div class="faq-a">Once you're home from the store, tap <strong>To Pantry</strong>. This takes the items from your shopping list and adds them directly to your pantry — no re-entering anything. You can also tap <strong>Scan</strong> to use your camera to identify items before adding them.</div>
+            <div class="faq-a">Once you're home from the store, tap <strong>To Pantry</strong>. This takes the items from your shopping list and adds them directly to your pantry — no re-entering anything.</div>
           </div>
 
           <div class="faq-item" onclick="toggleFaq(this)">
@@ -225,7 +393,7 @@ body_scripts: |
           </div>
         </div>
 
-        <!-- Your Account -->
+        <!-- ── Your Account ─────────────────────────────── -->
         <div class="faq-section" id="help-account">
           <h3>Your Account</h3>
 
