@@ -222,41 +222,49 @@ head_extra: |
       <div>
         <div class="feat-label">AI Suggestions</div>
         <h2>Three ways AI tells you exactly what to cook</h2>
-        <p>MyRecipeHQ's AI doesn't just store your recipes — it recommends what to cook based on what you have, what you're planning, and what's about to expire.</p>
+        <p>MyRecipeHQ's AI recommends what to cook based on what you have, what you're already planning, and what's about to expire.</p>
         <ul class="feat-bullets">
-          <li>See which recipes you can make right now using ingredients already in your kitchen, prioritizing things about to expire</li>
-          <li>Once you have a few meals scheduled, get suggestions that share the most ingredients with your current week</li>
-          <li>Build a meal on the fly — suggest sides to complement any main dish</li>
-          <li>AI picks side pairings based on flavor, texture, and cuisine cohesion — not just shared ingredients</li>
-          <li>Cook From My Kitchen — AI generates complete meals from your pantry ingredients</li>
-          <li>Smart Swaps — AI ingredient substitutions when you're missing something</li>
-          <li>All suggestions draw from your own recipe library and pantry — no algorithm pushing random results at you</li>
-          <li>Suggestions update live as your pantry and plan change throughout the week</li>
+          <li><strong>Get Suggestions</strong> — tap any planner slot and recipes are scored by pantry match and ingredient overlap with your week. Best fits rise to the top automatically</li>
+          <li>Separate Entrée and Side tabs so you can fill each course independently</li>
+          <li>Swap any planned meal for a better-fitting one without disrupting the rest of your week</li>
+          <li><strong>Cook From My Kitchen</strong> — AI generates complete meals from your pantry ingredients, including entrée and side pairings (Max tier)</li>
+          <li>All suggestions draw from your own recipe library — no algorithm pushing random outside results at you</li>
         </ul>
       </div>
       <div class="feat-visual">
         <div class="feat-visual-inner">
-          <div style="margin-bottom:14px;padding:14px 16px;background:var(--orange-l);border:1px solid rgba(249,115,22,.25);border-radius:12px">
-            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:8px">🧊 Cook from your fridge</div>
-            <div class="mini-card" style="margin-bottom:8px;border-color:rgba(249,115,22,.3)">
-              <div class="mini-card-top">
-                <div class="mini-icon">🍋</div>
-                <div><div class="mini-title">Lemon Garlic Chicken</div><div class="mini-sub" style="color:var(--orange)">6 of 7 ingredients on hand</div></div>
-              </div>
+          <!-- Get Suggestions sheet -->
+          <div style="margin-bottom:12px;border:1px solid var(--border);border-radius:14px;overflow:hidden">
+            <div style="background:#F5F5F4;padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+              <div style="font-size:13px;font-weight:600;color:#1C1917">Get Suggestions</div>
+              <div style="font-size:11px;color:var(--mid)">Monday · Apr 7</div>
             </div>
-            <div class="mini-card" style="margin-bottom:0">
-              <div class="mini-card-top">
-                <div class="mini-icon">🍛</div>
-                <div><div class="mini-title">Chicken Tikka Masala</div><div class="mini-sub">8 of 12 ingredients on hand</div></div>
+            <div style="display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--border)">
+              <span style="background:#1C1917;color:white;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600">Entrées</span>
+              <span style="background:white;border:1px solid var(--border);color:var(--mid);padding:4px 14px;border-radius:20px;font-size:12px;font-weight:500">Sides</span>
+            </div>
+            <div style="padding:10px 14px;display:flex;flex-direction:column;gap:8px">
+              <div class="mini-card" style="margin:0">
+                <div class="mini-card-top">
+                  <div class="mini-icon">🍋</div>
+                  <div><div class="mini-title">Lemon Garlic Chicken</div><div class="mini-sub">6 of 7 pantry ingredients · 3 shared</div></div>
+                </div>
+              </div>
+              <div class="mini-card" style="margin:0">
+                <div class="mini-card-top">
+                  <div class="mini-icon">🍛</div>
+                  <div><div class="mini-title">Chicken Tikka Masala</div><div class="mini-sub">8 of 12 pantry ingredients · 4 shared</div></div>
+                </div>
               </div>
             </div>
           </div>
-          <div style="padding:14px 16px;background:var(--teal-l);border:1px solid rgba(13,148,136,.25);border-radius:12px">
-            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--teal);margin-bottom:8px">📅 Based on your plan</div>
-            <div class="mini-card" style="margin-bottom:0;border-color:rgba(13,148,136,.3)">
+          <!-- Cook From My Kitchen -->
+          <div style="padding:12px 14px;background:var(--orange-l);border:1px solid rgba(249,115,22,.25);border-radius:12px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:8px">🍳 Cook From My Kitchen</div>
+            <div class="mini-card" style="margin-bottom:0;border-color:rgba(249,115,22,.3)">
               <div class="mini-card-top">
-                <div class="mini-icon">🥢</div>
-                <div><div class="mini-title">Vegetable Stir Fry</div><div class="mini-sub" style="color:var(--teal)">Shares 4 ingredients with your week</div></div>
+                <div class="mini-icon">🥘</div>
+                <div><div class="mini-title">Garlic Butter Shrimp + Rice</div><div class="mini-sub" style="color:var(--orange)">AI-generated · uses 5 pantry items</div></div>
               </div>
             </div>
           </div>
