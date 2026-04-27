@@ -1,5 +1,3 @@
-# TODO: Remove Disallow before beta launch
 User-agent: *
-Disallow: /
 
 Sitemap: https://myrecipehq.com/sitemap.xml
