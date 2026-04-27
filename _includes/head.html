@@ -9,7 +9,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ page.title }}</title>
 <meta name="description" content="{{ page.description }}">
-{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% else %}<meta name="robots" content="noindex, nofollow">{% endif %}
+{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% else %}<meta name="robots" content="index, follow">{% endif %}
 {% if page.canonical %}<link rel="canonical" href="{{ site.url }}{{ page.canonical }}">{% endif %}
 <meta name="theme-color" content="#F97316">
 
